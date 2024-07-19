@@ -103,7 +103,122 @@ router.post('/beta-private/iteration-1/find-a-claim/', function (req, res) {
 });
 
 router.post('/alpha/iteration-1/start-a-claim/what-is-your-name', function (req, res) {
-  res.redirect('/alpha/iteration-1/start-a-claim/about-the-baby2');
+  res.redirect('/alpha/iteration-1/start-a-claim/nino');
 });
+
+router.post('/alpha/iteration-1/start-a-claim/nino', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/dob');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/dob', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/confirm-details');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/confirm-details', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/previous-address');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/previous-address', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/MATB1');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/MATB1', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/SMP1');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/SMP1', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/baby-due');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/baby-due', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/baby-born');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/baby-born', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/baby-birth-date');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/baby-birth-date', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/employment-test-dates');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/employment-test-dates', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/employment-type');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/employment-type', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/employer-name');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/employer-name', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/employer-phone-number');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/employer-phone-number', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/employment-first-date');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/employment-first-date', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/employment-last-date');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/employment-last-date', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/employment-id');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/employment-id', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/payment-frequency');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/payment-frequency', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/another-employer');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/another-employer', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/employer-stop');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/employer-stop', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/employer-leave');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/employer-leave', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/employer-last-worked');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/employer-last-worked', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/employer-sick');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/employer-sick', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/mat-start');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/mat-start', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/mat-leave-start');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/mat-leave-start', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/employed-abroad');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/employed-abroad', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/other-benefits');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/other-benefits', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/map-start');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/map-start', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/mat-frequency');
+});
+
+router.post('/alpha/iteration-1/start-a-claim/mat-frequency', function (req, res) {
+  res.redirect('/alpha/iteration-1/start-a-claim/bank-details');
+});
+
+
+
 
 }

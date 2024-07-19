@@ -20,28 +20,29 @@
 
   {% from "govuk/components/input/macro.njk" import govukInput %}
 
-  <h1 class="govuk-heading-l govuk-!-margin-bottom-3">
-    What is your name?
-  </h1>
-
-  {{ govukInput({
-    label: {
-      text: "First name",
-      isPageHeading: true
+  {{ govukRadios({
+    name: "babyBorn",
+    fieldset: {
+      legend: {
+        text: "How often do you get paid by this employer?",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+      }
     },
-    classes: "govuk-input--width-20",
-    id: "width-20",
-    name: "width20"
-  }) }}
-
-  {{ govukInput({
-    label: {
-      text: "Last name",
-      isPageHeading: true
-    },
-    classes: "govuk-input--width-20",
-    id: "width-20",
-    name: "width20"
+    items: [
+      {
+        value: "week",
+        text: "Every week"
+      },
+      {
+        value: "2week",
+        text: "Every 2 weeks"
+      },
+      {
+        value: "4week",
+        text: "Every 4 weeks"
+      }
+    ]
   }) }}
 
   
