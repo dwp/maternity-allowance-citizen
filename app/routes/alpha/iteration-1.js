@@ -102,7 +102,7 @@ router.post('/beta-private/iteration-1/find-a-claim/', function (req, res) {
   res.redirect('/beta-private/iteration-1/find-a-claim/summary');
 });
 
-router.post('/alpha/iteration-1/start-a-claim/about-the-baby', function (req, res) {
+router.post('/alpha/iteration-1/start-a-claim/what-is-your-name', function (req, res) {
   res.redirect('/alpha/iteration-1/start-a-claim/about-the-baby2');
 });
 
