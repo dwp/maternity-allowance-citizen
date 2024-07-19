@@ -21,27 +21,15 @@
   {% from "govuk/components/input/macro.njk" import govukInput %}
 
   <h1 class="govuk-heading-l govuk-!-margin-bottom-3">
-    What is your name?
+    Upload your SMP1 form
   </h1>
 
-  {{ govukInput({
+  {{ govukFileUpload({
+    id: "file-upload-1",
+    name: "fileUpload1",
     label: {
-      text: "First name",
-      isPageHeading: true
-    },
-    classes: "govuk-input--width-20",
-    id: "width-20",
-    name: "width20"
-  }) }}
-
-  {{ govukInput({
-    label: {
-      text: "Last name",
-      isPageHeading: true
-    },
-    classes: "govuk-input--width-20",
-    id: "width-20",
-    name: "width20"
+      text: "Upload a file"
+    }
   }) }}
 
   
