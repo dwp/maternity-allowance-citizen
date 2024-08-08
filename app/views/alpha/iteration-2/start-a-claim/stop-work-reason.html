@@ -1,0 +1,63 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <form class="form" action="/stop-work-reason" method="post">
+
+  {% from "govuk/components/input/macro.njk" import govukInput %}
+
+  {{ govukRadios({
+    name: "stopWorkReason",
+    value: data['stopWorkReasonAnswer'],
+    fieldset: {
+      legend: {
+        text: "Why did you stop work?",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+      }
+    },
+    items: [
+      {
+        value: "maternity",
+        text: "Maternity leave"
+      },
+      {
+        value: "sick",
+        text: "Sick leave"
+      },
+      {
+        value: "ended",
+        text: "Ended work"
+      },
+      {
+        value: "unrelated",
+        text: "Non-pregnancy related absence (for example, compassionate leave)"
+      }
+    ]
+  }) }}
+
+  
+
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Save and continue"
+}) }}
+</form>
+</div></div>
+{% endblock %}

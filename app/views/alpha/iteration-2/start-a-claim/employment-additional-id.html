@@ -21,28 +21,19 @@
   {% from "govuk/components/input/macro.njk" import govukInput %}
 
   <h1 class="govuk-heading-l govuk-!-margin-bottom-3">
-    What is your name?
+    What is your payroll, employee, clock or work staff number?
   </h1>
 
   {{ govukInput({
     label: {
-      text: "First name",
+  
       isPageHeading: true
     },
     classes: "govuk-input--width-20",
     id: "width-20",
-    name: 'first-name'
+    name: "width20"
   }) }}
 
-  {{ govukInput({
-    label: {
-      text: "Last name",
-      isPageHeading: true
-    },
-    classes: "govuk-input--width-20",
-    id: "width-20",
-    name: 'last-name'
-  }) }}
 
   
 
