@@ -13,25 +13,35 @@
 {% endblock %}
 
 {% block content %}
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
+    <form class="form" action="/baby-born-answer" method="post">
 
-<form class="form" method="post" novalidate>
 
   {% from "govuk/components/input/macro.njk" import govukInput %}
 
-  <h1 class="govuk-heading-l govuk-!-margin-bottom-3">
-    What is your National Insurance number?
-  </h1>
-
-  {{ govukInput({
-    label: {
-      text: "National Insurance Number",
-      isPageHeading: true
+  {{ govukRadios({
+    classes: "govuk-radios--inline",
+    name: "babyBorn",
+    value: data['babyBornAnswer'],
+    fieldset: {
+      legend: {
+        text: "Has your baby been born?",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+      }
     },
-    classes: "govuk-input--width-20",
-    id: "width-20",
-    name: 'nino'
+    items: [
+      {
+        value: "yes",
+        text: "Yes"
+      },
+      {
+        value: "no",
+        text: "No"
+      }
+    ]
   }) }}
 
   
@@ -40,7 +50,7 @@
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
-  text: "Search"
+  text: "Save and continue"
 }) }}
 </form>
 </div></div>

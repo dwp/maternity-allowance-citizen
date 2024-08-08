@@ -19,23 +19,26 @@
       
       
 <section id="decision" class="govuk-!-margin-bottom-6">
-  <h1 class="govuk-heading-l">Claimant details</h1>
+  <h1 class="govuk-heading-l">Confirm employer details</h1>
   
     <table class="govuk-table">
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">
-        Name
+        Employer
       </th>
       <td class="govuk-table__cell">
-        {{ data['first-name'] }}  {{ data['last-name'] }}
+         Asda
         </td>
+      <!--<td class="govuk-table__cell">   <a class="govuk-link" href="#">
+        Change<span class="govuk-visually-hidden"> name</span>
+      </a></td>-->
     </tr>
 
       <th scope="row" class="govuk-table__header">
-        National Insurance number
+        Employment start date
       </th>
       <td class="govuk-table__cell">
-        {{ data['nino'] }}
+        12 July 2022
       </td>
       <td class="govuk-table__cell">  <!-- <a class="govuk-link" href="#">
         Change<span class="govuk-visually-hidden"> name</span>
@@ -44,10 +47,10 @@
 
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">
-        Date of birth
+       Employment end date
       </th>
       <td class="govuk-table__cell">
-        15 September 1996
+       Ongoing
       </td>
       <td class="govuk-table__cell">  <!-- <a class="govuk-link" href="#">
         Change<span class="govuk-visually-hidden"> name</span>
@@ -55,43 +58,19 @@
     </td>
     </tr> 
 
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">
-        Address
-      </th>
-      <td class="govuk-table__cell">
-        34 Fairburn Way,<br>Chelsea,<br>London,<br>SW7 3CP
-      </td>
-      <td class="govuk-table__cell">  <!-- <a class="govuk-link" href="#">
-        Change<span class="govuk-visually-hidden"> name</span>
-      </a>-->
-    </td>
-    </tr>
-
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">
-        UK telephone number
-      </th>
-      <td class="govuk-table__cell">
-       0789546510
-      </td>
-      <td class="govuk-table__cell">  <!-- <a class="govuk-link" href="#">
-        Change<span class="govuk-visually-hidden"> name</span>
-      </a>-->
-    </td>
-    </tr> 
 
 
 </tbody>
 </table>
 
   
-<form class="form" method="post" novalidate>
+<form class="form" action="/confirm-employment-answer" method="post" novalidate>
 
   {% from "govuk/components/radios/macro.njk" import govukRadios %}
   {{ govukRadios({
     classes: "govuk-radios--inline",
-    name: "claimant-confirm",
+    name: "confirmEmployment",
+    value: data['confirmEmploymentAnswer'],
     fieldset: {
       legend: {
         text: "Are these the correct details?",
@@ -109,12 +88,6 @@
       }
     ]
   }) }}
-
-  </form>
-
-  </section>
-
-  <form class="form" method="post" novalidate>
 
 
 
