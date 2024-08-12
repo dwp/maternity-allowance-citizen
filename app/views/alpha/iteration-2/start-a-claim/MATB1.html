@@ -14,55 +14,35 @@
 
 {% block content %}
 
-{%- from "govuk/components/file-upload/macro.njk" import govukFileUpload -%}
-{%- from "govuk/components/button/macro.njk" import govukButton -%}
-{%- from "govuk/components/error-summary/macro.njk" import govukErrorSummary -%}
-{%- from "moj/components/multi-file-upload/macro.njk" import mojMultiFileUpload -%}
-
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-three-quarters">
+<form class="form" method="post" novalidate>
 
-    {% if errorSummary.items.length %}
-      {{ govukErrorSummary({
-        titleText: 'There is a problem',
-        errorList: errorSummary.items
-      }) }}
-    {% endif %}
+  {% from "govuk/components/input/macro.njk" import govukInput %}
 
-    <h1 class="govuk-heading-xl">Upload files</h1>
+  <h1 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Upload your Maternity Certificate (MAT B1) form
+  </h1>
 
-    <form action="/components/multi-file-upload/examples/default" method="post" enctype="multipart/form-data">
-      {% set uploadHtml %}
-        {{ govukFileUpload({
-          id: "documents",
-          name: "documents",
-          classes: 'moj-multi-file-upload__input',
-          label: {
-            text: "Upload a file",
-            classes: 'govuk-label--m'
-          },
-          attributes: { multiple: '' },
-          errorMessage: errorMessage
-        }) }}
+  {{ govukFileUpload({
+    id: "file-upload-1",
+    name: "fileUpload1",
+    label: {
+      text: "Upload a file"
+    },
+    hint: {
+      text: "Proof of pregnancy will usually be a Maternity Certificate (MAT B1). You can also upload proof from a foreign medical official"
+    }
+  }) }}
 
-        {{govukButton({
-          text: 'Upload file',
-          classes: 'govuk-button--secondary moj-multi-file-upload__button'
-        })}}
-      {% endset %}
+  
 
-      {{ mojMultiFileUpload({
-        uploadedFiles: {
-          heading: { text: 'Files added' },
-          items: uploadedFiles
-        },
-        uploadHtml: uploadHtml
-      }) }}
 
-      {{govukButton({
-        text: 'Continue'
-      })}}
-    </form>
-  </div>
-</div>
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Save and continue"
+}) }}
+</form>
+</div></div>
 {% endblock %}
