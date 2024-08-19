@@ -143,7 +143,7 @@ router.post('/alpha/iteration-2/start-a-claim/baby-born', function (req, res) {
 });
 
 router.post('/alpha/iteration-2/start-a-claim/baby-birth-date', function (req, res) {
-  res.redirect('/alpha/iteration-2/start-a-claim/employment-test-dates');
+  res.redirect('/alpha/iteration-2/start-a-claim/employment-type');
 });
 
 
@@ -152,7 +152,7 @@ router.post('/alpha/iteration-2/start-a-claim/employment-test-dates', function (
 });
 
 router.post('/alpha/iteration-2/start-a-claim/employment-type', function (req, res) {
-  res.redirect('/alpha/iteration-2/start-a-claim/employer-name');
+  res.redirect('/alpha/iteration-2/start-a-claim/employment-playback');
 });
 
 router.post('/alpha/iteration-2/start-a-claim/employer-name', function (req, res) {
@@ -274,21 +274,21 @@ router.post('/etd-answer', function(request, response) {
   }
 })
 
-router.post('/employment-type-answer', function(request, response) {
+//router.post('/employment-type-answer', function(request, response) {
 
-  var employmentTypeAnswer = request.session.data['employmentType']
-  if (employmentTypeAnswer == "employed"){
-      response.redirect("/alpha/iteration-2/start-a-claim/employment-playback")
-  } else if (employmentTypeAnswer == "selfEmployed"){
-    response.redirect("/alpha/iteration-2/start-a-claim/test2")
-} 
-else if (employmentTypeAnswer == "agency"){
-  response.redirect("/alpha/iteration-2/start-a-claim/test3")
-} 
-else {
-  response.redirect("/alpha/iteration-2/start-a-claim/test4")
-}
-})
+//  var employmentTypeAnswer = request.session.data['employmentType']
+ // if (employmentTypeAnswer == "employed"){
+ //     response.redirect("/alpha/iteration-2/start-a-claim/employment-playback")
+ // } else if (employmentTypeAnswer == "selfEmployed"){
+  //  response.redirect("/alpha/iteration-2/start-a-claim/test2")
+//} 
+//else if (employmentTypeAnswer == "agency"){
+ // response.redirect("/alpha/iteration-2/start-a-claim/test3")
+//} 
+//else {
+// response.redirect("/alpha/iteration-2/start-a-claim/test4")
+//}
+//})
 
 router.post('/confirm-employment-answer', function(request, response) {
 
