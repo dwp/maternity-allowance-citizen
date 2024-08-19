@@ -21,17 +21,17 @@
   {% from "govuk/components/input/macro.njk" import govukInput %}
 
   <h1 class="govuk-heading-l govuk-!-margin-bottom-3">
-    Upload your Maternity Certificate (MAT B1) form
+    Upload your proof of pregnancy
   </h1>
+  <div id="passport-issued-hint" class="govuk-hint">
+    Proof of pregnancy will usually be a Maternity Certificate (MAT B1). You can also upload proof from a foreign medical official.
+  </div>
 
   {{ govukFileUpload({
     id: "file-upload-1",
     name: "fileUpload1",
     label: {
       text: "Upload a file"
-    },
-    hint: {
-      text: "Proof of pregnancy will usually be a Maternity Certificate (MAT B1). You can also upload proof from a foreign medical official"
     }
   }) }}
 
