@@ -16,36 +16,45 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
-    <form class="form" action="/employment-type-answer" method="post">
+    <form class="form" method="post">
 
   {% from "govuk/components/input/macro.njk" import govukInput %}
 
-  {{ govukRadios({
-    name: "employmentType",
-    value: data['employmentTypeAnswer'],
+  {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+  {{ govukCheckboxes({
+    name: "countries",
     fieldset: {
       legend: {
-        text: "What type of employment have you had?",
+        text: "Which type of employment did you have between [test period start date] and  [test period end date]?",
         isPageHeading: true,
         classes: "govuk-fieldset__legend--l"
       }
     },
+    hint: {
+      text: "You can select more than one type of employment."
+    },
     items: [
       {
         value: "employed",
-        text: "Employed"
+        text: "Employed (this includes agency or zero-hour contract work)"
       },
       {
-        value: "selfEmployed",
+        value: "self",
         text: "Self employed"
       },
       {
-        value: "agency",
-        text: "Agency work"
+        value: "partner",
+        text: "Unpaid work for partner's business
+        "
       },
       {
-        value: "partner",
-        text: "Unpaid work for partner's business"
+        divider: "or"
+      },
+      {
+        value: "none",
+        text: "None",
+        behaviour: "exclusive"
       }
     ]
   }) }}
