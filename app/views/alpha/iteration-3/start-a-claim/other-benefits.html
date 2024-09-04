@@ -16,32 +16,32 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
-    <form class="form" action="/sick-reason" method="post">
+<form class="form" action="/i3-other-benefits" method="post" novalidate>
 
   {% from "govuk/components/input/macro.njk" import govukInput %}
 
   {{ govukRadios({
-    name: "app/views/alpha/iteration-2/start-a-claim/sick-start.html",
-    value: data['sickReasonAnswer'],
+    name: "i3otherBenefits",
+    value: data['i3otherBenefitsAnswer'],
     fieldset: {
       legend: {
-        text: "Do you get Statutory Sick Pay or Employment and Support Allowance?",
+        text: "Are you or your partner getting any other DWP benefits or entitlements?",
         isPageHeading: true,
         classes: "govuk-fieldset__legend--l"
       }
     },
+    
+  hint: {
+    text: "For example, Carer's Allowance or Universal Credit. Do not include Child Benefit."
+  },
     items: [
       {
-        value: "SSP",
-        text: "Statutory Sick Pay"
+        value: "yes",
+        text: "Yes"
       },
       {
-        value: "ESA",
-        text: "Employment Support Allowance"
-      },
-      {
-        value: "none",
-        text: "None"
+        value: "no",
+        text: "No"
       }
     ]
   }) }}

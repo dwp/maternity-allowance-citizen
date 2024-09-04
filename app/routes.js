@@ -10,3 +10,4 @@ const router = govukPrototypeKit.requests.setupRouter()
 
 require('./routes/alpha/iteration-1')(router)
 require('./routes/alpha/iteration-2')(router)
+require('./routes/alpha/iteration-3')(router)
