@@ -16,32 +16,36 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
-    <form class="form" action="/sick-reason" method="post">
+    <form class="form" action="/i3-stop-work-reason" method="post">
 
   {% from "govuk/components/input/macro.njk" import govukInput %}
 
   {{ govukRadios({
-    name: "app/views/alpha/iteration-2/start-a-claim/sick-start.html",
-    value: data['sickReasonAnswer'],
+    name: "i3stopWorkReason",
+    value: data['i3stopWorkReasonAnswer'],
     fieldset: {
       legend: {
-        text: "Do you get Statutory Sick Pay or Employment and Support Allowance?",
+        text: "Why did you stop work?",
         isPageHeading: true,
         classes: "govuk-fieldset__legend--l"
       }
     },
     items: [
       {
-        value: "SSP",
-        text: "Statutory Sick Pay"
+        value: "maternity",
+        text: "Maternity leave"
       },
       {
-        value: "ESA",
-        text: "Employment Support Allowance"
+        value: "sick",
+        text: "Sick leave"
       },
       {
-        value: "none",
-        text: "None"
+        value: "ended",
+        text: "Ended work"
+      },
+      {
+        value: "unrelated",
+        text: "Non-pregnancy related absence (for example, compassionate leave)"
       }
     ]
   }) }}
