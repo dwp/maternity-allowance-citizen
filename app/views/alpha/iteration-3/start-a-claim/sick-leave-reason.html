@@ -16,13 +16,13 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
-    <form class="form" action="/sick-reason" method="post">
+    <form class="form" action="/i3-sick-reason" method="post">
 
   {% from "govuk/components/input/macro.njk" import govukInput %}
 
   {{ govukRadios({
-    name: "app/views/alpha/iteration-2/start-a-claim/sick-start.html",
-    value: data['sickReasonAnswer'],
+    name: "i3sickReason",
+    value: data['i3sickReasonAnswer'],
     fieldset: {
       legend: {
         text: "Do you get Statutory Sick Pay or Employment and Support Allowance?",

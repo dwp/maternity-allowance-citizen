@@ -16,32 +16,30 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
-    <form class="form" action="/sick-reason" method="post">
+    <form class="form" method="post">
+
 
   {% from "govuk/components/input/macro.njk" import govukInput %}
 
   {{ govukRadios({
-    name: "app/views/alpha/iteration-2/start-a-claim/sick-start.html",
-    value: data['sickReasonAnswer'],
+    classes: "govuk-radios--inline",
+    name: "babyBorn",
+    value: data['babyBornAnswer'],
     fieldset: {
       legend: {
-        text: "Do you get Statutory Sick Pay or Employment and Support Allowance?",
+        text: "Has your baby been born?",
         isPageHeading: true,
         classes: "govuk-fieldset__legend--l"
       }
     },
     items: [
       {
-        value: "SSP",
-        text: "Statutory Sick Pay"
+        value: "yes",
+        text: "Yes"
       },
       {
-        value: "ESA",
-        text: "Employment Support Allowance"
-      },
-      {
-        value: "none",
-        text: "None"
+        value: "no",
+        text: "No"
       }
     ]
   }) }}

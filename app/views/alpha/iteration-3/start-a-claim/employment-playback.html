@@ -24,50 +24,75 @@
     Based on your earnings, we believe you may be able to get the standard rate of Maternity Allowance.
   </div>
   
+
+  <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+            Employment history
+          </span>
+        </h2>
+      </div>
+      <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+        
+
+  
     <table class="govuk-table">
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">
-        Employer
-      </th>
-      <td class="govuk-table__cell">
-         Argos
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">
+          Employer
+        </th>
+        <td class="govuk-table__cell">
+           Argos
+          </td>
+        <!--<td class="govuk-table__cell">   <a class="govuk-link" href="#">
+          Change<span class="govuk-visually-hidden"> name</span>
+        </a></td>-->
+      </tr>
+  
+        <th scope="row" class="govuk-table__header">
+          Employment start date
+        </th>
+        <td class="govuk-table__cell">
+          12 July 2022
         </td>
-      <!--<td class="govuk-table__cell">   <a class="govuk-link" href="#">
-        Change<span class="govuk-visually-hidden"> name</span>
-      </a></td>-->
-    </tr>
-
-      <th scope="row" class="govuk-table__header">
-        Employment start date
-      </th>
-      <td class="govuk-table__cell">
-        12 July 2022
+        <td class="govuk-table__cell">  <!-- <a class="govuk-link" href="#">
+          Change<span class="govuk-visually-hidden"> name</span>
+        </a>--></td>
+      
+  
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">
+         Employment end date
+        </th>
+        <td class="govuk-table__cell">
+         Ongoing
+        </td>
+        <td class="govuk-table__cell">  <!-- <a class="govuk-link" href="#">
+          Change<span class="govuk-visually-hidden"> name</span>
+        </a>-->
       </td>
-      <td class="govuk-table__cell">  <!-- <a class="govuk-link" href="#">
-        Change<span class="govuk-visually-hidden"> name</span>
-      </a>--></td>
-    
+      </tr> 
+  
+  
+  
+  </tbody>
+  </table>
+      </div>
+    </div>
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+            Highest earning weeks
+          </span>
+        </h2>
+      </div>
+      <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+        <p class="govuk-body">More info on HEWs and instruction to check to make sure it's correct</p>
 
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">
-       Employment end date
-      </th>
-      <td class="govuk-table__cell">
-       Ongoing
-      </td>
-      <td class="govuk-table__cell">  <!-- <a class="govuk-link" href="#">
-        Change<span class="govuk-visually-hidden"> name</span>
-      </a>-->
-    </td>
-    </tr> 
 
-
-
-</tbody>
-</table>
-
-<h2 class="govuk-heading-m">Your highest earning weeks</h2>
-<p class="govuk-body">More info on HEWs and instruction to check to make sure it's correct</p>
 <table class="govuk-table">
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
@@ -145,8 +170,20 @@
   </tbody>
 </table>
 
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+
   
-<form class="form" action="/confirm-employment-answer" method="post" novalidate>
+<form class="form" method="post" novalidate>
 
   {% from "govuk/components/radios/macro.njk" import govukRadios %}
   {{ govukRadios({

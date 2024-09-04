@@ -16,32 +16,45 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
-    <form class="form" action="/sick-reason" method="post">
+    <form class="form" method="post">
 
   {% from "govuk/components/input/macro.njk" import govukInput %}
 
-  {{ govukRadios({
-    name: "app/views/alpha/iteration-2/start-a-claim/sick-start.html",
-    value: data['sickReasonAnswer'],
+  {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+  {{ govukCheckboxes({
+    name: "countries",
     fieldset: {
       legend: {
-        text: "Do you get Statutory Sick Pay or Employment and Support Allowance?",
+        text: "Which type of employment did you have between [test period start date] and  [test period end date]?",
         isPageHeading: true,
         classes: "govuk-fieldset__legend--l"
       }
     },
+    hint: {
+      text: "You can select more than one type of employment."
+    },
     items: [
       {
-        value: "SSP",
-        text: "Statutory Sick Pay"
+        value: "employed",
+        text: "Employed (this includes agency, zero-hour contracts and PAYE work)"
       },
       {
-        value: "ESA",
-        text: "Employment Support Allowance"
+        value: "self",
+        text: "Self employed"
+      },
+      {
+        value: "partner",
+        text: "Unpaid work for partner's business
+        "
+      },
+      {
+        divider: "or"
       },
       {
         value: "none",
-        text: "None"
+        text: "None",
+        behaviour: "exclusive"
       }
     ]
   }) }}
