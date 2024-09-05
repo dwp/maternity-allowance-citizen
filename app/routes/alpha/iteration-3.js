@@ -127,7 +127,7 @@ router.post('/alpha/iteration-3/start-a-claim/previous-address', function (req, 
 });
 
 router.post('/alpha/iteration-3/start-a-claim/MATB1', function (req, res) {
-  res.redirect('/alpha/iteration-3/start-a-claim/SMP1');
+  res.redirect('/alpha/iteration-3/start-a-claim/employment-type');
 });
 
 router.post('/alpha/iteration-3/start-a-claim/SMP1', function (req, res) {
