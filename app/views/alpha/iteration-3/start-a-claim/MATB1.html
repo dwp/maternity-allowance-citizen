@@ -44,11 +44,42 @@
   
 
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
 
-{{ govukButton({
-  text: "Save and continue"
-}) }}
+
+  <form class="form" method="post" novalidate>
+
+    {% from "govuk/components/radios/macro.njk" import govukRadios %}
+    {{ govukRadios({
+      classes: "govuk-radios--inline",
+      name: "confirmEmployment",
+      value: data['confirmEmploymentAnswer'],
+      fieldset: {
+        legend: {
+          text: "Has part A and part B of the MAT B1 form been filled in?",
+          classes: "govuk-fieldset__legend--m"
+        }
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Yes"
+        },
+        {
+          value: "no",
+          text: "No"
+        }
+      ]
+    }) }}
+  
+  
+  
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+  
+      {{ govukButton({
+        text: "Save and continue"
+      }) }}
+  
+      </form>
 </form>
 </div></div>
 {% endblock %}
