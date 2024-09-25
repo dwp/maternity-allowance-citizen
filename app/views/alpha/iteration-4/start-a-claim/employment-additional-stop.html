@@ -21,20 +21,21 @@
   {% from "govuk/components/input/macro.njk" import govukInput %}
 
   <h1 class="govuk-heading-l govuk-!-margin-bottom-3">
-    Upload your proof of pregnancy
+    When did you stop working at [employer]?
   </h1>
-  <div id="passport-issued-hint" class="govuk-hint">
-    Proof of pregnancy will usually be a Maternity Certificate (MAT B1). You can also upload proof from a foreign medical official.
-  </div>
-  <div id="passport-issued-hint" class="govuk-hint">
-    Accepted file types are jpg, pdf and png.
-  </div>
 
-  {{ govukFileUpload({
-    id: "file-upload-1",
-    name: "fileUpload1",
-    label: {
-      text: "Upload a file"
+
+  {{ govukDateInput({
+    id: "passport-issued",
+    namePrefix: "passport-issued",
+    fieldset: {
+      legend: {
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+      }
+    },
+    hint: {
+      text: "For example, 27 3 2007"
     }
   }) }}
 
