@@ -21,20 +21,24 @@
   {% from "govuk/components/input/macro.njk" import govukInput %}
 
   <h1 class="govuk-heading-l govuk-!-margin-bottom-3">
-    Upload your proof of pregnancy
+    Upload your SMP1 form for [EmployerName]
   </h1>
-  <div id="passport-issued-hint" class="govuk-hint">
-    Proof of pregnancy will usually be a Maternity Certificate (MAT B1). You can also upload proof from a foreign medical official.
+  <div id="passport-issued-body" class="govuk-body">
+    Our records show that you were employed by [employername] between [date] and [date]. You must upload an SMP1 form for each employer you had in this period.
+
   </div>
-  <div id="passport-issued-hint" class="govuk-hint">
-    Accepted file types are jpg, pdf and png.
+
+  <div id="passport-issued-body" class="govuk-body">
+   SMP1 forms must be dated from [date]
+
   </div>
+
 
   {{ govukFileUpload({
     id: "file-upload-1",
     name: "fileUpload1",
     label: {
-      text: "Upload a file"
+      text: "Upload a file or photo. Accepted file types are jpg, pdf and png."
     }
   }) }}
 

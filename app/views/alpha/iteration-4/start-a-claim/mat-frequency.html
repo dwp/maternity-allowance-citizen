@@ -20,22 +20,25 @@
 
   {% from "govuk/components/input/macro.njk" import govukInput %}
 
-  <h1 class="govuk-heading-l govuk-!-margin-bottom-3">
-    Upload your proof of pregnancy
-  </h1>
-  <div id="passport-issued-hint" class="govuk-hint">
-    Proof of pregnancy will usually be a Maternity Certificate (MAT B1). You can also upload proof from a foreign medical official.
-  </div>
-  <div id="passport-issued-hint" class="govuk-hint">
-    Accepted file types are jpg, pdf and png.
-  </div>
-
-  {{ govukFileUpload({
-    id: "file-upload-1",
-    name: "fileUpload1",
-    label: {
-      text: "Upload a file"
-    }
+  {{ govukRadios({
+    name: "stopWork",
+    fieldset: {
+      legend: {
+        text: "How often would you like to get Maternity Allowance?",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+      }
+    },
+    items: [
+      {
+        value: "yes",
+        text: "Every 2 weeks"
+      },
+      {
+        value: "no",
+        text: "Every 4 weeks"
+      }
+    ]
   }) }}
 
   
