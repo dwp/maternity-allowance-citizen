@@ -1,0 +1,224 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+      
+      
+<section id="decision" class="govuk-!-margin-bottom-6">
+  <h1 class="govuk-heading-l">Maternity Allowance award</h1>
+  <div id="passport-issued-hint" class="govuk-hint">
+    Based on your earnings, we believe you may be able to get the standard rate of Maternity Allowance.
+  </div>
+  
+
+  <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+            Employment history
+          </span>
+        </h2>
+      </div>
+      <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+        
+
+  
+    <table class="govuk-table">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">
+          Employer
+        </th>
+        <td class="govuk-table__cell">
+           Argos
+          </td>
+        <!--<td class="govuk-table__cell">   <a class="govuk-link" href="#">
+          Change<span class="govuk-visually-hidden"> name</span>
+        </a></td>-->
+      </tr>
+  
+        <th scope="row" class="govuk-table__header">
+          Employment start date
+        </th>
+        <td class="govuk-table__cell">
+          12 July 2022
+        </td>
+        <td class="govuk-table__cell">  <!-- <a class="govuk-link" href="#">
+          Change<span class="govuk-visually-hidden"> name</span>
+        </a>--></td>
+      
+  
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">
+         Employment end date
+        </th>
+        <td class="govuk-table__cell">
+         Ongoing
+        </td>
+        <td class="govuk-table__cell">  <!-- <a class="govuk-link" href="#">
+          Change<span class="govuk-visually-hidden"> name</span>
+        </a>-->
+      </td>
+      </tr> 
+  
+  
+  
+  </tbody>
+  </table>
+      </div>
+    </div>
+    <div class="govuk-accordion__section">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+            Highest earning weeks
+          </span>
+        </h2>
+      </div>
+      <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+       <!-- <p class="govuk-body">More info on HEWs and instruction to check to make sure it's correct</p>-->
+
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Date</th>
+      <th scope="col" class="govuk-table__header">Employer</th>
+      <th scope="col" class="govuk-table__header">Amount</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">29 January 2023</th>
+      <td class="govuk-table__cell">Argos</td>
+      <td class="govuk-table__cell">£250.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">5 February 2023</th>
+      <td class="govuk-table__cell">Argos</td>
+      <td class="govuk-table__cell">£250.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">12 February 2023</th>
+      <td class="govuk-table__cell">Argos</td>
+      <td class="govuk-table__cell">£250.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">19 February 2023</th>
+      <td class="govuk-table__cell">Argos</td>
+      <td class="govuk-table__cell">£250.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">26 February 2023</th>
+      <td class="govuk-table__cell">Argos</td>
+      <td class="govuk-table__cell">£250.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">5 March 2023</th>
+      <td class="govuk-table__cell">Argos</td>
+      <td class="govuk-table__cell">£250.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">12 March 2023</th>
+      <td class="govuk-table__cell">Argos</td>
+      <td class="govuk-table__cell">£250.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">19 March 2023</th>
+      <td class="govuk-table__cell">Argos</td>
+      <td class="govuk-table__cell">£250.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">26 March 2023</th>
+      <td class="govuk-table__cell">Argos</td>
+      <td class="govuk-table__cell">£250.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">2 April 2023</th>
+      <td class="govuk-table__cell">Argos</td>
+      <td class="govuk-table__cell">£250.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">9 April 2023</th>
+      <td class="govuk-table__cell">Argos</td>
+      <td class="govuk-table__cell">£250.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">16 April 2023</th>
+      <td class="govuk-table__cell">Argos</td>
+      <td class="govuk-table__cell">£250.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">23 April 2023</th>
+      <td class="govuk-table__cell">Argos</td>
+      <td class="govuk-table__cell">£250.00</td>
+    </tr>
+  </tbody>
+</table>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+
+  
+<form class="form" method="post" novalidate>
+
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+  {{ govukRadios({
+    classes: "govuk-radios--inline",
+    name: "confirmEmployment",
+    value: data['confirmEmploymentAnswer'],
+    fieldset: {
+      legend: {
+        text: "Are these the correct details?",
+        classes: "govuk-fieldset__legend--m"
+      }
+    },
+    items: [
+      {
+        value: "yes",
+        text: "Yes"
+      },
+      {
+        value: "no",
+        text: "No"
+      }
+    ]
+  }) }}
+
+
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    {{ govukButton({
+      text: "Save and continue"
+    }) }}
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

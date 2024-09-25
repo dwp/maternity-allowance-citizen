@@ -1,0 +1,100 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+      
+      
+<section id="decision" class="govuk-!-margin-bottom-6">
+  <h1 class="govuk-heading-l">Additional employer details</h1>
+  <!--<div id="passport-issued-hint" class="govuk-hint">
+    This is the employment information we have from HM Revenue & Customs for your Test Period. You can change it if it is incorrect.
+  </div>-->
+  
+    <table class="govuk-table">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">
+        Employer name
+      </th>
+      <td class="govuk-table__cell">
+         Asda
+        </td>
+        <td class="govuk-table__cell">  <a class="govuk-link" href="../start-a-claim/employer-additional-name.html">
+          Change<span class="govuk-visually-hidden"> name</span>
+        </a>
+      </td>
+    </tr>
+
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">
+        Employment start date
+      </th>
+      <td class="govuk-table__cell">
+        28 March 2022
+      </td>
+      <td class="govuk-table__cell">   <a class="govuk-link" href="../start-a-claim/employment-additional-date.html">
+        Change<span class="govuk-visually-hidden"> name</span>
+      </a></td>
+      </tr>
+    
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">
+       Still working at [employer]?
+      </th>
+      <td class="govuk-table__cell">
+      No
+      </td>
+      <td class="govuk-table__cell">  <a class="govuk-link" href="../start-a-claim/employment-additional-ongoing.html">
+        Change<span class="govuk-visually-hidden"> name</span>
+      </a>
+    </td>
+    </tr> 
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">
+       Employment end date
+      </th>
+      <td class="govuk-table__cell">
+       30 September 2022
+      </td>
+      <td class="govuk-table__cell">  <a class="govuk-link" href="../start-a-claim/employment-additional-stop.html">
+        Change<span class="govuk-visually-hidden"> name</span>
+      </a>
+    </td>
+    </tr> 
+
+
+
+</tbody>
+</table>
+
+
+<form class="form" method="post" novalidate>
+
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    {{ govukButton({
+      text: "Save and continue"
+    }) }}
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
