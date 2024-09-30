@@ -130,9 +130,6 @@ router.post('/alpha/iteration-4/start-a-claim/MATB1', function (req, res) {
   res.redirect('/alpha/iteration-4/start-a-claim/employment-type');
 });
 
-router.post('/alpha/iteration-4/start-a-claim/SMP1', function (req, res) {
-  res.redirect('/alpha/iteration-4/start-a-claim/employer-stop');
-});
 
 router.post('/alpha/iteration-4/start-a-claim/baby-due', function (req, res) {
   res.redirect('/alpha/iteration-4/start-a-claim/baby-born');
@@ -152,6 +149,10 @@ router.post('/alpha/iteration-4/start-a-claim/baby-birth-date', function (req, r
 
 router.post('/alpha/iteration-4/start-a-claim/payslip-summary', function (req, res) {
   res.redirect('/alpha/iteration-4/start-a-claim/earnings-history-additional');
+});
+
+router.post('/alpha/iteration-4/start-a-claim/payslip-select-employer', function (req, res) {
+  res.redirect('/alpha/iteration-4/start-a-claim/payslip-date');
 });
 
 router.post('/alpha/iteration-4/start-a-claim/payslip-delete', function (req, res) {
@@ -174,6 +175,17 @@ router.post('/alpha/iteration-4/start-a-claim/payslip-upload', function (req, re
   res.redirect('/alpha/iteration-4/start-a-claim/payslip-summary');
 });
 
+router.post('/alpha/iteration-4/start-a-claim/earnings-history-additional', function (req, res) {
+  res.redirect('/alpha/iteration-4/start-a-claim/SMP1');
+});
+
+router.post('/alpha/iteration-4/start-a-claim/SMP1', function (req, res) {
+  res.redirect('/alpha/iteration-4/start-a-claim/SMP12');
+});
+
+router.post('/alpha/iteration-4/start-a-claim/SMP12', function (req, res) {
+  res.redirect('/alpha/iteration-4/start-a-claim/employer-stop');
+});
 
 router.post('/alpha/iteration-4/start-a-claim/employment-test-dates', function (req, res) {
   res.redirect('/alpha/iteration-4/start-a-claim/employment-type');
