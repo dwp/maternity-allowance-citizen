@@ -16,24 +16,32 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
-<form class="form" method="post" novalidate>
+    <form class="form" method="post">
+
 
   {% from "govuk/components/input/macro.njk" import govukInput %}
 
-
-  {{ govukDateInput({
-    id: "passport-issued",
-    namePrefix: "passport-issued",
+  {{ govukRadios({
+    classes: "govuk-radios--inline",
+    name: "employmentOngoingAnswer",
+    value: data['employmentStop'],
     fieldset: {
       legend: {
-        text: "When was your first day of employment with Asda?",
+        text: "Which employer needs a new payslip?",
         isPageHeading: true,
         classes: "govuk-fieldset__legend--l"
       }
     },
-    hint: {
-      text: "For example, 27 3 2007"
-    }
+    items: [
+      {
+        value: "yes",
+        text: "Argos"
+      },
+      {
+        value: "no",
+        text: "Asda"
+      }
+    ]
   }) }}
 
   
