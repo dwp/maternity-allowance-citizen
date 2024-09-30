@@ -50,7 +50,7 @@
 
     {% from "govuk/components/radios/macro.njk" import govukRadios %}
     {{ govukRadios({
-      classes: "govuk-radios--inline",
+      classes: "",
       name: "confirmEmployment",
       value: data['confirmEmploymentAnswer'],
       fieldset: {
@@ -61,12 +61,16 @@
       },
       items: [
         {
-          value: "yes",
-          text: "Yes"
+          value: "pA",
+          text: "Part A"
         },
         {
-          value: "no",
-          text: "No"
+          value: "pB",
+          text: "Part B"
+        },
+        {
+          value: "both",
+          text: "Both Part A and Part B"
         }
       ]
     }) }}

@@ -21,21 +21,24 @@
   {% from "govuk/components/input/macro.njk" import govukInput %}
 
   <h1 class="govuk-heading-l govuk-!-margin-bottom-3">
-    When did you stop working at Asda?
+    Upload your SMP1 form for Asda
   </h1>
+  <div id="passport-issued-body" class="govuk-body">
+    Our records show that you were employed by Asda between 28 March 2022 and 30 September 2022. You must upload an SMP1 form for each employer you had in this period.
+
+  </div>
+
+  <div id="passport-issued-body" class="govuk-body">
+   SMP1 forms must be dated from 31 March 2022
+
+  </div>
 
 
-  {{ govukDateInput({
-    id: "passport-issued",
-    namePrefix: "passport-issued",
-    fieldset: {
-      legend: {
-        isPageHeading: true,
-        classes: "govuk-fieldset__legend--l"
-      }
-    },
-    hint: {
-      text: "For example, 27 3 2007"
+  {{ govukFileUpload({
+    id: "file-upload-1",
+    name: "fileUpload1",
+    label: {
+      text: "Upload a file or photo. Accepted file types are jpg, pdf and png."
     }
   }) }}
 
