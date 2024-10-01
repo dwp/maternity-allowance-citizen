@@ -438,13 +438,13 @@ else {
 }
 })
 
-router.post('/i3-sick-reason', function(request, response) {
+router.post('/i4-sick-reason', function(request, response) {
 
-  var i3sickReasonAnswer = request.session.data['i3sickReason']
-  if (i3sickReasonAnswer == "SSP"){
+  var i4sickReasonAnswer = request.session.data['i4sickReason']
+  if (i4sickReasonAnswer == "SSP"){
       response.redirect("/alpha/iteration-4/start-a-claim/sick-end")
 
-  } else if (i3sickReasonAnswer == "ESA"){
+  } else if (i4sickReasonAnswer == "ESA"){
     response.redirect("/alpha/iteration-4/start-a-claim/sick-start")
 
 } 
