@@ -1,0 +1,563 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+      {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+      
+      
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds-from-desktop">
+      
+            <h1 class="govuk-heading-l">Check your answers before sending your application</h1>
+      
+            <h2 class="govuk-heading-m">Baby details</h2>
+      
+            {{ govukSummaryList({
+              classes: "govuk-!-margin-bottom-9",
+              rows: [
+                {
+                  key: {
+                    text: "Baby due date"
+                  },
+                  value: {
+                    text: "17 October 2024"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "name"
+                      }
+                    ]
+                  }
+                },
+                {
+                  key: {
+                    text: "Baby born"
+                  },
+                  value: {
+                    text: "Yes"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "date of birth"
+                      }
+                    ]
+                  }
+                },
+                {
+                  key: {
+                    text: "Baby birth date"
+                  },
+                  value: {
+                    text: "17 October 2024"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "customer reference"
+                      }
+                    ]
+                  }
+                },
+                {
+                  key: {
+                    text: "Proof of pregnancy"
+                  },
+                  value: {
+                    html: "Maternity Certificate (MAT)"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "address"
+                      }
+                    ]
+                  }
+                },
+                {
+                  key: {
+                    text: "MAT B1 provided?"
+                  },
+                  value: {
+                    html: "Yes"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "address"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }) }}
+      
+            <h2 class="govuk-heading-m">Employment details</h2>
+      
+            {{ govukSummaryList({
+              classes: "govuk-!-margin-bottom-9",
+              rows: [
+                {
+                  key: {
+                    text: "Employment type during Test Period"
+                  },
+                  value: {
+                    text: "Employed"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "previous application number"
+                      }
+                    ]
+                  }
+                },
+                {
+                  key: {
+                    text: "Employer"
+                  },
+                  value: {
+                    text: "Argos"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "",
+                        visuallyHiddenText: "licence type"
+                      }
+                    ]
+                  }
+                },
+                {
+                  key: {
+                    text: "Employment start date"
+                  },
+                  value: {
+                    html: "12 January 2022"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "home address"
+                      }
+                    ]
+                  }
+                },
+                {
+                  key: {
+                    text: "Employment end date"
+                  },
+                  value: {
+                    text: "Ongoing"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "licence period"
+                      }
+                    ]
+                  }
+                },
+                {
+                  key: {
+                    text: "Have you stopped work"
+                  },
+                  value: {
+                    text: "Yes"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "licence period"
+                      }
+                    ]
+                  }
+                },
+                {
+                  key: {
+                    text: "Reason for stopping work"
+                  },
+                  value: {
+                    text: "Maternity leave"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "licence period"
+                      }
+                    ]
+                  }
+                },
+                {
+                  key: {
+                    text: "Request Maternity Allowance Period start date"
+                  },
+                  value: {
+                    text: "12 November 2024"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "licence period"
+                      }
+                    ]
+                  }
+                },
+                {
+                  key: {
+                    text: "Requested Maternity Allowance frequency"
+                  },
+                  value: {
+                    text: "Every 4 weeks"
+                  },
+                  actions: {
+                    items: [
+                      {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "licence period"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }) }}
+
+            <h2 class="govuk-heading-m">Earnings details</h2>
+      
+            
+      
+<section id="decision" class="govuk-!-margin-bottom-6">
+
+    <table class="govuk-table">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">
+        Date
+      </th>
+      <th class="govuk-table__header">
+         Employer
+        </th>
+      <th class="govuk-table__header">Payslip amount </th>
+    </tr>
+    <tr class="govuk-table__cell">
+     
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">
+       31 May 2024
+      </td>
+      <td class="govuk-table__cell">
+        Argos
+      </td>
+      <td class="govuk-table__cell">£500.00</td>
+    </td>
+    <td class="govuk-table__cell"></td>
+    </tr>
+
+
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">
+       30 June 2024
+      </td>
+      <td class="govuk-table__cell">
+        Argos
+      </td>
+      <td class="govuk-table__cell">£650.00</td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+    <td scope="row" class="govuk-table__cell">
+     31 July 2024
+    </td>
+    <td class="govuk-table__cell">
+      Argos
+    </td>
+    <td class="govuk-table__cell">£340.00</td>
+    <td class="govuk-table__cell"></td>
+  </tr>
+
+  <tr class="govuk-table__row">
+    <td scope="row" class="govuk-table__cell">
+     31 August 2024
+    </td>
+    <td class="govuk-table__cell">
+      Argos
+    </td>
+    <td class="govuk-table__cell">£120.00</td>
+    <td class="govuk-table__cell"></td>
+  </tr>
+  
+  
+  <tr class="govuk-table__row"></tr>
+    <td scope="row" class="govuk-table__cell">
+     30 April 2024
+    </td>
+    <td class="govuk-table__cell">
+      Smith's Bakery
+    </td>
+    <td class="govuk-table__cell">£500.00</td>
+    <td class="govuk-table__cell"><a href="../start-a-claim/payslip-summary.html">Change</a></td>
+  </tr>
+
+
+</tbody>
+</table>
+
+
+<table class="govuk-table">
+
+
+<h2 class="govuk-heading-m">Bank details</h2>
+      
+{{ govukSummaryList({
+  classes: "govuk-!-margin-bottom-9",
+  rows: [
+    {
+      key: {
+        text: "Name on the account"
+      },
+      value: {
+        text: "Jane Doe"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "previous application number"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Sort code"
+      },
+      value: {
+        text: "11-11-11"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "licence type"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Account number"
+      },
+      value: {
+        html: "12345678"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "home address"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Building society roll number"
+      },
+      value: {
+        text: "123456"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "licence period"
+          }
+        ]
+      }
+    }
+
+  ]
+}) }}
+
+<h2 class="govuk-heading-m">Uploaded files</h2>
+      
+{{ govukSummaryList({
+  classes: "govuk-!-margin-bottom-9",
+  rows: [
+    {
+      key: {
+        text: "MAT B1 form"
+      },
+      value: {
+        text: "link to file"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "previous application number"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "SMP1 form"
+      },
+      value: {
+        text: "link to file"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "licence type"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Birth certificate"
+      },
+      value: {
+        html: "link to file"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "home address"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Payslips"
+      },
+      value: {
+        html: "Smith's Bakery<br>12 October 2024"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "licence period"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: ""
+      },
+      value: {
+        html: "Smith's Bakery<br>12 November 2024"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "licence period"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: ""
+      },
+      value: {
+        html: "Smith's Bakery<br>12 December 2024"
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "licence period"
+          }
+        ]
+      }
+    }
+
+  ]
+}) }}
+      
+            <h2 class="govuk-heading-m">Now send your application</h2>
+      
+            <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+      
+            <form action="/form-handler" method="post" novalidate>
+      
+              <input type="hidden" name="answers-checked" value="true">
+      
+              {{ govukButton({
+                text: "Accept and send"
+              }) }}
+      
+            </form>
+      
+          </div>
+        </div>
+
+
+    </div>
+  </div>
+
+{% endblock %}
