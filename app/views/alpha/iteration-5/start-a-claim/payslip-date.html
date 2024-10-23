@@ -21,11 +21,10 @@
   {% from "govuk/components/input/macro.njk" import govukInput %}
 
   <h1 class="govuk-heading-l govuk-!-margin-bottom-3">
-    What is the date 
-    on the payslip?
+    What is the date on the payslip?
   </h1>
 
- <!-- <div id="passport-issued-hint" class="govuk-hint">Use the due date on your maternity certificate (MAT B1) or other proof of  pregnancy.</div>-->
+<div id="passport-issued-hint" class="govuk-hint">Payslip dates must be in your Test Period (2 July 2023 and 5 October 2024).</div>
 
   {{ govukDateInput({
     id: "passport-issued",
@@ -47,7 +46,7 @@
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
-  text: "Save and continue"
+  text: "Continue"
 }) }}
 </form>
 </div></div>
