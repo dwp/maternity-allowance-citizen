@@ -124,6 +124,10 @@ router.post('/alpha/iteration-5/start-a-claim/confirm-details', function (req, r
   res.redirect('/alpha/iteration-5/start-a-claim/baby-due');
 });
 
+router.post('/alpha/iteration-5/start-a-claim/baby-due', function (req, res) {
+  res.redirect('/alpha/iteration-5/start-a-claim/reasonable-adjustment');
+});
+
 router.post('/alpha/iteration-5/start-a-claim/previous-address', function (req, res) {
   res.redirect('/alpha/iteration-5/start-a-claim/MATB1');
 });
@@ -136,11 +140,15 @@ router.post('/alpha/iteration-5/start-a-claim/preferences', function (req, res) 
   res.redirect('/alpha/iteration-5/start-a-claim/reasonable-adjustment');
 });
 
-router.post('/alpha/iteration-5/start-a-claim/reasonable-adjustment', function (req, res) {
-  res.redirect('/alpha/iteration-5/start-a-claim/baby-due');
+router.post('/alpha/iteration-5/start-a-claim/address-preference', function (req, res) {
+  res.redirect('/alpha/iteration-5/start-a-claim/reasonable-adjustment');
 });
 
-router.post('/alpha/iteration-5/start-a-claim/baby-due', function (req, res) {
+router.post('/alpha/iteration-5/start-a-claim/reasonable-adjustment', function (req, res) {
+  res.redirect('/alpha/iteration-5/start-a-claim/baby-due-2');
+});
+
+router.post('/alpha/iteration-5/start-a-claim/baby-due-2', function (req, res) {
   res.redirect('/alpha/iteration-5/start-a-claim/baby-born');
 });
 
@@ -189,7 +197,7 @@ router.post('/alpha/iteration-5/start-a-claim/earnings-history-additional', func
 });
 
 router.post('/alpha/iteration-5/start-a-claim/SMP1', function (req, res) {
-  res.redirect('/alpha/iteration-5/start-a-claim/SMP12');
+  res.redirect('/alpha/iteration-5/start-a-claim/employer-stop');
 });
 
 router.post('/alpha/iteration-5/start-a-claim/SMP12', function (req, res) {

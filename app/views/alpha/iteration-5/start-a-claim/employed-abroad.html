@@ -25,13 +25,13 @@
     value: data['i3employedAbroadAnswer'],
     fieldset: {
       legend: {
-        text: "Did you work abroad during the period between 2 July 2023 and 5 October 2024?",
+        text: "Did you pay National Insurance to a country other than the United Kingdom?",
         isPageHeading: true,
         classes: "govuk-fieldset__legend--l"
       }
     },
   hint: {
-    
+    text:"Only include payments in your Test Period (2 July 2023 to 5 October 2024)"
   },
     items: [
       {
@@ -51,7 +51,7 @@
 {% from "govuk/components/button/macro.njk" import govukButton %}
 
 {{ govukButton({
-  text: "Save and continue"
+  text: "Continue"
 }) }}
 </form>
 </div></div>

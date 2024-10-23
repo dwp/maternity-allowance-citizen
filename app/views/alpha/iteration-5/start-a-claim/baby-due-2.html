@@ -21,8 +21,10 @@
   {% from "govuk/components/input/macro.njk" import govukInput %}
 
   <h1 class="govuk-heading-l govuk-!-margin-bottom-3">
-    When will your sickness benefit end?
+    What is your baby's due date?
   </h1>
+
+  <div id="passport-issued-hint" class="govuk-hint">Use the due date on your maternity certificate (MAT B1) or other proof of  pregnancy.</div>
 
   {{ govukDateInput({
     id: "passport-issued",
