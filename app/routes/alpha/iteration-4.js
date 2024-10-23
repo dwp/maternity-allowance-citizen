@@ -132,7 +132,7 @@ router.post('/alpha/iteration-4/start-a-claim/MATB1', function (req, res) {
 
 
 router.post('/alpha/iteration-4/start-a-claim/baby-due', function (req, res) {
-  res.redirect('/alpha/iteration-4/start-a-claim/baby-born');
+  res.redirect('/alpha/iteration-5/start-a-claim/reasonable-adjustment');
 });
 
 router.post('/alpha/iteration-4/start-a-claim/baby-born', function (req, res) {
