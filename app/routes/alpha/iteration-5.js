@@ -121,7 +121,7 @@ router.post('/alpha/iteration-5/start-a-claim/dob', function (req, res) {
 });
 
 router.post('/alpha/iteration-5/start-a-claim/confirm-details', function (req, res) {
-  res.redirect('/alpha/iteration-5/start-a-claim/baby-due');
+  res.redirect('/alpha/iteration-5/start-a-claim/reasonable-adjustment');
 });
 
 router.post('/alpha/iteration-5/start-a-claim/baby-due', function (req, res) {
