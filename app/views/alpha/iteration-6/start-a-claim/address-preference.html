@@ -1,0 +1,58 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!--h1 class="govuk-heading-l">Maternity Allowance start date</h1-->
+
+      <form class="form" method="post">
+
+        {{ govukRadios({
+          name: "ReasonableAdjustment",
+          value: data['ReasonableAdjustment'],
+          fieldset: {
+            legend: {
+              text: "Where should we send letters about your Maternity Allowance claim?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: ""
+          },
+          items: [
+            {
+              value: "Yes",
+              html: "34 Fairburn Way,<br>Chelsea,<br>London,<br>SW7 3CP"
+            },
+            {
+              value: "other",
+              text: "Other"
+            }
+          ]
+        }) }}
+        
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+        
+        </form>
+
+    </div>
+  </div>
+
+{% endblock %}

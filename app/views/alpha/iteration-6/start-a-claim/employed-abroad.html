@@ -16,42 +16,31 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
-<form class="form" action="/i5-stop-work-reason" method="post" novalidate>
+<form class="form" method="post" novalidate>
 
   {% from "govuk/components/input/macro.njk" import govukInput %}
-  {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
   {{ govukRadios({
-    name: "whereDoYouLive",
-    name: "i5stopWorkReason",
-    value: data['i5stopWorkReasonAnswer'],
+    name: "i3employedAbroad",
+    value: data['i3employedAbroadAnswer'],
     fieldset: {
       legend: {
-        text: "Have you stopped work to have your baby or for another reason?",
+        text: "Did you pay National Insurance to a country other than the United Kingdom?",
         isPageHeading: true,
         classes: "govuk-fieldset__legend--l"
       }
     },
+  hint: {
+    text:"Only include payments in your Test Period (2 July 2023 to 5 October 2024)"
+  },
     items: [
-
       {
-        value: "mat",
-        text: "Maternity leave"
+        value: "yes",
+        text: "Yes"
       },
       {
-        value: "sick",
-        text: "Sick leave"
-      },
-      {
-        value: "ended",
-        text: "Ended work (for example, quit or made redundant)"
-      },
-      {
-        divider: "or"
-      },
-      {
-        value: "none",
-        text: "I have not stopped work yet"
+        value: "no",
+        text: "No"
       }
     ]
   }) }}
