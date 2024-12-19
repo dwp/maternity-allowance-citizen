@@ -1,0 +1,585 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+      
+      
+<section id="decision" class="govuk-!-margin-bottom-6">
+  <h1 class="govuk-heading-l">Earnings history</h1>
+  <div id="passport-issued-hint" class="govuk-body">
+    These payslips show the money you have earned during your Test Period (2 July 2023 and 5 October 2024). This information comes from HM Revenue & Customs. 
+    <br><br>
+    You can add other payslips to show higher earnings and possibly increase the Maternity Allowance you can get.
+  </div>
+
+  <div class="govuk-tabs" data-module="govuk-tabs">
+    <h2 class="govuk-tabs__title">
+      Contents
+    </h2>
+    <ul class="govuk-tabs__list">
+      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+        <a class="govuk-tabs__tab" href="#asda">
+          Asda
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#argos">
+          Argos
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#sainsburys">
+          Sainsbury's
+        </a>
+      </li>
+
+    </ul>
+    <div class="govuk-tabs__panel" id="asda">
+      <h2 class="govuk-heading-l">Asda earnings</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Date</th>
+           
+            <th scope="col" class="govuk-table__header">Payslip amount (gross)</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 June 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 July 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">31 August 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 September 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 October 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 November 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 December 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 January 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">28 Februry 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 March 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 April 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 May 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 June 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 July 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 August 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 September 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="argos">
+      <h2 class="govuk-heading-l">Argos earnings</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Date</th>
+           
+            <th scope="col" class="govuk-table__header">Payslip amount (gross)</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 June 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 July 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">31 August 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 September 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 October 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 November 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 December 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 January 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">28 Februry 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 March 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 April 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 May 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 June 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 July 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 August 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 September 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="sainsburys">
+      <h2 class="govuk-heading-l">Sainsbury's earnings</h2>
+      <table class="govuk-table">
+       <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Date</th>
+           
+            <th scope="col" class="govuk-table__header">Payslip amount (gross)</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 June 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 July 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">31 August 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 September 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 October 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 November 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 December 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 January 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">28 Februry 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 March 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 April 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 May 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 June 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 July 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 August 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 September 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="argos">
+      <h2 class="govuk-heading-l">Past week</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Case manager</th>
+            <th scope="col" class="govuk-table__header">Cases opened</th>
+            <th scope="col" class="govuk-table__header">Cases closed</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">David Francis</td>
+            <td class="govuk-table__cell">24</td>
+            <td class="govuk-table__cell">18</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Paul Farmer</td>
+            <td class="govuk-table__cell">16</td>
+            <td class="govuk-table__cell">20</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Rita Patel</td>
+            <td class="govuk-table__cell">24</td>
+            <td class="govuk-table__cell">27</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="sainsburys">
+      <h2 class="govuk-heading-l">Past month</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Date</th>
+           
+            <th scope="col" class="govuk-table__header">Payslip amount (gross)</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 June 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 July 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">31 August 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 September 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 October 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 November 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 December 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 January 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">28 Februry 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 March 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 April 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 May 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 June 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 July 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 August 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 September 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="argos">
+      <h2 class="govuk-heading-l">Past week</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Case manager</th>
+            <th scope="col" class="govuk-table__header">Cases opened</th>
+            <th scope="col" class="govuk-table__header">Cases closed</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">David Francis</td>
+            <td class="govuk-table__cell">24</td>
+            <td class="govuk-table__cell">18</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Paul Farmer</td>
+            <td class="govuk-table__cell">16</td>
+            <td class="govuk-table__cell">20</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Rita Patel</td>
+            <td class="govuk-table__cell">24</td>
+            <td class="govuk-table__cell">27</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year">
+      <h2 class="govuk-heading-l">Past year</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Date</th>
+           
+            <th scope="col" class="govuk-table__header">Payslip amount (gross)</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 June 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 July 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">31 August 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 September 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 October 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 November 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 December 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 January 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">28 Februry 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 March 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 April 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 May 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 June 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 July 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 August 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">30 September 2023</td>
+            <td class="govuk-table__cell">£500.00</td>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+    
+<a href="../start-a-claim/payslip-select-employer.html">
+<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Add payslip
+</button>
+</a>
+
+  
+<form class="form" method="post" novalidate>
+
+
+
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
