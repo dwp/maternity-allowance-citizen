@@ -16,26 +16,23 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
-<form class="form" action="/i5-stop-work-reason" method="post" novalidate>
+    <form class="form" action="/i3-stop-work-reason" method="post">
 
   {% from "govuk/components/input/macro.njk" import govukInput %}
-  {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
   {{ govukRadios({
-    name: "whereDoYouLive",
-    name: "i5stopWorkReason",
-    value: data['i5stopWorkReasonAnswer'],
+    name: "i3stopWorkReason",
+    value: data['i3stopWorkReasonAnswer'],
     fieldset: {
       legend: {
-        text: "Have you stopped work to have your baby or for another reason?",
+        text: "Why did you stop work?",
         isPageHeading: true,
         classes: "govuk-fieldset__legend--l"
       }
     },
     items: [
-
       {
-        value: "mat",
+        value: "maternity",
         text: "Maternity leave"
       },
       {
@@ -44,14 +41,11 @@
       },
       {
         value: "ended",
-        text: "Ended work (for example, quit or made redundant)"
+        text: "Ended work"
       },
       {
-        divider: "or"
-      },
-      {
-        value: "none",
-        text: "I have not stopped work yet"
+        value: "unrelated",
+        text: "Non-pregnancy related absence (for example, compassionate leave)"
       }
     ]
   }) }}

@@ -16,45 +16,42 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
-    <form class="form" method="post">
+<form class="form" action="/i6-stop-work-reason" method="post" novalidate>
 
   {% from "govuk/components/input/macro.njk" import govukInput %}
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-  {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-
-  {{ govukCheckboxes({
-    name: "countries",
+  {{ govukRadios({
+    name: "whereDoYouLive",
+    name: "i6stopWorkReason",
+    value: data['i5stopWorkReasonAnswer'],
     fieldset: {
       legend: {
-        text: "Which type of employment did you have between 2 July 2023 and 5 October 2024?",
+        text: "Have you stopped work to have your baby or for another reason?",
         isPageHeading: true,
         classes: "govuk-fieldset__legend--l"
       }
     },
-    hint: {
-      text: "These dates are the start and end of your Test Period (2 July 2023 and 5 October 2024). You can select more than one type of employment. Being on leave still counts as having employment."
-    },
     items: [
+
       {
-        value: "employed",
-        text: "Employed (this includes agency, zero-hour contracts and director of a limited company)"
+        value: "mat",
+        text: "Maternity leave"
       },
       {
-        value: "self",
-        text: "Self employed"
+        value: "sick",
+        text: "Sick leave"
       },
       {
-        value: "partner",
-        text: "Unpaid work for partner's business
-        "
+        value: "ended",
+        text: "Ended work (for example, quit or made redundant)"
       },
       {
         divider: "or"
       },
       {
         value: "none",
-        text: "None",
-        behaviour: "exclusive"
+        text: "I have not stopped work yet"
       }
     ]
   }) }}
