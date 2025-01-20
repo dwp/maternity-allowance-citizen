@@ -39,9 +39,7 @@
   <li>Bereavement benefits</li>
   <li>Carer's Allowance</li>
   <li>Carer support payment</li>
-  <li>Council tax reduction</li>
   <li>Employment Support Allowance (ESA)</li>
-  <li>Housing Benefit</li>
   <li>Income Support</li>
   <li>Jobseeker's Allowance - this will stop if you get Maternity Allowance</li>
 
@@ -49,16 +47,23 @@
 
 <p class="govuk-body">You can use the <a href="">benefit calculator</a> to help what benefits you could get and how much you could receive.</p>
 
+
+<h2 class="govuk-heading-m">Pregnancy-related sick leave</h2>
+
+<!--<p class="govuk-body">If you are on sick leave due to a pregnancy-related illness on or after the 4th week before the baby is due, your Maternity Allowance must start at any time in this 4 week period. </p>-->
+
+<p class="govuk-body">If you are receiving Statutory Sick Pay (SSP), New Style Employment and Support Allowance or Incapcity Benefit in this 4 week peiod, it will stop.</p>
+
 <form method="POST">
 
-  <h2 class="govuk-heading-m">I have read and understood this declaration</h2>
+  <h2 class="govuk-heading-m">Tick to confirm if you understand the above information</h2>
   {{ govukCheckboxes({
 idPrefix: "confirm",
 name: "confirm",
 items: [
 {
 value: "confirm",
-text: "I agree to this declaration"
+text: "Yes I confirm"
 }
 ]
 }) }}

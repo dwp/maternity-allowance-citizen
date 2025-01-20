@@ -297,7 +297,7 @@ router.post('/alpha/iteration-6/start-a-claim/other-benefits', function (req, re
 
 
 router.post('/alpha/iteration-6/start-a-claim/mat-leave-start', function (req, res) {
-  res.redirect('/alpha/iteration-6/start-a-claim/employed-abroad');
+  res.redirect('/alpha/iteration-6/start-a-claim/claimant-T3-summary');
 });
 
 router.post('/alpha/iteration-6/start-a-claim/employed-abroad', function (req, res) {
@@ -376,12 +376,13 @@ router.post('/alpha/iteration-6/start-a-claim/check-employment', function (req, 
   res.redirect('/alpha/iteration-6/start-a-claim/check-benefits');
 });
 
-router.post('/alpha/iteration-6/start-a-claim/check-benefits', function (req, res) {
-  res.redirect('/alpha/iteration-6/start-a-claim/declaration-UC');
-});
 
 router.post('/alpha/iteration-6/start-a-claim/declaration-UC', function (req, res) {
-  res.redirect('/alpha/iteration-6/start-a-claim/check-baby');
+  res.redirect('/alpha/iteration-6/start-a-claim/OneLogin');
+});
+
+router.post('/alpha/iteration-6/start-a-claim/OneLogin', function (req, res) {
+  res.redirect('/alpha/iteration-6/start-a-claim/task-1');
 });
 
 router.post('/alpha/iteration-6/start-a-claim/bereavement-type', function (req, res) {
@@ -560,9 +561,20 @@ router.post('/i4-sick-reason', function(request, response) {
 
 } 
 
+
 else {
   response.redirect("/alpha/iteration-6/start-a-claim/pregnancy-sick")
 }
+})
+
+router.post('/i6-benefit-check', function(request, response) {
+
+  var i6benefitCheckAnswer = request.session.data['i6benefitCheck']
+  if (i6benefitCheckAnswer == "UC"){
+      response.redirect("/alpha/iteration-6/start-a-claim/declaration-UC")
+  } else {
+      response.redirect("/alpha/iteration-6/start-a-claim/OneLogin")
+  }
 })
 
 router.post('/confirm-employment-answer-i4', function(request, response) {
@@ -574,5 +586,7 @@ router.post('/confirm-employment-answer-i4', function(request, response) {
       response.redirect("/alpha/iteration-6/start-a-claim/earnings-history")
   }
 })
+
+
 
 }

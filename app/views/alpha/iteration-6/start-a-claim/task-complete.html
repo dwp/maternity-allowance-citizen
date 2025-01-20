@@ -20,6 +20,8 @@
 
   <h1 class="govuk-heading-xl">Task list</h1>
 
+  <p class="govuk-body">Your task list is complete. You can check each section you have completed if you need to change anything.</p>
+
   <ul class="govuk-task-list">
     <li class="govuk-task-list__item govuk-task-list__item--with-link">
       <div class="govuk-task-list__name-and-hint">
@@ -91,7 +93,15 @@
 
 <form method="POST">
 
-  <h2 class="govuk-heading-m">Declaration to confirm everything is corrset</h2>
+  <h2 class="govuk-heading-m">Declaration to confirm everything is correct</h2>
+  <p class="govuk-body">By agreeing to this declaration, you agree:</p>
+  <ul class="govuk-list govuk-list--bullet">
+  <li>the information you have given is complete and correct</li>  
+  <li>to tell the Department for Work and Pensions (DWP) straight away if your circumstances change, such as your address, bank details, marital status, or anything else</li> 
+  <li>if you have made a claim in advance of starting your maternity leave or have your baby and your circumstances change</li> 
+  <li>if you knowingly give information that is incorrect or incomplete, your benefit may be stopped and you may be liable to prosecution or other actions</li> 
+  <li>to pay back any Maternity Allowance if you are paid too much</li> 
+  </ul>
   {{ govukCheckboxes({
 idPrefix: "confirm",
 name: "confirm",
