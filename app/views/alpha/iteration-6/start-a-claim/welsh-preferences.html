@@ -26,29 +26,24 @@
           value: data['ReasonableAdjustment'],
           fieldset: {
             legend: {
-              text: "Select if you need Welsh Language preferences
-              ",
+              text: "Which language would you like us to use when contacting you?",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
-          },
+          }
+          ,
+  hint: {
+    text: "This will include phone calls and letters"
+  },
    
           items: [
             {
               value: "Yes",
-              text: "Welsh language letters"
+              text: "English"
             },
             {
               value: "No",
-              text: "Welsh language phone calls"
-            },
-            {
-              value: "No",
-              text: "Welah language phone calls and letters"
-            },
-            {
-              value: "No",
-              text: "None"
+              text: "Welsh"
             }
           ]
         }) }}

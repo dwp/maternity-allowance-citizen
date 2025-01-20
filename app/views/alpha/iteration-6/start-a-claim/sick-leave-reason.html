@@ -12,7 +12,7 @@
   }) }}
 {% endblock %}
 
-{% block content %}
+{% block content %} 
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
@@ -21,7 +21,7 @@
   {% from "govuk/components/input/macro.njk" import govukInput %}
 
   {{ govukRadios({
-    name: "i4sickReason",
+    name: "i6sickReason",
     value: data['i4sickReasonAnswer'],
     fieldset: {
       legend: {
