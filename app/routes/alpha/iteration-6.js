@@ -165,11 +165,11 @@ router.post('/alpha/iteration-6/start-a-claim/reasonable-adjustment', function (
 });
 
 router.post('/alpha/iteration-6/start-a-claim/baby-due-2', function (req, res) {
-  res.redirect('/alpha/iteration-6/start-a-claim/baby-born');
+  res.redirect('/alpha/iteration-6/start-a-claim/proof');
 });
 
 router.post('/alpha/iteration-6/start-a-claim/baby-born', function (req, res) {
-  res.redirect('/alpha/iteration-6/start-a-claim/proof');
+  res.redirect('/alpha/iteration-6/start-a-claim/baby-due-2');
 });
 
 router.post('/alpha/iteration-6/start-a-claim/proof', function (req, res) {
