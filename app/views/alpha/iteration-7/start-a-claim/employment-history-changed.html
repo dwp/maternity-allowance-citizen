@@ -1,0 +1,119 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+      
+      
+<section id="decision" class="govuk-!-margin-bottom-6">
+  <h1 class="govuk-heading-l">Employment history</h1>
+  <div id="passport-issued-hint" class="govuk-body">
+    This is the employment information we have from HM Revenue & Customs for your Test Period (23 October 2023 and 1 February 2025).
+    Your Test Period is the 66 weeks before the week the baby is due not the actual date of birth.
+    <br><br>Add other employers you have had within the Test Period. You can change this information if it is incorrect.
+  </div>
+  
+  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-visually-hidden">Warning</span>
+      Asda employment start date has been updated.
+    </strong>
+  </div>
+
+    <table class="govuk-table">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">
+        Employer
+      </th>
+      <th class="govuk-table__header">
+        Employment start date
+        </th>
+      <th class="govuk-table__header">
+        Employment end date
+        </th>
+        <td class="govuk-table__cell">
+       
+          </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">
+       Asda
+      </td>
+      <td class="govuk-table__cell">
+        
+       21 September 2023
+      </td>
+      <td class="govuk-table__cell">   
+        Ongoing<span class="govuk-visually-hidden"> name</span>
+      </td>
+      <td class="govuk-table__cell">
+        <a href="employment-change-type">Change</a> | <a href="employment-delete-employer">Delete</a>
+      </td>
+      <tr class="govuk-table__row">
+  
+        </tr>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">
+       Sainsbury's
+      </td>
+      <td class="govuk-table__cell">
+       12 July 2024
+      </td>
+      <td class="govuk-table__cell">   
+        18 January 2025<span class="govuk-visually-hidden"> name</span>
+      </td>
+      <td class="govuk-table__cell">
+       <a href="employment-change-type">Change</a> | <a href="employment-delete-employer">Delete</a>
+      </td>
+      <tr class="govuk-table__row">
+
+        </tr>
+    </tr>
+
+
+
+
+
+</tbody>
+</table>
+
+<a href="../start-a-claim/employer-additional-name.html">
+<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Add employer
+</button>
+</a>
+
+  
+<form class="form" method="post" novalidate>
+
+
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
