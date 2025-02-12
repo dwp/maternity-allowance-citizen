@@ -1,0 +1,86 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+   <!-- {% include "govuk-prototype-kit/includes/homepage-top.njk" %}-->
+
+    <!--<h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>-->
+
+    <!--{% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}-->
+  </div>
+</div>
+
+<h2 class="govuk-heading-xl">Effects on other benefits</h2>
+
+<p class="govuk-body">The other benefits that can be affected are:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>Bereavement benefits</li>
+  <li>Carer's Allowance</li>
+  <li>Carer support payment</li>
+  <li>Council tax reduction</li>
+  <li>Employment Support Allowance (ESA)</li>
+  <li>Housing Benefit</li>
+  <li>Income Support</li>
+  <li>Jobseeker's Allowance - this will stop if you get Maternity Allowance</li>
+
+</ul>
+
+
+<h1 class="govuk-heading-l">If you get Universal Credit</h1>
+<p class="govuk-body">Your Universal Credit payment will be reduced by an amount equal to your Maternity Allowance payment. </p>
+<p class="govuk-body">You may get an <a href="">extra amount of Universal Credit for your children</a> (whether you get Maternity Allowance of not).</p>
+<p class="govuk-body"><a href="">Report a change on your Universal Credit account</a> if you start getting Maternity Allowance.</p>
+<p class="govuk-body">What benefits you get will affect which <a href="">National Insurance credits</a> you're slegible for. If you get Universal Credit:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>with Maternity Allowance payments you get Class 1 National Insurance credits, which help you qualify for some other benefits and State Pension</li>
+  <li>without Maternity Allowance payments, you get Class 3 National Insurance credits, which count towards your State Pension only.</li>
+
+</ul>
+
+<h2 class="govuk-heading-m">Payments</h2>
+
+<p class="govuk-body">Your payments for your other benefits and Maternity Allowance may fall on different times of the month. Most benefits are paid on the same date of each month or every 4 weeks. Maternity Allowance is paid every 2 or 4 weeks.  </p>
+
+
+
+
+
+<h2 class="govuk-heading-m">Pregnancy-related sick leave</h2>
+
+<p class="govuk-body">If you are on sick leave due to a pregnancy-related illness on or after the 4th week before the baby is due, your Maternity Allowance must start at any time in this 4 week period. </p>
+
+<p class="govuk-body">it you are receiving Statutory Sick Pay (SSP), New Style Employment and Support Allowance or Incapcity Benefit in this 4 week peiod, it will stop.</p>
+
+<form method="POST">
+
+  <h2 class="govuk-heading-m">Tick to confirm if you understand the above information</h2>
+  {{ govukCheckboxes({
+idPrefix: "confirm",
+name: "confirm",
+items: [
+{
+value: "confirm",
+text: "Yes I confirm"
+}
+]
+}) }}
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+</form>
+
+
+
+{% endblock %}
