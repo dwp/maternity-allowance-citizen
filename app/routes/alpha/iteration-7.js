@@ -165,6 +165,10 @@ router.post('/alpha/iteration-7/start-a-claim/reasonable-adjustment', function (
 });
 
 router.post('/alpha/iteration-7/start-a-claim/baby-due-2', function (req, res) {
+  res.redirect('/alpha/iteration-7/start-a-claim/offrampEarly');
+});
+
+router.post('/alpha/iteration-7/start-a-claim/offrampEarly', function (req, res) {
   res.redirect('/alpha/iteration-7/start-a-claim/proof');
 });
 
@@ -397,7 +401,23 @@ router.post('/alpha/iteration-7/start-a-claim/check-answers', function (req, res
 });
 
 router.post('/alpha/iteration-7/start-a-claim/check-postcode', function (req, res) {
+  res.redirect('/alpha/iteration-7/start-a-claim/offrampPostcode');
+});
+
+router.post('/alpha/iteration-7/start-a-claim/offrampPostcode', function (req, res) {
   res.redirect('/alpha/iteration-7/start-a-claim/check-employment');
+});
+
+router.post('/alpha/iteration-7/start-a-claim/check-employment', function (req, res) {
+  res.redirect('/alpha/iteration-7/start-a-claim/offrampEmployer');
+});
+
+router.post('/alpha/iteration-7/start-a-claim/offrampEmployer', function (req, res) {
+  res.redirect('/alpha/iteration-7/start-a-claim/check-benefits');
+});
+
+router.post('/alpha/iteration-7/start-a-claim/check-employment', function (req, res) {
+  res.redirect('/alpha/iteration-7/start-a-claim/check-benefits');
 });
 
 router.post('/alpha/iteration-7/start-a-claim/check-employment', function (req, res) {
