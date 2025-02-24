@@ -19,7 +19,19 @@
 <h1 class="govuk-heading-l">Sorry, there is a problem</h1>
 <p class="govuk-body">The Maternity Allowance online application is currently unavailable for you because you have applied too early. You cannot apply until [date of 14th week before the week the baby is due].</p>
 
+<form method="POST">
 
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+  
+  <div class="govuk-button-group">
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+  
+  
+  </div>
+  
+  </form>
 
 <!--<form method="POST">
 {% from "govuk/components/button/macro.njk" import govukButton %}
