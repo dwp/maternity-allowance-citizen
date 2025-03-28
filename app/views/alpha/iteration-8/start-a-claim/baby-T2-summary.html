@@ -1,0 +1,96 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+      
+      
+<section id="decision" class="govuk-!-margin-bottom-6">
+  <h1 class="govuk-heading-l">Confirm your baby details</h1>
+  
+    <table class="govuk-table">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">
+        Baby born
+      </th>
+      <td class="govuk-table__cell">
+       No
+      </td>
+      <td class="govuk-table__cell">  <a class="govuk-link" href="baby-born">
+        Change<span class="govuk-visually-hidden"> name</span>
+      </a></td>
+    </tr>
+    <tr class="govuk-table__row"></tr>
+      <th scope="row" class="govuk-table__header">
+        Baby due date
+      </th>
+      <td class="govuk-table__cell">
+       8 February 2025
+      </td>
+      <td class="govuk-table__cell">  <a class="govuk-link" href="baby-due-2">
+        Change<span class="govuk-visually-hidden"> name</span>
+      </a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">
+        Type of proof of pregnancy
+      </th>
+      <td class="govuk-table__cell">
+        MATB1
+      </td>
+      <td class="govuk-table__cell">  <a class="govuk-link" href="proof">
+        Change<span class="govuk-visually-hidden"> name</span>
+      </a></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">
+        Evidence uploaded
+      </th>
+      <td class="govuk-table__cell">
+        matb1.jpg
+      </td>
+      <td class="govuk-table__cell">  <a class="govuk-link" href="MATB1">
+        Change<span class="govuk-visually-hidden"> name</span>
+      </a></td>
+    </tr>
+
+</tbody>
+</table>
+
+
+  
+<form class="form" method="post" novalidate>
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+  <div class="govuk-button-group">
+    {{ govukButton({
+      text: "Save and continue"
+    }) }}
+  
+
+  </div>
+
+  </form>
+
+  </section>
+
+
+  </div>
+</div>
+
+{% endblock %}

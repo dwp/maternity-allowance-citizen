@@ -1,0 +1,55 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+      
+      
+<section id="decision" class="govuk-!-margin-bottom-6">
+  <h1 class="govuk-heading-l">Confirm your details</h1>
+  
+  <div class="govuk-inset-text">
+    34 Fairburn Way,<br>
+    Chelsea,<br>
+    London,<br>
+    SW7 3CP
+  </div>
+
+  
+<form class="form" method="post" novalidate>
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+  <div class="govuk-button-group">
+    {{ govukButton({
+      text: "Use this address"
+    }) }}
+  
+    {{ govukButton({
+      text: "Add new address",
+      classes: "govuk-button--secondary"
+    }) }}
+  </div>
+
+  </form>
+
+  </section>
+
+
+  </div>
+</div>
+
+{% endblock %}
