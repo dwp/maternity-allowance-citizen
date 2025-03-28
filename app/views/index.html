@@ -1,3 +1,5 @@
+
+
 {% extends "layouts/main.html" %}
 
 {% set pageName="Home" %}
@@ -5,7 +7,7 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-full">
 
    <!-- {% include "govuk-prototype-kit/includes/homepage-top.njk" %}-->
 
@@ -14,8 +16,7 @@
     </h1>-->
 
     <!--{% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}-->
-  </div>
-</div>
+
 <h1 class="govuk-heading-xl">
 Apply for Maternity Allowance
 </h1>
@@ -51,7 +52,12 @@ Apply for Maternity Allowance
 
 <p>Maternity Allowance may affect other benefits or entitlements you are getting, including Universal Credit.</p>
 
-<a href="/alpha/iteration-7/start-a-claim/check-postcode" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+<div class="govuk-inset-text">
+  This service is also available in <a href="">Welsh (Cymraeg)</a>.
+</div>
+
+
+<a href="/alpha/iteration-8/start-a-claim/check-postcode" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
 
 
   Start now
@@ -61,5 +67,6 @@ Apply for Maternity Allowance
 </a>
 
 
-
+</div>
+</div>
 {% endblock %}

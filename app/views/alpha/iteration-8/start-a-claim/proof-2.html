@@ -1,0 +1,68 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+      <form class="form" 
+       method="post" action="/i8-baby-born-pregnancy-proof"  novalidate>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+   
+
+
+          {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+          {{ govukRadios({
+            name: "baby-born-pregnancy-proof",
+            value: data['babyBornPregnancyProofAnswer'],
+            fieldset: {
+              legend: {
+                text: "What proof of pregnancy do you have?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            items: [
+              {
+                value: "matb1",
+                text: "Maternity Certificate (MATB1)"
+              },
+              {
+                value: "other",
+                text: "Other proof of pregnancy"
+              },
+              {
+                value: "none",
+                text: "None"
+              }
+            ]
+          }) }}
+
+        </fieldset>
+      </div>
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

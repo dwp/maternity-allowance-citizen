@@ -1,0 +1,66 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+      
+      
+<section id="decision" class="govuk-!-margin-bottom-6">
+  <h1 class="govuk-heading-l">Can we send letters about your Maternity Allowance to this address?</h1>
+  
+  <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+      <label class="govuk-label govuk-radios__label" for="changedName">
+        Yes
+      </label>
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+      <label class="govuk-label govuk-radios__label" for="changedName-2">
+        No
+      </label>
+    </div>
+  </div>
+<br>
+
+
+
+  
+<form class="form" method="post" novalidate>
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+  <div class="govuk-button-group">
+    {{ govukButton({
+      text: "Confirm"
+    }) }}
+  
+    {{ govukButton({
+      text: "Add new address",
+      classes: "govuk-button--secondary"
+    }) }}
+  </div>
+
+  </form>
+
+  </section>
+
+
+  </div>
+</div>
+
+{% endblock %}
