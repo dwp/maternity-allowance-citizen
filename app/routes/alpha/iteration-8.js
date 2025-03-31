@@ -705,7 +705,7 @@ router.post('/i8-benefit-check', function(request, response) {
 
   var i8benefitCheckAnswer = request.session.data['i8benefitCheck']
   if (i8benefitCheckAnswer == "UC"){
-      response.redirect("/alpha/iteration-8/start-a-claim/declaration-uc")
+      response.redirect("/alpha/iteration-8/start-a-claim/declaration-UC")
 
   } else if (i8benefitCheckAnswer == "none"){
     response.redirect("/alpha/iteration-8/start-a-claim/OneLogin")
