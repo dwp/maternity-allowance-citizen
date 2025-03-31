@@ -18,6 +18,10 @@
   <div class="govuk-grid-column-three-quarters">
     <form class="form" method="post">
 
+      <h1 class="govuk-heading-xl">Which type of employment did you have during your Test Period?</h1>
+      <p class="govuk-body">Your Test Period is the 66 weeks before the week the baby is due not the actual date of birth. You can calculate your Test Period dates by using the online <a href="">Test Period calculator</a>, or by using the <a href="">Test Period table</a>.</p>
+      <p class="govuk-body">Select all that apply.</p>
+
   {% from "govuk/components/input/macro.njk" import govukInput %}
 
   {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
@@ -26,7 +30,7 @@
     name: "countries",
     fieldset: {
       legend: {
-        text: "What is your employment status?",
+        text: "",
         isPageHeading: true,
         classes: "govuk-fieldset__legend--l"
       }
