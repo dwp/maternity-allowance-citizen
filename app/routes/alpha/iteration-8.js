@@ -425,7 +425,7 @@ router.post('/alpha/iteration-8/start-a-claim/check-answers', function (req, res
 });
 
 router.post('/alpha/iteration-8/start-a-claim/check-postcode', function (req, res) {
-  res.redirect('/alpha/iteration-8/start-a-claim/offrampPostcode');
+  res.redirect('/alpha/iteration-8/start-a-claim/check-employment');
 });
 
 router.post('/alpha/iteration-8/start-a-claim/offrampPostcode', function (req, res) {
@@ -433,7 +433,7 @@ router.post('/alpha/iteration-8/start-a-claim/offrampPostcode', function (req, r
 });
 
 router.post('/alpha/iteration-8/start-a-claim/check-employment', function (req, res) {
-  res.redirect('/alpha/iteration-8/start-a-claim/offrampEmployer');
+  res.redirect('/alpha/iteration-8/start-a-claim/check-benefits');
 });
 
 router.post('/alpha/iteration-8/start-a-claim/offrampEmployer', function (req, res) {
@@ -465,10 +465,18 @@ router.post('/alpha/iteration-8/start-a-claim/payslip-change-summary', function 
 });
 
 router.post('/alpha/iteration-8/start-a-claim/declaration-UC', function (req, res) {
-  res.redirect('/alpha/iteration-8/start-a-claim/OneLogin');
+  res.redirect('/alpha/iteration-8/start-a-claim/work-abroad');
 });
 
 router.post('/alpha/iteration-8/start-a-claim/declaration-other', function (req, res) {
+  res.redirect('/alpha/iteration-8/start-a-claim/work-abroad');
+});
+
+router.post('/alpha/iteration-8/start-a-claim/birth-certificate', function (req, res) {
+  res.redirect('/alpha/iteration-8/start-a-claim/proof-2');
+});
+
+router.post('/alpha/iteration-8/start-a-claim/work-abroad', function (req, res) {
   res.redirect('/alpha/iteration-8/start-a-claim/OneLogin');
 });
 
