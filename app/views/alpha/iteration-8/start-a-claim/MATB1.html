@@ -56,9 +56,16 @@
   
       {% from "govuk/components/button/macro.njk" import govukButton %}
   
-      {{ govukButton({
-        text: "Continue"
-      }) }}
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+      
+        {{ govukButton({
+          text: "I do not have an SMP1 form",
+          classes: "govuk-button--secondary"
+        }) }}
+      </div>
   </form>
 
 </div></div>

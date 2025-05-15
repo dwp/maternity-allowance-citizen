@@ -165,7 +165,11 @@ router.post('/alpha/iteration-8/start-a-claim/reasonable-adjustment', function (
 });
 
 router.post('/alpha/iteration-8/start-a-claim/baby-due-not-born', function (req, res) {
-  res.redirect('/alpha/iteration-8/start-a-claim/offrampEarly');
+  res.redirect('/alpha/iteration-8/start-a-claim/proof-2');
+});
+
+router.post('/alpha/iteration-8/start-a-claim/proof-2', function (req, res) {
+  res.redirect('/alpha/iteration-8/start-a-claim/MATB1');
 });
 
 router.post('/alpha/iteration-8/start-a-claim/baby-due-born', function (req, res) {
@@ -691,13 +695,13 @@ else {
 
 
 
-router.post('/i4-sick-reason', function(request, response) {
+router.post('/i8-sick-reason', function(request, response) {
 
-  var i4sickReasonAnswer = request.session.data['i4sickReason']
-  if (i4sickReasonAnswer == "SSP"){
+  var i8sickReasonAnswer = request.session.data['i8sickReason']
+  if (i8sickReasonAnswer == "SSP"){
       response.redirect("/alpha/iteration-8/start-a-claim/sick-end")
 
-  } else if (i4sickReasonAnswer == "ESA"){
+  } else if (i8sickReasonAnswer == "ESA"){
     response.redirect("/alpha/iteration-8/start-a-claim/sick-start")
 
 } 
