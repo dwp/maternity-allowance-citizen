@@ -169,7 +169,7 @@ router.post('/alpha/iteration-8/start-a-claim/baby-due-not-born', function (req,
 });
 
 router.post('/alpha/iteration-8/start-a-claim/proof-2', function (req, res) {
-  res.redirect('/alpha/iteration-8/start-a-claim/MATB1');
+  res.redirect('/alpha/iteration-8/start-a-claim/baby-T2-summary');
 });
 
 router.post('/alpha/iteration-8/start-a-claim/baby-due-born', function (req, res) {
