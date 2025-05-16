@@ -761,6 +761,14 @@ router.post('/i8-pregnancy-related', function(request, response) {
   }
 })
 
+router.post('/i8-map-choice', function(request, response) {
 
+  var i8mapChoiceAnswer = request.session.data['i8mapChoice']
+  if (i8mapChoiceAnswer == "yes"){
+      response.redirect("/alpha/iteration-8/start-a-claim/mat-frequency")
+  } else {
+      response.redirect("/alpha/iteration-8/start-a-claim/map-start")
+  }
+})
 
 }
