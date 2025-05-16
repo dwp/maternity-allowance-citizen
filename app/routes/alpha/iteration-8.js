@@ -172,6 +172,10 @@ router.post('/alpha/iteration-8/start-a-claim/proof-2', function (req, res) {
   res.redirect('/alpha/iteration-8/start-a-claim/baby-T2-summary');
 });
 
+router.post('/alpha/iteration-8/start-a-claim/employer-stop', function (req, res) {
+  res.redirect('/alpha/iteration-8/start-a-claim/sick-reason');
+});
+
 router.post('/alpha/iteration-8/start-a-claim/baby-due-born', function (req, res) {
   res.redirect('/alpha/iteration-8/start-a-claim/baby-DOB');
 });
@@ -464,6 +468,14 @@ router.post('/alpha/iteration-8/start-a-claim/payslip-change-upload', function (
   res.redirect('/alpha/iteration-8/start-a-claim/payslip-change-summary');
 });
 
+router.post('/alpha/iteration-8/start-a-claim/first-whole-day-absence', function (req, res) {
+  res.redirect('/alpha/iteration-8/start-a-claim/last-day-worked');
+});
+
+router.post('/alpha/iteration-8/start-a-claim/last-day-worked', function (req, res) {
+  res.redirect('/alpha/iteration-8/start-a-claim/claimant-T3-summary');
+});
+
 router.post('/alpha/iteration-8/start-a-claim/payslip-change-summary', function (req, res) {
   res.redirect('/alpha/iteration-8/start-a-claim/earnings-history-changed');
 });
@@ -637,7 +649,7 @@ router.post('/i8-stop-work-reason', function(request, response) {
       response.redirect("/alpha/iteration-8/start-a-claim/mat-leave-start")
 
   } else if (i8stopWorkReasonAnswer == "sick"){
-    response.redirect("/alpha/iteration-8/start-a-claim/sick-leave-reason")
+    response.redirect("/alpha/iteration-8/start-a-claim/sick-reason")
 
 } 
 else if (i8stopWorkReasonAnswer == "ended"){
@@ -736,6 +748,16 @@ router.post('/confirm-employment-answer-i4', function(request, response) {
       response.redirect("/alpha/iteration-8/start-a-claim/employer-additional-name")
   } else {
       response.redirect("/alpha/iteration-8/start-a-claim/earnings-history")
+  }
+})
+
+router.post('/i8-pregnancy-related', function(request, response) {
+
+  var i8pregnancyRelatedAnswer = request.session.data['i8pregnancyRelated']
+  if (i8pregnancyRelatedAnswer == "yes"){
+      response.redirect("/alpha/iteration-8/start-a-claim/first-whole-day-absence")
+  } else {
+      response.redirect("/alpha/iteration-8/start-a-claim/last-day-worked")
   }
 })
 
