@@ -1,0 +1,98 @@
+
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+      
+      
+<section id="decision" class="govuk-!-margin-bottom-6">
+  <h1 class="govuk-heading-l">Employment history</h1>
+  <div id="passport-issued-hint" class="govuk-hint">
+    This is the employment information we have from HM Revenue & Customs for your Test Period (2 July 2023 and 5 October 2024). You can change it if it is incorrect. You can only change the details for employers you have added.
+  </div>
+  
+  <table class="govuk-table">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">
+        Employer
+      </th>
+      <th class="govuk-table__header">
+        Employment start date
+        </th>
+      <th class="govuk-table__header">
+        Employment end date
+        </th>
+        <td class="govuk-table__cell">
+       
+          </td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Argos
+           </td>
+           <td class="govuk-table__cell">
+            1 May 2024
+               </td>
+               <td class="govuk-table__cell">
+                Ongoing
+                   </td>
+        <td class="govuk-table__cell">
+       
+          </td>
+    </tr>
+
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">
+        Smith's Bakery
+           </td>
+           <td class="govuk-table__cell">
+            28 March 2022
+               </td>
+               <td class="govuk-table__cell">
+                30 April 2024
+                   </td>
+                   <td class="govuk-table__cell">
+                    <a href="">Change</a>
+                       </td>
+    </tr>
+
+
+
+
+</tbody>
+</table>
+
+
+
+
+
+<a href="../start-a-claim/employer-additional-name.html">
+<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Add employer
+</button>
+</a>
+
+  
+<form class="form" method="post" novalidate>
+
+
+
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

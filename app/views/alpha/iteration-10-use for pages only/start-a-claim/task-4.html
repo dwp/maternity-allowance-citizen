@@ -1,0 +1,100 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+<form class="form" method="post" novalidate>
+
+  <h1 class="govuk-heading-xl">Task list</h1>
+
+  <div class="govuk-inset-text">
+    Your answers so far have been saved.
+    <br><br>
+    You have not provided any proof of pregnancy. This will need to be provided before Maternity Allowance can be awarded. You can upload this now or wait for us to contact you. You can still submit your application without this evidence.
+  </div>
+
+  <p class="govuk-body">This is a list of all sections you need to complete to apply for Maternity Allowance. They must all be complete for your application to be sent.<br><br>
+   </p>
+
+  <ul class="govuk-task-list">
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="claimant-T1-summary" aria-describedby="company-details-1-status">
+          Claimant details
+        </a>
+      </div>
+      <div class="govuk-task-list__status" id="company-details-2-status">
+        <strong class="govuk-tag govuk-tag--green">
+          Complete
+        </strong>
+      </div>
+    </li>
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="baby-T2-summary" aria-describedby="company-details-2-status">
+          Baby details
+        </a>
+      </div>
+      <div class="govuk-task-list__status" id="company-details-2-status">
+        <strong class="govuk-tag govuk-tag--yellow" style="max-width: fit-content !important;">
+          Complete - evidence required
+        </strong>
+      </div>
+    </li>
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="claimant-T3-summary" aria-describedby="company-details-3-hint company-details-3-status">
+         Employment details
+        </a>
+        <!--<div id="company-details-3-hint" class="govuk-task-list__hint">
+          Include 5 years of the company’s relevant financial information
+        </div>-->
+      </div>
+      <div class="govuk-task-list__status" id="company-details-3-status">
+        <strong class="govuk-tag govuk-tag--green">
+          Complete
+        </strong>
+      </div>
+    </li>
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="earnings-history" aria-describedby="company-details-4-status">
+          Earning details
+        </a>
+      </div>
+      <div class="govuk-task-list__status" id="company-details-4-status">
+        <strong class="govuk-tag govuk-tag--blue">
+          Incomplete
+        </strong>
+      </div>
+    </li>
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-task-list__name-and-hint">
+
+          Payment details
+   
+      </div>
+      <div class="govuk-task-list__status" id="company-details-5-status">
+        <strong class="govuk-tag govuk-tag--blue">
+          Incomplete
+        </strong>
+      </div>
+    </li>
+  </ul>
+
+</form>
+</div></div>
+{% endblock %}

@@ -1,0 +1,84 @@
+
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!--h1 class="govuk-heading-l">Maternity Allowance start date</h1-->
+
+      <form class="form" action="/i10-benefit-check" method="post">
+
+        <h1 class="govuk-heading-xl">Are you or your partner getting any of the following benefits?</h1> 
+
+        <p class="govuk-body">When you claim Maternity Allowance, some of your other benefit payments may change. Your total benefit payments will either go up or stay the same.
+<br><br>
+Select a benefit if you are considering, or are in the process of applying for it.
+
+        </p>
+
+        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+
+        {{ govukCheckboxes({
+          name: "i9benefitCheck",
+          value: data['i9benefitCheckAnswer'],
+          fieldset: {
+            legend: {
+              text: " ",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+       
+          items: [
+            {
+              value: "UC",
+              text: "Universal Credit"
+            },
+            {
+              value: "bereavement",
+              text: "Bereavement benefits"
+            },
+            {
+              value: "CA",
+              text: "Carer's Allowance"
+            },
+            {
+              value: "Carer",
+              text: "Carer Support Payment (Scotland only)"
+            },
+            {
+              value: "ESA",
+              text: "Employment Support Allowance (ESA)"
+            },
+            {
+              value: "income",
+              text: "Income Support"
+            },
+            {
+              value: "JSA",
+              text: "Job Seeker's Allowance - this will stop if you get Maternity Allowance"
+            },
+            {
+              divider: "or"
+            },
+            {
+              value: "none",
+              text: "None"
+            }
+          ]
+        }) }}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+        
+        </form>
+
+    </div>
+  </div>
+
+{% endblock %}

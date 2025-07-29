@@ -1,0 +1,76 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <form class="form" method="post">
+
+      <h1 class="govuk-heading-xl">Which type of employment did you have during your Test Period?</h1>
+      <p class="govuk-body">Your Test Period is the 66 weeks before the week the baby is due not the actual date of birth. You can calculate your Test Period dates by using the online <a href="">Test Period calculator</a>, or by using the <a href="">Test Period table</a>.</p>
+      <p class="govuk-body">Select all that apply.</p>
+
+  {% from "govuk/components/input/macro.njk" import govukInput %}
+
+  {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+  {{ govukCheckboxes({
+    name: "countries",
+    fieldset: {
+      legend: {
+        text: "",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+      }
+    },
+    hint: {
+      text: ""
+    },
+    items: [
+      {
+        value: "employed",
+        text: "Employed (this includes agency, zero-hour contracts and director of a limited company)"
+      },
+      {
+        value: "self",
+        text: "Self employed"
+      },
+      {
+        value: "partner",
+        text: "Unpaid work for partner's business (partner means either your husband, wife or civil partner).
+        "
+      },
+      {
+        divider: "or"
+      },
+      {
+        value: "none",
+        text: "None",
+        behaviour: "exclusive"
+      }
+    ]
+  }) }}
+
+  
+
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+</form>
+</div></div>
+{% endblock %}

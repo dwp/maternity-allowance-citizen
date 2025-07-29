@@ -1,0 +1,48 @@
+
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <form class="form" action="/i10-baby-born" method="post">
+
+
+  {% from "govuk/components/input/macro.njk" import govukInput %}
+
+  {{ govukRadios({
+    classes: "govuk-radios--inline",
+    name: "baby-born",
+    value: data['babyBornAnswer'],
+    fieldset: {
+      legend: {
+        text: "Has your baby been born?",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+      }
+    },
+    items: [
+      {
+        value: "yes",
+        text: "Yes"
+      },
+      {
+        value: "no",
+        text: "No"
+      }
+    ]
+  }) }}
+
+  <p class="govuk-body"><a href="">My baby was still born or died</a></p>
+
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+</form>
+</div></div>
+{% endblock %}

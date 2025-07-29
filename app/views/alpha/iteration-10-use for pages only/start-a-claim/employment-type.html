@@ -1,0 +1,67 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <form class="form" method="post">
+
+  {% from "govuk/components/input/macro.njk" import govukInput %}
+
+  {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+  <h1 class="govuk-heading-l">Which type of employment did you have on 24 November 2024?</h1> 
+
+  <p class="govuk-body">This date is the 15th week before the week your baby is due. This is used to decide if you should be getting Statutory Maternity Pay (SMP). You can select more than one type of employment.</p>
+ 
+
+    {{ govukCheckboxes({
+      name: "employment",
+    items: [
+      {
+        value: "employed",
+        text: "Employed (this includes agency, zero-hour contracts and directors of a limited company)"
+      },
+      {
+        value: "self",
+        text: "Self employed"
+      },
+      {
+        value: "partner",
+        text: "Unpaid work for partner's business 
+        "
+      },
+      {
+        divider: "or"
+      },
+      {
+        value: "none",
+        text: "None",
+        behaviour: "exclusive"
+      }
+    ]
+  }) }}
+
+  
+
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+</form>
+</div></div>
+{% endblock %}

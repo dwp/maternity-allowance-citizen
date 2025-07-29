@@ -1,0 +1,79 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <form class="form" action="/i8-baby-birth-proof" method="post">
+
+
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+      {{ govukRadios({
+        name: "baby-proof",
+        value: data['babyProofAnswer'],
+        fieldset: {
+          legend: {
+            text: "What proof of birth do you have?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: ""
+        },
+        items: [
+          {
+            value: "certificate",
+            text: "Birth Certificate",
+            hint: {
+              text: ""
+            }
+          },
+          {
+            value: "matb1",
+            text: "Maternity Certificate (MATB1)",
+            hint: {
+              text: "Ensure Part B of the form is filled in"
+            }
+          },
+          {
+            value: "letter",
+            text: "Letter or statement on appropriately headed paper",
+            hint: {
+              text: "This will be from a doctor, midwife or a responsible officer of the hospital or home in which the birth took place"
+            }
+          },
+          {
+            value: "none",
+            text: "None",
+            hint: {
+              text: ""
+            }
+          }
+        ]
+      }) }}
+
+
+
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+</form>
+</div></div>
+{% endblock %}

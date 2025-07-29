@@ -1,0 +1,65 @@
+
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!--h1 class="govuk-heading-l">Maternity Allowance start date</h1-->
+
+      <form class="form" action="/i9-employment-check" method="post">
+
+        <h1 class="govuk-heading-xl">Which type of employment did you have during your Test Period?</h1>
+        <p class="govuk-body">Your Test Period is the 66 weeks before the week the baby is due, not the actual date of birth. You can calculate your Test Period dates by using the online <a href="">Test Period calculator (opens in a new tab)</a>, or by using the <a href="">Test Period table (opens in a new tab)</a>.</p>
+        <p class="govuk-body">Select all that apply.</p>
+
+        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+
+        {{ govukCheckboxes({
+          name: "employmentCheck",
+          value: data['employmentCheckAnswer'],
+          fieldset: {
+            legend: {
+              text: " ",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+       
+          items: [
+          {
+            value: "employed",
+            text: "Employed (this includes agency, zero-hour contracts and directors of a limited company)"
+          },
+          {
+            value: "self",
+            text: "Self employed"
+          },
+          {
+            value: "partner",
+            text: "Unpaid work for partner's business (partner means either your husband, wife or civil partner)
+            "
+          },
+            {
+              divider: "or"
+            },
+            {
+              value: "none",
+              text: "None"
+            }
+          ]
+        }) }}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+        
+        </form>
+
+    </div>
+  </div>
+
+{% endblock %}

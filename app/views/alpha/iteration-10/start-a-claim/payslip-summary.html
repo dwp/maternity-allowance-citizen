@@ -1,0 +1,88 @@
+
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+      
+      
+<section id="decision" class="govuk-!-margin-bottom-6">
+  <h1 class="govuk-heading-l">Payslip details</h1>
+  <!--<div id="passport-issued-hint" class="govuk-hint">
+    This is the employment information we have from HM Revenue & Customs for your Test Period. You can change it if it is incorrect.
+  </div>-->
+  
+    <table class="govuk-table">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">
+        Employer
+      </th>
+      <td class="govuk-table__cell">
+        Smith's Bakery
+        </td>
+        <td class="govuk-table__cell">   </td>
+    </tr>
+
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">
+        Date of payment
+      </th>
+      <td class="govuk-table__cell">
+        30 April 2024
+      </td>
+      <td class="govuk-table__cell">   <a class="govuk-link" href="../start-a-claim/payslip-date.html">
+        Change<span class="govuk-visually-hidden"> name</span>
+      </a></td>
+      </tr>
+    
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">
+       Amount
+      </th>
+      <td class="govuk-table__cell">
+       £500.00
+      </td>
+      <td class="govuk-table__cell">  <a class="govuk-link" href="../start-a-claim/payslip-amount.html">
+        Change<span class="govuk-visually-hidden"> name</span>
+      </a>
+    </td>
+    </tr> 
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">
+       Payslip
+      </th>
+      <td class="govuk-table__cell">
+       payslip.jpg
+      </td>
+      <td class="govuk-table__cell">  <a class="govuk-link" href="../start-a-claim/payslip-upload.html">
+        Change<span class="govuk-visually-hidden"> name</span>
+      </a>
+    </td>
+    </tr> 
+
+
+
+</tbody>
+</table>
+
+
+<form class="form" method="post" novalidate>
+
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
