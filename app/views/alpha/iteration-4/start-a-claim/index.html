@@ -1,0 +1,69 @@
+
+
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+   <!-- {% include "govuk-prototype-kit/includes/homepage-top.njk" %}-->
+
+    <!--<h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>-->
+
+    <!--{% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}-->
+
+<h1 class="govuk-heading-xl">
+Apply for Maternity Allowance
+</h1>
+
+<p class="govuk-body">Maternity Allowance is a payment you can get when you take time off to have a baby.</p>
+
+<p class="govuk-body">You could get it if you:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>are employed but cannot get Statutory Maternity Pay (SMP)</li> 
+  <li>have recently stopped working</li>
+  <li>take part in unpaid work for the business of your spouse or civil partner</li>
+</ul>
+
+
+<p class="govuk-body">You can get Maternity Allowance for up to 39 weeks and can claim after the 26th week of the pregnancy.</p> 
+ 
+<h2 class="govuk-heading-m">If you delay sending your claim</h2>
+<p class="govuk-body">If you claim later than 3 months after you want you Maternity Allowance to start, you may not get the full amount of Maternity Allowance.</p> 
+
+ 
+<h2 class="govuk-heading-l">Before you start</h2>
+
+<p class="govuk-body">You will also need to upload evidence of:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>your maternity certificate (MAT B1)</li>
+  <li>an SMP1 form from each employer you had during the 15th week before the week your baby is due</li>
+  <li>Your baby's birth certificate, if applicable</li>
+  <li>Your baby's still birth or death certificate if your baby was still born or had a neonatal death</li>
+
+</ul>
+
+<p class="govuk-body">You will need to know your National Insurance number and have a GOV.UK One Login account. You will have a chance to create an account if you do not have one already.</p> 
+
+<p>Maternity Allowance may affect other benefits or entitlements you are getting, including Universal Credit.</p>
+ 
+
+
+<a href="/alpha/iteration-3/start-a-claim/check-employment" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+
+
+  Start now
+  <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+  </svg>
+</a>
+
+
+</div>
+</div>
+{% endblock %}
