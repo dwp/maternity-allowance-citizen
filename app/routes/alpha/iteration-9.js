@@ -745,7 +745,7 @@ router.post('/i9-benefit-check', function(request, response) {
 
   var i9benefitCheckAnswer = request.session.data['i9benefitCheck']
   if (i9benefitCheckAnswer == "UC"){
-      response.redirect("/alpha/iteration-9/start-a-claim/declaration-UC")
+      response.redirect("/alpha/iteration-9/start-a-claim/declaration-uc")
 
   } else if (i9benefitCheckAnswer == "none"){
     response.redirect("/alpha/iteration-9/start-a-claim/work-abroad")
