@@ -463,14 +463,7 @@ router.post('/alpha/iteration-10/start-a-claim/check-employment', function (req,
 router.post('/alpha/iteration-10/start-a-claim/offrampEmployer', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/check-benefits');
 });
-
-router.post('/alpha/iteration-10/start-a-claim/check-employment', function (req, res) {
-  res.redirect('/alpha/iteration-10/start-a-claim/check-benefits');
-});
-
-router.post('/alpha/iteration-10/start-a-claim/check-employment', function (req, res) {
-  res.redirect('/alpha/iteration-10/start-a-claim/check-benefits');
-});
+ 
 
 router.post('/alpha/iteration-10/start-a-claim/payslip-change-type', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/payslip-change-amount');
@@ -501,6 +494,11 @@ router.post('/alpha/iteration-10/start-a-claim/declaration-UC', function (req, r
 });
 
 router.post('/alpha/iteration-10/start-a-claim/declaration-other', function (req, res) {
+  res.redirect('/alpha/iteration-10/start-a-claim/work-abroad');
+}); 
+
+
+router.post('/alpha/iteration-10/start-a-claim/declaration-other-selfemploy', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/work-abroad');
 });
 
@@ -547,6 +545,8 @@ router.post('/alpha/iteration-10/start-a-claim/claimant-T4-summary', function (r
 router.post('/alpha/iteration-10/start-a-claim/task-complete', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/confirmation');
 });
+
+
 
 router.post('/i10-baby-born', function(request, response) {
 
@@ -753,7 +753,7 @@ router.post('/i10-benefit-check', function(request, response) {
 } 
 
 else {
-  response.redirect("/alpha/iteration-10/start-a-claim/declaration-other")
+  response.redirect("/alpha/iteration-10/start-a-claim/declaration-other-selfemploy")
 }
 })
 
@@ -800,7 +800,7 @@ router.post('/i10-work-abroad', function(request, response) {
 router.post('/i10-employment-check', function(request, response) {
 
   var employmentCheckAnswer = request.session.data['employmentCheck']
-  if (employmentCheckAnswer == "employed"){
+  if (employmentCheckAnswer == "employed" || employmentCheckAnswer == "self"){
       response.redirect("/alpha/iteration-10/start-a-claim/check-benefits")
   } else {
       response.redirect("/alpha/iteration-10/start-a-claim/leaveEmployment")
@@ -835,7 +835,7 @@ router.post('/i10-employment-check-smp', function(request, response) {
   } 
   
   else if (employmentCheckSMPAnswer == "self"){
-    response.redirect("/alpha/iteration-10/start-a-claim/leave-self-employment")
+    response.redirect("/alpha/iteration-10/start-a-claim/selfemployment-start") //selfemployment-start// 
 } 
 
 else if (employmentCheckSMPAnswer == "partner"){
@@ -845,6 +845,53 @@ else if (employmentCheckSMPAnswer == "partner"){
   else {
       response.redirect("/alpha/iteration-10/start-a-claim/leave-no-employment")
   }
-})
+}) 
+
+// self-employment-HMRC // 
+
+router.post('/alpha/iteration-10/start-a-claim/selfemployment-start', function (req, res) {
+  res.redirect('/alpha/iteration-10/start-a-claim/selfemployment-still-check');
+}); 
+
+
+router.post('/i10-selfemployed-still', function(request, response) {
+
+  var selfemploystillAnswer = request.session.data['selfemploystillAnswer']
+  if (selfemploystillAnswer == "yes"){
+      response.redirect("/alpha/iteration-10/start-a-claim/selfemployment-HMRC-NIC2")
+  } else {
+      response.redirect("/alpha/iteration-10/start-a-claim/selfemployment-stop")
+  }
+}) 
+
+router.post('/alpha/iteration-10/start-a-claim/selfemployment-stop', function (req, res) {
+  res.redirect('/alpha/iteration-10/start-a-claim/selfemployment-HMRC-NIC2');
+}); 
+
+router.post('/alpha/iteration-10/start-a-claim/selfemployment-HMRC-NIC2', function (req, res) {
+  res.redirect('/alpha/iteration-10/start-a-claim/selfemployment-LDW-reason');
+}); 
+
+router.post('/i10-selfemployed-LDW', function(request, response) {
+
+  var selfemploymentLDWAnswer = request.session.data['selfemploymentLDWAnswer']
+  if (selfemploymentLDWAnswer == "yes"){
+      response.redirect("/alpha/iteration-10/start-a-claim/selfemployment-last-day-worked")
+  } else {
+      response.redirect("/alpha/iteration-10/start-a-claim/claimant-T3-summary-selfemployment-LDW-5")
+  }
+}) 
+
+router.post('/alpha/iteration-10/start-a-claim/selfemployment-last-day-worked', function (req, res) {
+  res.redirect('/alpha/iteration-10/start-a-claim/claimant-T3-summary-selfemployment-LDW-4');
+}); 
+
+router.post('/alpha/iteration-10/start-a-claim/claimant-T3-summary-selfemployment-LDW-4', function (req, res) {
+  res.redirect('/alpha/iteration-10/start-a-claim/map-option');
+}); 
+
+router.post('/alpha/iteration-10/start-a-claim/claimant-T3-summary-selfemployment-LDW-5', function (req, res) {
+  res.redirect('/alpha/iteration-10/start-a-claim/map-option');
+}); 
 
 }
