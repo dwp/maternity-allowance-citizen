@@ -1,7 +1,14 @@
 
 {% extends "layouts/main.html" %}
 
-{% set pageName="Home" %}
+{% set pageName="Home" %} 
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
 
 {% block content %}
 

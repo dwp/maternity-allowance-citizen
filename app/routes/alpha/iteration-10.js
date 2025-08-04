@@ -441,7 +441,7 @@ router.post('/alpha/iteration-10/start-a-claim/bank-details', function (req, res
 });
 
 router.post('/alpha/iteration-10/start-a-claim/claimant-T5-summary', function (req, res) {
-  res.redirect('/alpha/iteration-10/start-a-claim/task-complete');
+  res.redirect('/alpha/iteration-10/start-a-claim/task-complete-selfemployment-evidence-yes');
 });
 
 router.post('/alpha/iteration-10/start-a-claim/check-answers', function (req, res) {
@@ -542,7 +542,7 @@ router.post('/alpha/iteration-10/start-a-claim/claimant-T4-summary', function (r
   res.redirect('/alpha/iteration-10/start-a-claim/map-option');
 });
 
-router.post('/alpha/iteration-10/start-a-claim/task-complete', function (req, res) {
+router.post('/alpha/iteration-10/start-a-claim/task-complete-selfemployment-evidence-yes', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/confirmation');
 });
 
