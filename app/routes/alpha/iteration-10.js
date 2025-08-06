@@ -847,7 +847,7 @@ else if (employmentCheckSMPAnswer == "partner"){
   }
 }) 
 
-// self-employment-HMRC // 
+// self-employment and HMRC // 
 
 router.post('/alpha/iteration-10/start-a-claim/selfemployment-start', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/selfemployment-still-check');
@@ -872,13 +872,23 @@ router.post('/alpha/iteration-10/start-a-claim/selfemployment-HMRC-NIC2', functi
   res.redirect('/alpha/iteration-10/start-a-claim/selfemployment-LDW-reason');
 }); 
 
-router.post('/i10-selfemployed-LDW', function(request, response) {
+router.post('/i10-selfemploy-stop-work', function(request, response) {
 
   var selfemploymentLDWAnswer = request.session.data['selfemploymentLDWAnswer']
   if (selfemploymentLDWAnswer == "yes"){
       response.redirect("/alpha/iteration-10/start-a-claim/selfemployment-last-day-worked")
   } else {
-      response.redirect("/alpha/iteration-10/start-a-claim/claimant-T3-summary-selfemployment-LDW-5")
+      response.redirect("/alpha/iteration-10/start-a-claim/selfemployment-LDW-plan-know")
+  }
+}) 
+
+router.post('/i10-selfemploy-LDW-plan-know', function(request, response) {
+
+  var selfemploymentLDWplanAnswer = request.session.data['selfemploymentLDWplanAnswer'] 
+  if (selfemploymentLDWplanAnswer == "yes"){
+      response.redirect("/alpha/iteration-10/start-a-claim/selfemployment-LDW-plan")
+  } else {
+      response.redirect("/alpha/iteration-10/start-a-claim/claimant-T3-summary-selfemployment-LDW-6")
   }
 }) 
 
@@ -886,11 +896,21 @@ router.post('/alpha/iteration-10/start-a-claim/selfemployment-last-day-worked', 
   res.redirect('/alpha/iteration-10/start-a-claim/claimant-T3-summary-selfemployment-LDW-4');
 }); 
 
+router.post('/alpha/iteration-10/start-a-claim/selfemployment-LDW-plan', function (req, res) {
+  res.redirect('/alpha/iteration-10/start-a-claim/claimant-T3-summary-selfemployment-LDW-5');
+}); 
+
 router.post('/alpha/iteration-10/start-a-claim/claimant-T3-summary-selfemployment-LDW-4', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/map-option');
 }); 
 
+
 router.post('/alpha/iteration-10/start-a-claim/claimant-T3-summary-selfemployment-LDW-5', function (req, res) {
+  res.redirect('/alpha/iteration-10/start-a-claim/map-option');
+}); 
+
+
+router.post('/alpha/iteration-10/start-a-claim/claimant-T3-summary-selfemployment-LDW-6', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/map-option');
 }); 
 

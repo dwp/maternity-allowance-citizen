@@ -12,18 +12,18 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
-    <form class="form" action="/i10-selfemploy-stop-work" method="post">
+    <form class="form" action="/i10-selfemploy-LDW-plan-know" method="post">
 
 
   {% from "govuk/components/input/macro.njk" import govukInput %}
 
   {{ govukRadios({
     classes: "govuk-radios--inline",
-    name: "selfemploymentLDWAnswer",
-    value: data['selfemploymentLDWAnswer'],
+    name: "selfemploymentLDWplanAnswer",
+    value: data['selfemploymentLDWplanAnswer'],
     fieldset: {
       legend: {
-        text: "Have you stopped work to have your baby?",
+        text: "Do you know your last day of work?",
         isPageHeading: true,
         classes: "govuk-fieldset__legend--l"
       }
