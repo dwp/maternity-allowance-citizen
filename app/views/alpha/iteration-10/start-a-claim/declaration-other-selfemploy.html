@@ -26,7 +26,7 @@
   </div>
 </div>
 
-<h2 class="govuk-heading-xl">Effects on other benefits</h2>
+<h2 class="govuk-heading-xl">Effects on other benefits - self-employed</h2>
 
 <p class="govuk-body">The other benefits that can be affected are:</p>
 
@@ -37,10 +37,12 @@
   <li>Council tax reduction</li>
   <li>Employment Support Allowance (ESA)</li>
   <li>Housing Benefit</li>
-  <li>Income Support</li>
-  <li>Jobseeker's Allowance - this will stop if you get Maternity Allowance</li>
+  <li>Income Support</li> 
+
 
 </ul>
+
+<p>Jobseeker's Allowance - this will stop if you get Maternity Allowance</p>
 
 <p class="govuk-body">You can use the <a href="">benefit calculator</a> to help what benefits you could get and how much you could receive.</p>
 
@@ -59,30 +61,32 @@
 
 <h2 class="govuk-heading-m">Payments</h2>
 
-<p class="govuk-body">	
-  Other benefits and Maternity Allowance could be paid at different times. Most benefits are paid monthly or every 4 weeks. Maternity Allowance is paid every 2 or 4 weeks.</p>
+<p class="govuk-body">  Most benefits are paid monthly or every 4 weeks. Maternity Allowance is paid every 2 or 4 weeks.</p>
 
-
-
-
-
-<!-- <h2 class="govuk-heading-m">Pregnancy-related sick leave</h2> -->
+<!-- <h2 class="govuk-heading-m">Pregnancy-related sick leave</h2> --> 
 
 <p class="govuk-body">If you are receiving New Style Employment and Support Allowance or Incapcity Benefit in this 4 week period, it will stop.</p>
 
 <form method="POST">
 
-  <h2 class="govuk-heading-m">Tick to confirm if you understand the above information</h2>
-  {{ govukCheckboxes({
-idPrefix: "confirm",
-name: "confirm",
-items: [
-{
-value: "confirm",
-text: "Yes I confirm"
-}
-]
-}) }}
+ 
+
+
+<h2 class="govuk-heading-m">Confirm understanding</h2> 
+
+<p class="govuk-body">Confirm you understand how your other benefits may be affected if you claim Maternity Allowance</p> 
+
+
+{{ govukCheckboxes({
+  idPrefix: "confirm",
+  name: "confirm",
+  items: [
+  {
+  value: "confirm",
+  text: "Yes I confirm"
+  }
+  ]
+  }) }} 
 
 <div class="govuk-button-group">
   {{ govukButton({
