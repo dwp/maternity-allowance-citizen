@@ -1,0 +1,87 @@
+
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %} 
+
+ 
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!--h1 class="govuk-heading-l">Maternity Allowance start date</h1-->
+
+      <form class="form" action="/i6-benefit-check" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          name: "i6benefitCheck",
+          value: data['i6benefitCheckAnswer'],
+          fieldset: {
+            legend: {
+              text: " Are you or your partner getting any of the following benefits?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "When you claim Maternity Allowance, some of your other benefit payments may change. Your total benefit payments will either go up or stay the same. You may also be affected by the benefit cap, which limits the total amount of benefit you can get. It applies to most people aged 16 or over who have not reached State Pension age.
+                  "
+          },
+          items: [
+            {
+              value: "UC",
+              text: "Universal Credit"
+            },
+            {
+              value: "bereavement",
+              text: "Bereavement benefits"
+            },
+            {
+              value: "CA",
+              text: "Carer's Allowance"
+            },
+            {
+              value: "Carer",
+              text: "Carer Support Payment"
+            },
+            {
+              value: "ESA",
+              text: "Employment Support Allowance (ESA)"
+            },
+            {
+              value: "income",
+              text: "Income Support"
+            },
+            {
+              value: "JSA",
+              text: "Job Seeker's Allowance - this will stop if you get Maternity Allowance"
+            },
+            {
+              divider: "or"
+            },
+            {
+              value: "none",
+              text: "None"
+            }
+          ]
+        }) }}
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+        
+        </form>
+
+    </div>
+  </div>
+
+{% endblock %}

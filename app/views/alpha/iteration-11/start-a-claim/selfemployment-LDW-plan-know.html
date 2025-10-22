@@ -1,0 +1,53 @@
+
+{% extends "layout.html" %}
+ 
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <form class="form" action="/i11-selfemploy-LDW-plan-know" method="post">
+
+
+  {% from "govuk/components/input/macro.njk" import govukInput %}
+
+  {{ govukRadios({
+    classes: "govuk-radios--inline",
+    name: "selfemploymentLDWplanAnswer",
+    value: data['selfemploymentLDWplanAnswer'],
+    fieldset: {
+      legend: {
+        text: "Do you know your last day of work?",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+      }
+    },
+    items: [
+      {
+        value: "yes",
+        text: "Yes"
+      },
+      {
+        value: "no",
+        text: "No"
+      }
+    ]
+  }) }}
+
+ 
+
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+</form>
+</div></div>
+{% endblock %}

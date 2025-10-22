@@ -1,0 +1,78 @@
+
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %} 
+
+ 
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <form class="form" action="/i12-employment-check-smp" method="post">
+
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-3">
+        Which type of employment did you have on 23 February 2025?
+      </h1>
+      <p class="govuk-body">This date is the 15th week before the week your baby is due. This is used to decide if you should be getting Statutory Maternity Pay (SMP). You can select more than one type of employment.</p>
+
+  {% from "govuk/components/input/macro.njk" import govukInput %}
+
+  {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+  {{ govukCheckboxes({
+    name: "employmentCheckSMP",
+    value: data['employmentCheckSMPAnswer'],
+    fieldset: {
+      legend: {
+        text: "",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+      }
+    },
+    hint: {
+      text: ""
+    },
+    items: [
+      {
+        value: "employed",
+        text: "Employed (this includes agency, zero-hour contracts and directors of a limited company)"
+      },
+      {
+        value: "self",
+        text: "Self employed"
+      },
+      {
+        value: "partner",
+        text: "Unpaid work for partner's business (partner means either your husband, wife or civil partner)
+        "
+      },
+      {
+        divider: "or"
+      },
+      {
+        value: "none",
+        text: "None",
+        behaviour: "exclusive"
+      }
+    ]
+  }) }}
+
+  
+
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+</form>
+</div></div>
+{% endblock %}
