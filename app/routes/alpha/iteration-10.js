@@ -749,11 +749,8 @@ router.post('/i10-benefit-check', function(request, response) {
 
   } else if (i10benefitCheckAnswer == "none"){
     response.redirect("/alpha/iteration-10/start-a-claim/work-abroad")
-
-} 
-
-else {
-  response.redirect("/alpha/iteration-10/start-a-claim/declaration-other-selfemploy")
+  } else {
+  response.redirect("/alpha/iteration-10/start-a-claim/declaration-other")
 }
 })
 
@@ -797,10 +794,11 @@ router.post('/i10-work-abroad', function(request, response) {
   }
 })
 
+
 router.post('/i10-employment-check', function(request, response) {
 
   var employmentCheckAnswer = request.session.data['employmentCheck']
-  if (employmentCheckAnswer == "employed" || employmentCheckAnswer == "self"){
+  if (employmentCheckAnswer == "employed"){
       response.redirect("/alpha/iteration-10/start-a-claim/check-benefits")
   } else {
       response.redirect("/alpha/iteration-10/start-a-claim/leaveEmployment")
