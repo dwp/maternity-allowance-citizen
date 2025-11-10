@@ -41,15 +41,6 @@ router.post('/beta-private/iteration-10/start-a-claim/about-the-baby', function 
   }
 });
 
-router.post('/beta-private/iteration-10/start-a-claim/last-day-known', function (req, res) {
-  if (req.session.data['planned-day'] == 'yes') {
-    res.redirect('/beta-private/iteration-10/start-a-claim/planned-last-day');
-  }
-  else {
-    res.redirect('/beta-private/iteration-10/start-a-claim/claimant-T3-summary');
-  }
-});
-
 router.post('/beta-private/iteration-10/start-a-claim/baby-birth-date', function (req, res) {
   res.redirect('/beta-private/iteration-10/start-a-claim/date-last-worked');
 });
@@ -201,10 +192,6 @@ router.post('/alpha/iteration-10/start-a-claim/baby-birth-cert-number', function
   res.redirect('/alpha/iteration-10/start-a-claim/proof-2');
 });
 
-router.post('/alpha/iteration-10/start-a-claim/postcode', function (req, res) {
-  res.redirect('/alpha/iteration-10/start-a-claim/check-employment');
-});
-
 router.post('/alpha/iteration-10/start-a-claim/MATB1-b', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/baby-T2-summary');
 });
@@ -246,7 +233,7 @@ router.post('/alpha/iteration-10/start-a-claim/payslip-delete', function (req, r
 });
 
 router.post('/alpha/iteration-10/start-a-claim/earnings-history', function (req, res) {
-  res.redirect('/alpha/iteration-10/start-a-claim/claimant-T4-summary');
+  res.redirect('/alpha/iteration-10/start-a-claim/employed-abroad');
 });
 
 router.post('/alpha/iteration-10/start-a-claim/earnings-history-changed', function (req, res) {
@@ -425,10 +412,6 @@ router.post('/alpha/iteration-10/start-a-claim/employment-start-date', function 
   res.redirect('/alpha/iteration-10/start-a-claim/employer-change-summary');
 });
 
-router.post('/alpha/iteration-10/start-a-claim/last-day-worked', function (req, res) {
-  res.redirect('/alpha/iteration-10/start-a-claim/mat-leave-start');
-});
-
 router.post('/alpha/iteration-10/start-a-claim/employer-change-summary', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/employment-history-changed');
 });
@@ -458,14 +441,14 @@ router.post('/alpha/iteration-10/start-a-claim/bank-details', function (req, res
 });
 
 router.post('/alpha/iteration-10/start-a-claim/claimant-T5-summary', function (req, res) {
-  res.redirect('/alpha/iteration-10/start-a-claim/task-complete');
+  res.redirect('/alpha/iteration-10/start-a-claim/task-complete-selfemployment-evidence-yes');
 });
 
 router.post('/alpha/iteration-10/start-a-claim/check-answers', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/confirmation');
 });
 
-router.post('/alpha/iteration-10/start-a-claim/postcode', function (req, res) {
+router.post('/alpha/iteration-10/start-a-claim/check-postcode', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/check-employment');
 });
 
@@ -498,12 +481,8 @@ router.post('/alpha/iteration-10/start-a-claim/first-whole-day-absence', functio
   res.redirect('/alpha/iteration-10/start-a-claim/last-day-worked');
 });
 
-router.post('/alpha/iteration-10/start-a-claim/first-whole-day-absence', function (req, res) {
-  res.redirect('/alpha/iteration-10/start-a-claim/last-day-worked');
-});
-
 router.post('/alpha/iteration-10/start-a-claim/last-day-worked', function (req, res) {
-  res.redirect('/alpha/iteration-10/start-a-claim/mat-leave-start');
+  res.redirect('/alpha/iteration-10/start-a-claim/claimant-T3-summary');
 });
 
 router.post('/alpha/iteration-10/start-a-claim/payslip-change-summary', function (req, res) {
@@ -528,17 +507,12 @@ router.post('/alpha/iteration-10/start-a-claim/birth-certificate', function (req
 });
 
 router.post('/alpha/iteration-10/start-a-claim/OneLogin', function (req, res) {
-  res.redirect('/alpha/iteration-10/start-a-claim/name');
-});
-
-router.post('/alpha/iteration-10/start-a-claim/last-day-planned', function (req, res) {
-  res.redirect('/alpha/iteration-10/start-a-claim/claimant-T3-summary');
-});
-
-router.post('/alpha/iteration-10/start-a-claim/name', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/claimant-T1-address-static');
 });
 
+router.post('/alpha/iteration-10/start-a-claim/bereavement-type', function (req, res) {
+  res.redirect('/alpha/iteration-10/start-a-claim/bereavement-upload');
+});
 
 router.post('/alpha/iteration-10/start-a-claim/bereavement-upload', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/task-1');
@@ -583,17 +557,6 @@ router.post('/i10-baby-born', function(request, response) {
       response.redirect("alpha/iteration-10/start-a-claim/baby-due-not-born")
   }
 })
-
-router.post('/i10-planned-day', function(request, response) {
-
-  var plannedDayAnswer = request.session.data['planned-day']
-  if (plannedDayAnswer == "yes"){
-      response.redirect("/alpha/iteration-10/start-a-claim/last-day-planned")
-  } else {
-      response.redirect("alpha/iteration-10/start-a-claim/claimant-T3-summary")
-  }
-})
-
 
 router.post('/i3-other-benefits', function(request, response) {
 
@@ -699,7 +662,7 @@ router.post('/i10-stop-work-reason', function(request, response) {
 
   var i10stopWorkReasonAnswer = request.session.data['i10stopWorkReason']
   if (i10stopWorkReasonAnswer == "mat"){
-      response.redirect("/alpha/iteration-10/start-a-claim/last-day-worked")
+      response.redirect("/alpha/iteration-10/start-a-claim/mat-leave-start")
 
   } else if (i10stopWorkReasonAnswer == "sick"){
     response.redirect("/alpha/iteration-10/start-a-claim/sick-reason")
@@ -714,7 +677,7 @@ else if (i10stopWorkReasonAnswer == "annual"){
 
 } 
 else {
-  response.redirect("/alpha/iteration-10/start-a-claim/last-day-known")
+  response.redirect("/alpha/iteration-10/start-a-claim/mat-leave-expected-start")
 }
 })
 
@@ -786,8 +749,11 @@ router.post('/i10-benefit-check', function(request, response) {
 
   } else if (i10benefitCheckAnswer == "none"){
     response.redirect("/alpha/iteration-10/start-a-claim/work-abroad")
-  } else {
-  response.redirect("/alpha/iteration-10/start-a-claim/declaration-other")
+
+} 
+
+else {
+  response.redirect("/alpha/iteration-10/start-a-claim/declaration-other-selfemploy")
 }
 })
 
@@ -831,11 +797,10 @@ router.post('/i10-work-abroad', function(request, response) {
   }
 })
 
-
 router.post('/i10-employment-check', function(request, response) {
 
   var employmentCheckAnswer = request.session.data['employmentCheck']
-  if (employmentCheckAnswer == "employed"){
+  if (employmentCheckAnswer == "employed" || employmentCheckAnswer == "self"){
       response.redirect("/alpha/iteration-10/start-a-claim/check-benefits")
   } else {
       response.redirect("/alpha/iteration-10/start-a-claim/leaveEmployment")
@@ -947,36 +912,6 @@ router.post('/alpha/iteration-10/start-a-claim/claimant-T3-summary-selfemploymen
 
 router.post('/alpha/iteration-10/start-a-claim/claimant-T3-summary-selfemployment-LDW-6', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/map-option');
-}); 
-
-
-router.post('/i10-bereavement', function(request, response) {
-
-  var bereavementAnswer = request.session.data['bereavement']
-  if (bereavementAnswer == "miscarriage"){
-      response.redirect("/alpha/iteration-10/start-a-claim/offrampBereavement-MC")
-
-  } else if (bereavementAnswer == "stillbirth"){
-    response.redirect("/alpha/iteration-10/start-a-claim/MATB1-bereavement")
-
-  } else if (bereavementAnswer == "neonatal"){
-    response.redirect("/alpha/iteration-10/start-a-claim/MATB1-bereavement")
-
-  } else {
-  response.redirect("/alpha/iteration-10/start-a-claim/baby-born")
-}
-})
-
-router.post('/alpha/iteration-10/start-a-claim/MATB1-bereavement', function (req, res) {
-  res.redirect('/alpha/iteration-10/start-a-claim/baby-born-bereavement');
-}); 
-
-router.post('/alpha/iteration-10/start-a-claim/MATB1-bereavement-required', function (req, res) {
-  res.redirect('/alpha/iteration-10/start-a-claim/baby-born-bereavement');
-}); 
-
-router.post('/alpha/iteration-10/start-a-claim/baby-born-bereavement', function (req, res) {
-  res.redirect('/alpha/iteration-10/start-a-claim/bereavement-upload-birth');
 }); 
 
 }

@@ -1,24 +1,5 @@
-#   myproject
-#   myproject-feature
 # add project specific words here, one word per line
 # e.g.:
-Allgofnodi
-Navs
-Nunjucks
-WCAG
-bidi
-colors
-currentcolor
-drowdown
-elif
-endfor
-endmacro
-govuk
-kubel
-linktext
-loadpath
+#   myproject
+#   myproject-feature
 myproject
-navs
-smartquotes
-titlecase
-useds
