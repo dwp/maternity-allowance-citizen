@@ -21,10 +21,14 @@
   {% from "govuk/components/button/macro.njk" import govukButton %}
   {% from "govuk/components/input/macro.njk" import govukInput %}
   
-  <h1 class="govuk-heading-l">Bank or building society account details</h1>
+  <h1 class="govuk-heading-l">Bank or building society account details</h1> 
+
+    <div id="passport-issued-hint" class="govuk-body">
+    Completing this section does not guarantee you will get Maternity Allowance.
+  </div>
 
   <div id="passport-issued-hint" class="govuk-body">
-    If you can get Maternity Allowance, we will send your payments to this account.
+    If your application is approved, we will send your payments to this account.
   </div>
   
   {{ govukInput({

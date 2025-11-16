@@ -803,10 +803,10 @@ router.post('/i12-employment-check', function(request, response) {
   if (employmentCheckAnswer == "employed" || employmentCheckAnswer == "self"){
       response.redirect("/alpha/iteration-12/start-a-claim/check-benefits")
   } else {
-      response.redirect("/alpha/iteration-12/start-a-claim/leaveEmployment")
+      response.redirect("/alpha/iteration-12/start-a-claim/offramp-two-employment")
   }
-})
-
+}) 
+ 
 router.post('/i12-address', function(request, response) {
 
   var addressAnswer = request.session.data['address']
@@ -843,7 +843,7 @@ else if (employmentCheckSMPAnswer == "partner"){
 } 
   
   else {
-      response.redirect("/alpha/iteration-12/start-a-claim/leave-no-employment")
+      response.redirect("/alpha/iteration-12/start-a-claim/offramp-two-employment-withback")
   }
 }) 
 
