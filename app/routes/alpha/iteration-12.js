@@ -543,7 +543,7 @@ router.post('/alpha/iteration-12/start-a-claim/claimant-T4-summary', function (r
 });
 
 router.post('/alpha/iteration-12/start-a-claim/task-complete-selfemployment-evidence-yes', function (req, res) {
-  res.redirect('/alpha/iteration-12/start-a-claim/confirmation');
+  res.redirect('/alpha/iteration-12/start-a-claim/confirmation-selfemployed');
 });
 
 
