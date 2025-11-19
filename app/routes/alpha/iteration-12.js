@@ -446,7 +446,12 @@ router.post('/alpha/iteration-12/start-a-claim/claimant-T5-summary', function (r
 
 router.post('/alpha/iteration-12/start-a-claim/check-answers', function (req, res) {
   res.redirect('/alpha/iteration-12/start-a-claim/confirmation');
+}); 
+
+router.post('/alpha/iteration-12/start-a-claim/service-unavailable-upcoming', function (req, res) {
+  res.redirect('/alpha/iteration-12/start-a-claim/check-employment');
 });
+
 
 router.post('/alpha/iteration-12/start-a-claim/check-postcode', function (req, res) {
   res.redirect('/alpha/iteration-12/start-a-claim/check-employment');
