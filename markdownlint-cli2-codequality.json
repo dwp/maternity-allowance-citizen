@@ -1,0 +1,392 @@
+[
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected # A Header for Services Using GOV.UK One Login, found # A header for services using GOV.UK One Login']",
+    "severity": "minor",
+    "fingerprint": "090820ea8e8ad0bb72c5e64ee725769a43bc4186671373583895374b7689804b",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 1
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected ## How to Contribute to the Service Header, found ## How to contribute to the service header']",
+    "severity": "minor",
+    "fingerprint": "c67a3c06730a5630da47f47cc934933d0d6265fbbdff19fd7a2b945712b56481",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 23
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected ## Contacting the Maintainers, found ## Contacting the maintainers']",
+    "severity": "minor",
+    "fingerprint": "352c79defc70fc10d4b011b60e435c84c44a32dd59c9e5f3c3219f9e70b0bf68",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 27
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected ## What Different Parts of the Header Do, found ## What different parts of the header do']",
+    "severity": "minor",
+    "fingerprint": "252e3fc8f0e30d22d0aa8ae7288051ad3bd792ebf3e8b64dbfd3feca0a45fb6e",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 33
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected ### GOV.UK One Login Links in the Header, found ### GOV.UK One Login links in the header']",
+    "severity": "minor",
+    "fingerprint": "e30a9bbb239cc26f160a4eaeb3297405ed2ffff43c8c927da36d5ac8f9e21d38",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 41
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected ### Internal Service Navigation Links in the Header, found ### Internal service navigation links in the header']",
+    "severity": "minor",
+    "fingerprint": "e624119015c9e2987c52e0e60795af5e86b838ea8f4bbd769f662e0ec8afad01",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 48
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected ## How to Use the Header in a Prototype Kit Prototype, found ## How to use the header in a Prototype Kit prototype']",
+    "severity": "minor",
+    "fingerprint": "fea18c465ba2bd08aa632aa82bbf877b7980228456c30bab85e850a5cfcbc13c",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 52
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "MD059/descriptive-link-text",
+    "description": "MD059/descriptive-link-text: Link text should be descriptive",
+    "severity": "minor",
+    "fingerprint": "8b3fe740ac75633c9100ac5d6e7f198545555f4550af4718a313beb439d62e41",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 54
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected ## How to Start Using the Header in Your Service, found ## How to start using the header in your service']",
+    "severity": "minor",
+    "fingerprint": "5f72969ba31a947fe9da319b364ec904cbb8e48ed3dc3f2aa2c0a3bfbb2ce350",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 56
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected ### Write Logic Within Your Service so that the Header Is only Shown to Users Who Are Signed In, found ### Write logic within your service so that the header is only shown to users who are signed in']",
+    "severity": "minor",
+    "fingerprint": "9dcf8f998b03b4a1afaf3ddc9b5ab0f095231cb5a3e88086fae15c2d2bce576a",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 94
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected ### Adapt the Header's HTML so that It Works in the Templating Language Your Service Uses, found ### Adapt the header's HTML so that it works in the templating language your service uses']",
+    "severity": "minor",
+    "fingerprint": "d2145bb9639943a34ce5e0f83f720b506bc1399dfe1ff9e9aee277c68f92e806",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 100
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "MD051/link-fragments",
+    "description": "MD051/link-fragments: Link fragments should be valid",
+    "severity": "minor",
+    "fingerprint": "026be3b2da38df88ae5d7a78ca2808044ed6a8bfebbe4c4dd7bf9ed5f361c6a5",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 106
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected ### Adapt the Internal Service Navigation HTML so that It Includes Content Specific to Your Service, found ### Adapt the internal service navigation HTML so that it includes content specific to your service']",
+    "severity": "minor",
+    "fingerprint": "2e73645c2648777c41c897a02b49d2485591e2f849591dc559a134ed79de7966",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 108
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected #### Visually Highlight Which Page in the Menu the User Is Currently On, found #### Visually highlight which page in the menu the user is currently on']",
+    "severity": "minor",
+    "fingerprint": "1b690e7b88e925a4e7bd272d10614f9d03aaac6b9420c9a5c49ba8c25f7a36a3",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 115
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "MD033/no-inline-html",
+    "description": "MD033/no-inline-html: Inline HTML [Element: pre]",
+    "severity": "minor",
+    "fingerprint": "1c474520901c592a9a5d305467ce2f938b94f7d52322df382cc1177939babd21",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 121
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "MD033/no-inline-html",
+    "description": "MD033/no-inline-html: Inline HTML [Element: code]",
+    "severity": "minor",
+    "fingerprint": "1de7be78840d556e2520677e64f5c9398a32c4b2560ef96599b816cb65eb874b",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 121
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected #### Edit Screen Reader Text and ARIA Attributes to Be Specific to Your Service, found #### Edit screen reader text and ARIA attributes to be specific to your service']",
+    "severity": "minor",
+    "fingerprint": "e920beb7efef654b14e3effa7bea84b836d727db7830fa713a9e7aa0631969e3",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 133
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected #### Edit Accessibility Markup for the 'Menu' Button, found #### Edit accessibility markup for the 'menu' button']",
+    "severity": "minor",
+    "fingerprint": "6a2cfbdc89212981f3470e18201e8512bf0a3fa9d8be89086f500219f8df3d17",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 143
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected #### Edit Accessibility Markup for the Internal Service Navigation Menu, found #### Edit accessibility markup for the internal service navigation menu']",
+    "severity": "minor",
+    "fingerprint": "4357c1498b926b699feb34a47a7287a1f89ed91e63c68775bdfd2aaa5ad1fe1f",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 157
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected #### Edit Accessibility Markup for the Navigation Menu Page the User Is Currently On, found #### Edit accessibility markup for the navigation menu page the user is currently on']",
+    "severity": "minor",
+    "fingerprint": "d15658cb5516ab4deab8d100363fe7eba3d0c0770973613d664ed1bf5f4697b8",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 167
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected ### Point the 'Sign Out' Link at Your Service's Sign Out Endpoint, found ### Point the 'Sign out' link at your service's sign out endpoint']",
+    "severity": "minor",
+    "fingerprint": "1a0acfc3ea69718b1eea61f567b1e34be8fcfbbfac304f020909ebc035691d14",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 175
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected ## Using the Styles for the Header in Your Service, found ## Using the styles for the header in your service']",
+    "severity": "minor",
+    "fingerprint": "907d909482c7bfe7be2ad5dc5bf35669ed6f6eb4cede07f6d2b76093a993c087",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 186
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected ### If You Use the GOV.UK Frontend Npm Package, found ### If you use the GOV.UK Frontend npm package']",
+    "severity": "minor",
+    "fingerprint": "1a5021128df4997f87dd1f673abeedadd34e66524ca9cc0412829450a4938038",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 194
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected ### If You Use the GOV.UK Frontend Pre-Compiled CSS Files, found ### If you use the GOV.UK Frontend pre-compiled CSS files']",
+    "severity": "minor",
+    "fingerprint": "6ec303698c0ae37e6f2b1c6c40ba7fea9b0f39194a7688ea1a4ee154dfbb1f3c",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 202
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected ### If You Do Not Use GOV.UK Frontend, found ### If you do not use GOV.UK Frontend']",
+    "severity": "minor",
+    "fingerprint": "9883f7d846853e9956de36fc9fd3004b852d4dacdb1885e46d8bda5dda8eb920",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 208
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected ## Using the GDS Transport Font, found ## Using the GDS Transport font']",
+    "severity": "minor",
+    "fingerprint": "83d399c0662ddd8be974cf18c5ddb8958dd16eb51aac0f1aba41162341f8e58a",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 214
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected ## Using the Header's Javascript File, found ## Using the header's Javascript file']",
+    "severity": "minor",
+    "fingerprint": "884c1dc74a2345bb0c3cc75da78819dc79aaa8966964d6662f43fd981e0a33c0",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 222
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected ### Initialising the Header, found ### Initialising the header']",
+    "severity": "minor",
+    "fingerprint": "d1eafa89283b4b9b632e3a8d110cc40a6072b751326fe4a37e05833a14b23136",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 237
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected ### If You Don't Use the Header's Javascript, found ### If you don't use the header's Javascript']",
+    "severity": "minor",
+    "fingerprint": "3649abb3e1c27a968e67669226a81fa6b9c6bf5c94bead037f0cdd445e3b7ab8",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 243
+      }
+    }
+  },
+  {
+    "type": "issue",
+    "check_name": "titlecase-rule",
+    "description": "titlecase-rule: Titlecase rule [Title Case: 'Expected ## Translating the Header Content Into Other Languages, found ## Translating the header content into other languages']",
+    "severity": "minor",
+    "fingerprint": "e0f254e68db1f60fd964cac30252c3475f2572bb6d51748acd23ad37dca97391",
+    "location": {
+      "path": "vendor/govuk-one-login-service-header/package/README.md",
+      "lines": {
+        "begin": 250
+      }
+    }
+  }
+]

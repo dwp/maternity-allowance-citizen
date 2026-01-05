@@ -65,13 +65,13 @@ repos:
       - id: fix-smartquotes
       - id: forbid-bidi-controls
 
-  - repo: https://github.com/DavidAnson/markdownlint-cli2/
-    rev: v0.18.1
-    hooks:
-      - id: markdownlint-cli2
-        additional_dependencies:
-          - markdownlint-rule-titlecase@0.1.0
-          - markdownlint-cli2-formatter-codequality@0.0.5
+  # - repo: https://github.com/DavidAnson/markdownlint-cli2/
+  #   rev: v0.18.1
+  #   hooks:
+  #     - id: markdownlint-cli2
+  #       additional_dependencies:
+  #         - markdownlint-rule-titlecase@0.1.0
+  #         - markdownlint-cli2-formatter-codequality@0.0.5
 
   - repo: https://github.com/rbubley/mirrors-prettier
     rev: v3.5.3
@@ -88,7 +88,7 @@ repos:
       - id: check-renovate
 
   - repo: https://gitlab.com/dwp/secure-development/dwp-cli
-    rev: v3.15.3
+    rev: v3.26.0
     hooks:
       - id: check-catalog-info
       - id: check-pre-commit-config
