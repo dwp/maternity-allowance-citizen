@@ -1,6 +1,8 @@
 # Node.js ignores
 node_modules/
 *.tgz
+*.tar 
+*.tar.gz
 
 # Prototype ignores - per-user
 .tmp/
