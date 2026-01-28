@@ -1,10 +1,9 @@
 
-{% extends "layout.html" %}
+{% extends "layouts/main.html" %}
 
-{% block pageTitle %}
-  GOV.UK Prototype Kit
-{% endblock %}
+{% set pageName="Home" %} 
 
+ 
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
@@ -12,28 +11,26 @@
   }) }}
 {% endblock %}
 
+
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
-    <form class="form" action="/i8-baby-born" method="post"> 
+    <form class="form" action="/i10-planned-day" method="post">
 
-      {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+  {% from "govuk/components/input/macro.njk" import govukInput %}
 
   {{ govukRadios({
     classes: "govuk-radios--inline",
-    name: "sick-type",
-    value: data['sickType'],
+        name: "planned-day",
+        value: data['plannedDayAnswer'],
     fieldset: {
       legend: {
-        text: "Is your sickness pregnancy related?",
+        text: "Do you know your last day of work?",
         isPageHeading: true,
         classes: "govuk-fieldset__legend--l"
       }
-    }, 
-    hint: {
-      text: "Your health care provider can confirm if your sickness is pregnancy-related."
     },
     items: [
       {
@@ -56,6 +53,5 @@
   text: "Continue"
 }) }}
 </form>
-</div>
-</div>
+</div></div>
 {% endblock %}

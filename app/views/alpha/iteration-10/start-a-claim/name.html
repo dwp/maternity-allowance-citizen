@@ -1,0 +1,65 @@
+
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %} 
+
+ 
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+      
+      
+<section id="decision" class="govuk-!-margin-bottom-6">
+  
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        What is your name?
+      </h1>
+    </legend>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="width-10">
+   First name
+  </label>
+  <input class="govuk-input govuk-input--width-20" id="width-10" name="width10" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="width-10">
+   Last name
+  </label>
+  <input class="govuk-input govuk-input--width-20" id="width-10" name="width10" type="text">
+</div>
+
+  </fieldset>
+
+  
+<form class="form" method="post" novalidate>
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+  <div class="govuk-button-group">
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+  
+  </div>
+
+  </form>
+
+  </section>
+
+
+  </div>
+</div>
+
+{% endblock %}
