@@ -1,0 +1,49 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+   <form class="form" method="post"> 
+
+   <!-- {% include "govuk-prototype-kit/includes/homepage-top.njk" %}-->
+
+    <!--<h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>-->
+
+    <!--{% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}-->
+
+
+<h1 class="govuk-heading-l">Sorry, this service is unavailable</h1> 
+
+<p class="govuk-body">You will not be able to use the service from 12 noon Monday 13 October 2025 until 9am Tuesday 14 October 2025.</p>
+
+<p class="govuk-body">You will not be able to submit your application for Maternity Allowance during this time, and we cannot save your answers. </p>  
+
+<p>You could apply using the <a href="https://www.gov.uk/government/publications/maternity-allowance-claim-form">paper form</a>, or come back to our online application service when it is available.</p>
+ 
+<!--<form method="POST">
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+</form>-->  
+
+ 
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "I understand - continue with application"
+}) }}
+</div> 
+</div> 
+</form>
+{% endblock %}

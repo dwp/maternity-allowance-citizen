@@ -1,0 +1,46 @@
+
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <form class="form" method="post">
+
+
+
+             
+            </h1>
+            <p class="govuk-hint"></p>
+          </legend>
+        
+          
+
+            <div class="govuk-form-group">
+              <h1 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-label--l" for="event-name">
+                  What is your baby's certificate system number?
+                </label>
+              </h1>
+              <p class="govuk-hint" for="width-10">
+                This is a 9 digit number located at the bottom left corner of the certificate
+              </p>
+              <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+            </div>
+   
+   
+            <p class="govuk-body">
+              <a href="#" class="govuk-link">I do not have a birth certificate system number</a>
+            </p>
+
+
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+</form>
+</div></div>
+{% endblock %}
