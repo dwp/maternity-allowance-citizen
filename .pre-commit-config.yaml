@@ -55,7 +55,7 @@ repos:
           - --max-decode-depth=99
 
   - repo: https://github.com/sirosen/texthooks
-    rev: 0.7.1
+    rev: 0.6.8
     hooks:
       - id: alphabetize-codeowners
         args:
@@ -74,7 +74,7 @@ repos:
           - markdownlint-cli2-formatter-codequality@0.0.5
 
   - repo: https://github.com/rbubley/mirrors-prettier
-    rev: v3.8.1
+    rev: v3.5.3
     hooks:
       - id: prettier
         additional_dependencies:
