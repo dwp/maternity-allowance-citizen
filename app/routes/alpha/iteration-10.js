@@ -192,6 +192,10 @@ router.post('/alpha/iteration-10/start-a-claim/baby-birth-cert-number', function
   res.redirect('/alpha/iteration-10/start-a-claim/proof-2');
 });
 
+router.post('/alpha/iteration-10/start-a-claim/postcode', function (req, res) {
+  res.redirect('/alpha/iteration-10/start-a-claim/check-employment');
+});
+
 router.post('/alpha/iteration-10/start-a-claim/MATB1-b', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/baby-T2-summary');
 });
@@ -233,7 +237,7 @@ router.post('/alpha/iteration-10/start-a-claim/payslip-delete', function (req, r
 });
 
 router.post('/alpha/iteration-10/start-a-claim/earnings-history', function (req, res) {
-  res.redirect('/alpha/iteration-10/start-a-claim/employed-abroad');
+  res.redirect('/alpha/iteration-10/start-a-claim/claimant-T4-summary');
 });
 
 router.post('/alpha/iteration-10/start-a-claim/earnings-history-changed', function (req, res) {
@@ -410,6 +414,10 @@ router.post('/alpha/iteration-10/start-a-claim/employment-change-type', function
 
 router.post('/alpha/iteration-10/start-a-claim/employment-start-date', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/employer-change-summary');
+});
+
+router.post('/alpha/iteration-10/start-a-claim/last-day-worked', function (req, res) {
+  res.redirect('/alpha/iteration-10/start-a-claim/mat-leave-start');
 });
 
 router.post('/alpha/iteration-10/start-a-claim/employer-change-summary', function (req, res) {
@@ -662,7 +670,7 @@ router.post('/i10-stop-work-reason', function(request, response) {
 
   var i10stopWorkReasonAnswer = request.session.data['i10stopWorkReason']
   if (i10stopWorkReasonAnswer == "mat"){
-      response.redirect("/alpha/iteration-10/start-a-claim/mat-leave-start")
+      response.redirect("/alpha/iteration-10/start-a-claim/last-day-worked")
 
   } else if (i10stopWorkReasonAnswer == "sick"){
     response.redirect("/alpha/iteration-10/start-a-claim/sick-reason")
