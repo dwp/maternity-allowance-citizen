@@ -51,13 +51,19 @@
 
    
   
-  
-  
-      {% from "govuk/components/button/macro.njk" import govukButton %}
-  
-      {{ govukButton({
-        text: "Continue"
-      }) }}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Continue"
+  }) }}
+
+  {{ govukButton({
+    text: "I do not have a MATB1 form",
+    classes: "govuk-button--secondary",
+    href: "MATB1-bereavement-required"
+  }) }}
+</div>
   </form>
 
 </div></div>

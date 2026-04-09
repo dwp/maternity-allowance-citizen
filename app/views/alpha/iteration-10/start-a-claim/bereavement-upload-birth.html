@@ -46,14 +46,17 @@ We ask for your baby’s birth certificate to process your claim.
   <form class="form" method="post" novalidate>
 
    
-  
-  
-  
-      {% from "govuk/components/button/macro.njk" import govukButton %}
-  
-      {{ govukButton({
-        text: "Continue"
-      }) }}
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Continue"
+  }) }}
+
+  {{ govukButton({
+    text: "I do not have a birth certificate",
+    classes: "govuk-button--secondary",
+    href: "bereavement-upload-birth-reqd"
+  }) }}
+</div>
   </form>
 
 </div></div>
