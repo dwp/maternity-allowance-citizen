@@ -1,3 +1,11 @@
 {
-  "serviceName": "Apply for Maternity Allowance"
+  "serviceName": "Apply for Maternity Allowance",
+  "plugins": {
+  "govuk-frontend": {
+    "rebrand": true
+  }
 }
+  
+} 
+
+

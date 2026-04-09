@@ -1,0 +1,74 @@
+
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %} 
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %} 
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+      
+      <form class="form" action="/i14-map-choice" method="post" novalidate> 
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="mapStartDate-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Would you like to choose your Maternity Allowance start date?
+      </h1>
+    </legend> 
+
+    <p class="govuk-body">If you chose not to pick a date, Maternity Allowance will automatically start the day after your baby is born. </p> 
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="mapStartDate" name="mapStartDate" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="mapStartDate">
+          Yes
+        </label> 
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="mapStartDate-2" name="mapStartDate" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="mapStartDate-2">
+          No
+        </label>
+                <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          We will contact you to confirm your baby’s birth date.
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+
+
+
+  <div class="govuk-button-group">
+    {{ govukButton({
+      text: "Confirm"
+    }) }}
+  
+
+  </div>
+
+  </form>
+
+  </section>
+
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %} 
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %} 
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+   <!-- {% include "govuk-prototype-kit/includes/homepage-top.njk" %}-->
+
+    <!--<h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>-->
+
+    <!--{% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}-->
+ 
+  </div>
+  <h1 class="govuk-heading-xl">If you’re self employed</h1>
+
+ 
+
+ 
+    <p class="govuk-body">You can get between £27 to £187.18 per week for up to 39 weeks if you’re self-employed.</p>
+    <p class="govuk-body">How much you get depends on how many Class 2 National Insurance contributions you’ve made in the 66 week Test Period before your baby is due.</p> 
+
+    <p class="govuk-body">To be eligible for the maximum amount you must:</p> 
+    <ul class="govuk-list govuk-list--bullet">
+    <li>be registered with HM Revenue and Customs (HMRC) for at least 26 weeks in your Test Period</li>  
+    <li>have paid Class 2 National Insurance contributions for at least 13 weeks in your Test Period</li> 
+    </ul> 
+
+     <p class="govuk-body">You might get £27 for a few weeks while we link your contributions to your Maternity Allowance application. Your payments will be increased and backdated if necessary. This can take several weeks.</p> 
+ 
+     <h2 class="govuk-heading-m">If you’ve paid less than 13 weeks of contributions</h2> 
+     <p class="govuk-body">If you’ve not paid any Class 2 National Insurance contributions, you’ll be entitled to £27 per week Maternity Allowance.</p> 
+     <p class="govuk-body">You can top-up your contributions to increase your Maternity Allowance after you apply.</p> 
+    
+     <h2 class="govuk-heading-m">How to increase your Maternity Allowance</h2> 
+     <p class="govuk-body">After you apply, HMRC will contact you if you’ve paid less than 13 weeks of Class 2 National Insurance. They will tell you how many additional contributions you need to get the full amount of Maternity Allowance. You do not need to tell us that you have paid additional  voluntary contributions, HMRC will let us know. </p> 
+   
+     <h2 class="govuk-heading-m">Read more about:</h2> 
+
+
+     <p class="govuk-body">  <a href="https://www.gov.uk/maternity-allowance/what-youll-get" target="_blank">Maternity Allowance: What you'll get (opens in new tab)</a> </p>
+                
+     <p class="govuk-body"> <a href="https://www.gov.uk/voluntary-national-insurance-contributions" target="_blank">Voluntary National Insurance (opens in new tab)</a> </p>
+ 
+
+  <form method="POST">
+
+ 
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+ 
+    
+ 
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+   
+    
+    </form>
+
+</div>
+
+
+{% endblock %}

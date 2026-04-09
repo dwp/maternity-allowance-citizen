@@ -1,0 +1,51 @@
+
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+          <form class="form" method="post" novalidate>
+          {% from "govuk/components/radios/macro.njk" import govukRadios %}
+          {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+          <h1 class="govuk-heading-l">What information do you need to change?</h1>
+          {{ govukInsetText({
+            text: "You are changing the 30 August 2024 - £175.00 payment."
+          }) }}
+
+{{ govukRadios({
+  name: "whereDoYouLive",
+  fieldset: {
+    legend: {
+      text: "",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "date",
+      text: "Date"
+    },
+    {
+      value: "amount",
+      text: "Amount"
+    }
+  ]
+}) }}
+
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+</form>
+    </div>
+  </div>
+
+{% endblock %}

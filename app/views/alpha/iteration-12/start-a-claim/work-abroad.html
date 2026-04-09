@@ -1,0 +1,62 @@
+
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %} 
+
+ 
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <form class="form" action="/i12-work-abroad" method="post">
+
+      <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--l" for="event-name">
+          Have you lived or worked outside the UK in your Test Period?
+        </label>
+      </h1>
+      <p class="govuk-body">Your Test Period is the 66 weeks before the week the baby is due, not the actual date of birth. You can calculate your Test Period dates by using the online <a href="">Test Period calculator (opens in a new tab)</a>, or by using the <a href="">Test Period table (opens in a new tab)</a>.</p>
+        
+  {% from "govuk/components/input/macro.njk" import govukInput %}
+
+  {{ govukRadios({
+    classes: "govuk-radios--inline",
+    name: "workAbroad",
+    value: data['i12workAbroadAnswer'],
+    fieldset: {
+      legend: {
+        text: "",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+      }
+    },
+    items: [
+      {
+        value: "yes",
+        text: "Yes"
+      },
+      {
+        value: "no",
+        text: "No"
+      }
+    ]
+  }) }}
+
+
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+</form>
+</div></div>
+{% endblock %}

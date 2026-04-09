@@ -1,0 +1,105 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %} 
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+
+      <form class="form" method="post" novalidate> 
+
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+        {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+        
+        {% set dateHtml %}
+        {{ govukDateInput({
+          id: "enter-map-date",
+          name: "entermapdate",
+          type: "date",
+          autocomplete: "date",
+          spellcheck: false,
+          classes: "govuk-!-width-one-half",
+          label: {
+            text: "Maternity Allowance start date"
+          },
+          hint: {
+            text: "For example, 27 3 2007"
+          }
+        
+        }) }}
+        {% endset -%}  
+        
+        {% set adconeHtml %}
+        {{ govukRadios({
+          id: "adc-plus-one",
+          name: "adcplusone",
+          type: "adcone",
+          autocomplete: false,
+          classes: "govuk-!-width-one-third",
+          label: {
+            text: "Claimant wants to start maternity payments after the baby is born"
+          },
+          hint: {
+            text: "If you want the payments to start on the day after the baby is born, Maternity allowance agent will contact you to confirm the baby birthday."
+          }
+        }) }}
+        {% endset -%}    
+ 
+        
+        {{ govukRadios({
+          name: "payments",
+          fieldset: {
+            legend: {
+              text: "When would you like Maternity Allowance to start?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "Your payments can start on any date between 2 February 2025 and 11 March 2025. These are calculated based on your baby's due date. "
+          },
+          items: [
+            {
+              value: "date",
+              text: "Enter date",              
+              conditional: {
+                html: dateHtml
+              }
+            },
+            {
+              value: "adcplusone",
+              text: "Start payments after the baby is born",
+              conditional: {
+                html: adconeHtml
+              }
+            }
+ 
+          ]
+        }) }}       
+ 
+
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

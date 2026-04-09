@@ -5,3 +5,20 @@
   {% set govukRebrand = true %}
  
   {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+ {% from "govuk/components/header/macro.njk" import govukHeader %} 
+
+ {% block header %}
+
+{{ govukHeader({
+  classes: "govuk-header--full-width-border",
+  homepageUrl: "#"
+}) }}
+
+  {% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+
+{{ govukServiceNavigation({
+  serviceName: "Apply for Maternity Allowance",
+  serviceUrl: "#"
+}) }} 
+
+{% endblock %}

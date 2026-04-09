@@ -1,0 +1,68 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %} 
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+
+      <form class="form" method="post" novalidate> 
+
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          name: "signIn",
+          fieldset: {
+            legend: {
+              text: "Would you like the Maternity Allowance to start after the baby is born?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "Your payments can start on any date between 2 February 2025 and 11 March 2025. These are calculated based on your baby's due date."
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes",
+              hint: {
+                text: "We will contact you to confirm the baby's birth date."
+              }
+            },
+            {
+              value: "no",
+              text: "No",
+              hint: {
+                text: "You can choose the preferred date"
+              }
+            }
+          ]
+        }) }} 
+     
+ 
+
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

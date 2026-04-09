@@ -41,6 +41,15 @@ router.post('/beta-private/iteration-10/start-a-claim/about-the-baby', function 
   }
 });
 
+router.post('/beta-private/iteration-10/start-a-claim/last-day-known', function (req, res) {
+  if (req.session.data['planned-day'] == 'yes') {
+    res.redirect('/beta-private/iteration-10/start-a-claim/planned-last-day');
+  }
+  else {
+    res.redirect('/beta-private/iteration-10/start-a-claim/claimant-T3-summary');
+  }
+});
+
 router.post('/beta-private/iteration-10/start-a-claim/baby-birth-date', function (req, res) {
   res.redirect('/beta-private/iteration-10/start-a-claim/date-last-worked');
 });
@@ -449,14 +458,14 @@ router.post('/alpha/iteration-10/start-a-claim/bank-details', function (req, res
 });
 
 router.post('/alpha/iteration-10/start-a-claim/claimant-T5-summary', function (req, res) {
-  res.redirect('/alpha/iteration-10/start-a-claim/task-complete-selfemployment-evidence-yes');
+  res.redirect('/alpha/iteration-10/start-a-claim/task-complete');
 });
 
 router.post('/alpha/iteration-10/start-a-claim/check-answers', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/confirmation');
 });
 
-router.post('/alpha/iteration-10/start-a-claim/check-postcode', function (req, res) {
+router.post('/alpha/iteration-10/start-a-claim/postcode', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/check-employment');
 });
 
@@ -489,8 +498,12 @@ router.post('/alpha/iteration-10/start-a-claim/first-whole-day-absence', functio
   res.redirect('/alpha/iteration-10/start-a-claim/last-day-worked');
 });
 
+router.post('/alpha/iteration-10/start-a-claim/first-whole-day-absence', function (req, res) {
+  res.redirect('/alpha/iteration-10/start-a-claim/last-day-worked');
+});
+
 router.post('/alpha/iteration-10/start-a-claim/last-day-worked', function (req, res) {
-  res.redirect('/alpha/iteration-10/start-a-claim/claimant-T3-summary');
+  res.redirect('/alpha/iteration-10/start-a-claim/mat-leave-start');
 });
 
 router.post('/alpha/iteration-10/start-a-claim/payslip-change-summary', function (req, res) {
@@ -515,6 +528,14 @@ router.post('/alpha/iteration-10/start-a-claim/birth-certificate', function (req
 });
 
 router.post('/alpha/iteration-10/start-a-claim/OneLogin', function (req, res) {
+  res.redirect('/alpha/iteration-10/start-a-claim/name');
+});
+
+router.post('/alpha/iteration-10/start-a-claim/last-day-planned', function (req, res) {
+  res.redirect('/alpha/iteration-10/start-a-claim/claimant-T3-summary');
+});
+
+router.post('/alpha/iteration-10/start-a-claim/name', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/claimant-T1-address-static');
 });
 
@@ -562,6 +583,17 @@ router.post('/i10-baby-born', function(request, response) {
       response.redirect("alpha/iteration-10/start-a-claim/baby-due-not-born")
   }
 })
+
+router.post('/i10-planned-day', function(request, response) {
+
+  var plannedDayAnswer = request.session.data['planned-day']
+  if (plannedDayAnswer == "yes"){
+      response.redirect("/alpha/iteration-10/start-a-claim/last-day-planned")
+  } else {
+      response.redirect("alpha/iteration-10/start-a-claim/claimant-T3-summary")
+  }
+})
+
 
 router.post('/i3-other-benefits', function(request, response) {
 
@@ -682,7 +714,7 @@ else if (i10stopWorkReasonAnswer == "annual"){
 
 } 
 else {
-  response.redirect("/alpha/iteration-10/start-a-claim/mat-leave-expected-start")
+  response.redirect("/alpha/iteration-10/start-a-claim/last-day-known")
 }
 })
 
@@ -754,11 +786,8 @@ router.post('/i10-benefit-check', function(request, response) {
 
   } else if (i10benefitCheckAnswer == "none"){
     response.redirect("/alpha/iteration-10/start-a-claim/work-abroad")
-
-} 
-
-else {
-  response.redirect("/alpha/iteration-10/start-a-claim/declaration-other-selfemploy")
+  } else {
+  response.redirect("/alpha/iteration-10/start-a-claim/declaration-other")
 }
 })
 
@@ -802,10 +831,11 @@ router.post('/i10-work-abroad', function(request, response) {
   }
 })
 
+
 router.post('/i10-employment-check', function(request, response) {
 
   var employmentCheckAnswer = request.session.data['employmentCheck']
-  if (employmentCheckAnswer == "employed" || employmentCheckAnswer == "self"){
+  if (employmentCheckAnswer == "employed"){
       response.redirect("/alpha/iteration-10/start-a-claim/check-benefits")
   } else {
       response.redirect("/alpha/iteration-10/start-a-claim/leaveEmployment")

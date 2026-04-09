@@ -1,0 +1,92 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %} 
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %} 
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+   <!-- {% include "govuk-prototype-kit/includes/homepage-top.njk" %}-->
+
+    <!--<h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>-->
+
+    <!--{% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}-->
+ 
+  </div>
+  <h1 class="govuk-heading-xl">How much you could get</h1>
+
+ 
+
+ 
+    <p class="govuk-body">You can get between £27 to £187.18 per week for up to 39 weeks if you’re registered as self-employed.</p>
+    <p class="govuk-body">How much you get depends on how many Class 2 National Insurance contributions you’ve made in your Test Period (the 66 weeks before the week your baby is due.)</p> 
+
+    <p class="govuk-body">We contact HMRC on your behalf to find out how many contributions you’ve made.</p> 
+  
+    <p class="govuk-body">If you have not paid enough contributions to get the full amount of Maternity Allowance, HMRC will invite you to top up your contributions to get the full amount. </p> 
+ 
+    
+     <p class="govuk-body">You do not need to tell us if you choose to top up contributions, HMRC will do this for you.</p> 
+     <p class="govuk-body">You might get £27 for a few weeks while we link your contributions to your Maternity Allowance application. We will increase and backdate your payments, which may take several weeks.</p> 
+ 
+   
+     <h2 class="govuk-heading-m">Read more about:</h2> 
+
+
+     <p class="govuk-body">  <a href="https://www.gov.uk/maternity-allowance/what-youll-get" target="_blank">Maternity Allowance: What you'll get (opens in new tab)</a> </p>
+                
+     <p class="govuk-body"> <a href="https://www.gov.uk/voluntary-national-insurance-contributions" target="_blank">Voluntary National Insurance (opens in new tab)</a> </p>
+ 
+ 
+
+<form method="POST">
+
+    
+<h2 class="govuk-heading-m">Confirm understanding</h2> 
+
+<p class="govuk-body">Confirm you understand how much Maternity Allowance you may get.</p> 
+
+
+{{ govukCheckboxes({
+  idPrefix: "confirm",
+  name: "confirm",
+  items: [
+  {
+  value: "confirm",
+  text: "Yes I confirm"
+  }
+  ]
+  }) }} 
+
+
+ 
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+ 
+    
+ 
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+   
+    
+    </form>
+
+</div>
+
+
+{% endblock %}
