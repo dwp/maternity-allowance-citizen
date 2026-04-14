@@ -21,22 +21,24 @@
   {% from "govuk/components/input/macro.njk" import govukInput %}
 
   <h1 class="govuk-heading-l govuk-!-margin-bottom-3">
-    Upload your stillbirth or death certificate
+You need to upload your MAT B1 to get Maternity Allowance
+
   </h1>
 
+ <p class="govuk-body">	
+You will need to send us your MAT B1 form before you can get Maternity Allowance.</p>
+
+ <p class="govuk-body">	
+You can finish your application and post it to us at a later on.</p>
+
+  <!--<img src="/public/images/MATB1_Img.png" style="max-width: 70%;" alt="An image of a Maternity Certificate (MAT B1) that shows Part A and Part B. Part A is highlighted as the part that shows proof of pregnancy.">-->
   
  <!-- <div id="passport-issued-hint" class="govuk-hint">
     Proof of pregnancy will usually be a Maternity Certificate (MAT B1). You can also upload proof from a foreign medical official.
   </div>-->
 
 
-  {{ govukFileUpload({
-    id: "file-upload-1",
-    name: "fileUpload1",
-    label: {
-      text: "Upload a file or photo. Accepted file types are jpg, pdf and png."
-    }
-  }) }}
+
 
   
 

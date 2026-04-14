@@ -201,6 +201,10 @@ router.post('/alpha/iteration-10/start-a-claim/baby-birth-cert-number', function
   res.redirect('/alpha/iteration-10/start-a-claim/proof-2');
 });
 
+router.post('/alpha/iteration-10/start-a-claim/postcode', function (req, res) {
+  res.redirect('/alpha/iteration-10/start-a-claim/check-employment');
+});
+
 router.post('/alpha/iteration-10/start-a-claim/MATB1-b', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/baby-T2-summary');
 });
@@ -421,6 +425,10 @@ router.post('/alpha/iteration-10/start-a-claim/employment-start-date', function 
   res.redirect('/alpha/iteration-10/start-a-claim/employer-change-summary');
 });
 
+router.post('/alpha/iteration-10/start-a-claim/last-day-worked', function (req, res) {
+  res.redirect('/alpha/iteration-10/start-a-claim/mat-leave-start');
+});
+
 router.post('/alpha/iteration-10/start-a-claim/employer-change-summary', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/employment-history-changed');
 });
@@ -531,9 +539,6 @@ router.post('/alpha/iteration-10/start-a-claim/name', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/claimant-T1-address-static');
 });
 
-router.post('/alpha/iteration-10/start-a-claim/bereavement-type', function (req, res) {
-  res.redirect('/alpha/iteration-10/start-a-claim/bereavement-upload');
-});
 
 router.post('/alpha/iteration-10/start-a-claim/bereavement-upload', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/task-1');
@@ -942,6 +947,36 @@ router.post('/alpha/iteration-10/start-a-claim/claimant-T3-summary-selfemploymen
 
 router.post('/alpha/iteration-10/start-a-claim/claimant-T3-summary-selfemployment-LDW-6', function (req, res) {
   res.redirect('/alpha/iteration-10/start-a-claim/map-option');
+}); 
+
+
+router.post('/i10-bereavement', function(request, response) {
+
+  var bereavementAnswer = request.session.data['bereavement']
+  if (bereavementAnswer == "miscarriage"){
+      response.redirect("/alpha/iteration-10/start-a-claim/offrampBereavement-MC")
+
+  } else if (bereavementAnswer == "stillbirth"){
+    response.redirect("/alpha/iteration-10/start-a-claim/MATB1-bereavement")
+
+  } else if (bereavementAnswer == "neonatal"){
+    response.redirect("/alpha/iteration-10/start-a-claim/MATB1-bereavement")
+
+  } else {
+  response.redirect("/alpha/iteration-10/start-a-claim/baby-born")
+}
+})
+
+router.post('/alpha/iteration-10/start-a-claim/MATB1-bereavement', function (req, res) {
+  res.redirect('/alpha/iteration-10/start-a-claim/baby-born-bereavement');
+}); 
+
+router.post('/alpha/iteration-10/start-a-claim/MATB1-bereavement-required', function (req, res) {
+  res.redirect('/alpha/iteration-10/start-a-claim/baby-born-bereavement');
+}); 
+
+router.post('/alpha/iteration-10/start-a-claim/baby-born-bereavement', function (req, res) {
+  res.redirect('/alpha/iteration-10/start-a-claim/bereavement-upload-birth');
 }); 
 
 }

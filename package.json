@@ -12,10 +12,13 @@
     "@dwp/govuk-one-login-service-header": "file:vendor/govuk-one-login-service-header/package",
     "@govuk-one-login/service-header": "^5.0.0",
     "@govuk-prototype-kit/common-templates": "2.0.1",
-    "@ministryofjustice/frontend": "2.2.5",
-    "govuk-frontend": "5.14.0",
-    "govuk-prototype-kit": "^13.18.1",
-    "qs": "6.14.1",
+    "govuk-frontend": "5.12.0",
+    "govuk-prototype-kit": "13.20.0",
+    "qs": "6.15.1",
     "save": "2.9.0"
+  },
+   "overrides": {
+    "minimatch": "10.2.3",
+    "lodash": "4.18.1"
   }
 }
