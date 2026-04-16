@@ -1,0 +1,37 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+ 
+
+
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+   <!-- {% include "govuk-prototype-kit/includes/homepage-top.njk" %}-->
+
+    <!--<h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>-->
+
+    <!--{% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}-->
+
+
+<h1 class="govuk-heading-l">Sorry, the selected file could not be uploaded</h1> 
+
+<p class="govuk-body">Go back and check that your files:</p> 
+<ul class="govuk-list govuk-list--bullet">
+<li>are JPG, PDF or PNG</li>
+<li>are smaller than 20MB</li>
+<li>do not contain a virus</li>
+</ul>
+  
+<p class="govuk-body">If you get the same error, you could apply by using the <a href="https://www.gov.uk/government/publications/maternity-allowance-claim-form">paper form</a> and post your evidence to us instead.</p> 
+</div>
+
+</div>
+{% endblock %}

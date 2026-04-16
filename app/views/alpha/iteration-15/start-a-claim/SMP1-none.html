@@ -1,0 +1,54 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+   <!-- {% include "govuk-prototype-kit/includes/homepage-top.njk" %}-->
+
+    <!--<h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>-->
+
+    <!--{% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}-->
+
+
+<h1 class="govuk-heading-l">You need an SMP1 form to get Maternity Allowance</h1>
+
+<p class="govuk-body">You’ll need an SMP1 form from your employer to get Maternity Allowance.</p>
+
+<p class="govuk-body">If you have more than 1 employer, you must send us an SMP1 form from each employer.</p>
+
+<p class="govuk-body">If your employer refuses to give you an SMP1 form, you can contact. <a target="_blank" href="https://www.gov.uk/universal-credit">HM Revenue & Customs (HMRC) (opens in a new window)</a> for help.</p>
+
+<p class="govuk-body">You can still continue with your application without your SMP1 form. We'll contact you later and you'll need to send it to us through post.</p>
+
+<form method="POST">
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Continue"
+  }) }}
+
+
+</div>
+
+</form>
+
+<!--<form method="POST">
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+</form>-->
+</div>
+
+</div>
+{% endblock %}

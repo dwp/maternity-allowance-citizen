@@ -1,6 +1,15 @@
 {% extends "layouts/main.html" %}
 
-{% set pageName="Home" %}
+{% set pageName="Home" %} 
+
+ 
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
 
 {% block content %}
 
@@ -16,28 +25,11 @@
     <!--{% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}-->
 
 
-<h1 class="govuk-heading-l">Sorry, the service is unavailable</h1>
-<p class="govuk-body">The Maternity Allowance online application is currently unavailable for you right now because you are self-employed, have taken on unpaid work for your partner’s business or have no employment during your Test Period.
+<h1 class="govuk-heading-l">Your information is incorrect</h1>
+<p class="govuk-body">You have said the information we have on your employment history is incorrect. <br>
+  You cannot change this information right now on the online application.
   <br><br>
-
-
-
-
-
-
-Your answers have not been saved
- <br><br>
   In the meantime, you can still apply through a <a href="https://www.gov.uk/browse/benefits">paper form</a>.</p>
-
-Your answers have not been saved.
-<br><br>
-
-
-  In the meantime, you can still apply through a <a href="https://www.gov.uk/browse/benefits">paper form</a>.
-  <br><br>
-This is a new service, help us improve it by <a href="">giving your feedback</a>.
-  </p>
-
 
 
 

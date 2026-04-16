@@ -1,0 +1,63 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+   <!-- {% include "govuk-prototype-kit/includes/homepage-top.njk" %}-->
+
+    <!--<h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>-->
+
+    <!--{% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}-->
+
+
+<h1 class="govuk-heading-l">You are not eligible for Maternity Allowance if you had a miscarriage</h1>
+<p class="govuk-body">As your baby died and was born before 24 weeks of pregnancy, you cannot apply for Maternity Allowance.
+
+  <br><br>
+If your baby died, but was born after 24 weeks of pregnancy, or died after being born, then you can <a href="">apply for Maternity Allowance</a>. 
+
+
+</p>
+
+<h2 class="govuk-heading-m">After a miscarriage</h2>
+
+<p class="govuk-body">A miscarriage can be emotionally and physically draining. If you are struggling, advice and support are available for you.</p>
+
+<h2 class="govuk-heading-m">Support resources</h2>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li><a href="https://www.nhs.uk/conditions/miscarriage/" target="_blank">NHS: After miscarriage (opens in new tab)</a></li>
+  <li><a href="https://www.tommys.org/baby-loss-support/miscarriage-information-and-support/miscarriage-support" target="_blank">Tommy’s: Support after miscarriage (opens in new tab) </a></li>
+  <li><a href="https://www.sands.org.uk/support-you" target="_parent">Sands: Support for you (opens in new tab)</a></li>
+</ul>
+
+<h2 class="govuk-heading-m">Baby loss certificate</h2>
+
+<p class="govuk-body">You can get a free <a href="https://www.gov.uk/request-baby-loss-certificate" target="_blank">certificate in memory of your baby (opens in new tab)</a> if they died before 24 weeks.</p>
+<p class="govuk-body">You do not have to request a certificate, and it’s not a legal document, but a way to remember your baby.</p>
+<form method="POST">
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+  
+
+  
+  </form>
+
+<!--<form method="POST">
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+</form>-->
+</div>
+
+</div>
+{% endblock %}
