@@ -581,6 +581,11 @@ router.post('/alpha/iteration-15/start-a-claim/funeral-relationship', function (
   res.redirect('/alpha/iteration-15/start-a-claim/funeral-age');
 });
 
+router.post('/alpha/iteration-15/start-a-claim/claimant-bereavement-summary', function (req, res) {
+  res.redirect('/alpha/iteration-15/start-a-claim/bereavement-continue');
+});
+
+
 
 router.post('/alpha/iteration-15/start-a-claim/funeral-age', function (req, res) {
   res.redirect('/alpha/iteration-15/start-a-claim/funeral-weeks');
