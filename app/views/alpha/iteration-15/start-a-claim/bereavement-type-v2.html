@@ -16,70 +16,81 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-three-quarters">
-      
-      <div class="govuk-form-group">
+        <form class="form" action="/i15-bereavement" method="post">
+
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+<div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-            Applying for Maternity Allowance after a bereavement 
+            Applying for Maternity Allowance after a bereavement
+
             </h1>
           </legend>
          <div id="signIn-hint" class="govuk-body">
            You can apply for Maternity Allowance if your baby dies or was stillborn within certain timeframes.
 <br><br>
-           Our eligibility criteria is defined as:
+          Our eligibility criteria is defined as:
+
+          <br><br>
+          <h2 class="govuk-heading-m" style="margin-bottom: 0px;;">Stillbirth</h2>
+          <p>Your baby died, and then was born after 24 weeks of pregnancy and you have a stillbirth certificate</p>
+          
+
+          <h2 class="govuk-heading-m" style="margin-bottom: 0px;;">Neonatal death</h2>
+          <p>Your baby was born alive at any stage of pregnancy and then died</p>
+          
+
+          <h2 class="govuk-heading-m" style="margin-bottom: 0px;;">Miscarriage</h2>
+          <p>Your baby died and was born before 24 weeks of pregnancy</p>
+          
           </div>
 
-<h2 class="govuk-heading-m" style="margin-bottom: 0px !important;">Stillbirth</h2>
-<p class="govuk-body">Your baby died, and then was born after 24 weeks of pregnancy and you have a stillbirth certificate</p>
-<br>
+{{ govukRadios({
+  name: "whereDoYouLive",
+   name: "bereavement",
+    value: data['bereavementAnswer'],
+  fieldset: {
+    legend: {
+      text: "",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "stillbirth",
+      text: "Stillbirth",
+  hint: {
+    text: "Your baby died, and then was born after 24 weeks of pregnancy and you have a stillbirth certificate"
+  }
+    },
+    {
+      value: "neonatal",
+      text: "Neonatal death ",
+  hint: {
+    text: "Your baby was born alive at any stage of pregnancy and then died"
+  }
+    },
+    {
+      value: "miscarriage",
+      text: "Miscarriage",
+  hint: {
+    text: "Your baby died and was born before 24 weeks of pregnancy"
+  }
+    }
+  ]
+}) }}
+<br><br>
 
-<h2 class="govuk-heading-m" style="margin-bottom: 0px !important;">Neonatal death</h2>
-<p class="govuk-body">Your baby was born alive at any stage of pregnancy and then died</p>
-<br>
+{% from "govuk/components/button/macro.njk" import govukButton %}
 
-<h2 class="govuk-heading-m" style="margin-bottom: 0px !important;">Miscarriage</h2>
-<p class="govuk-body">Your baby died and was born before 24 weeks of pregnancy</p>
-<br>
+{{ govukButton({
+  text: "Continue"
+}) }}
 
-<h2 class="govuk-heading-m">Which type of bereavement have you had?</h2>
-
-          <div class="govuk-radios" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
-              <label class="govuk-label govuk-radios__label" for="signIn">
-                Stillbirth
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
-              <label class="govuk-label govuk-radios__label" for="signIn-2">
-                Neonatal death 
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
-              <label class="govuk-label govuk-radios__label" for="signIn-2">
-                Miscarriage
-              </label>
-            </div>
-         
-          </div>
-        </fieldset>
-      </div>
-  
-<form class="form" method="post" novalidate>
-
-
-
-
-    {% from "govuk/components/button/macro.njk" import govukButton %}
-
-    {{ govukButton({
-      text: "Continue"
-    }) }}
-
-    </form>
+</form>
 
   </div>
 </div>
