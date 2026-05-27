@@ -1,17 +1,16 @@
 
-{% extends "layouts/main.html" %}
+{% extends "layout.html" %}
 
-{% set pageName="Home" %} 
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
 
- 
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
     href: "javascript:history.go(-1)"
   }) }}
 {% endblock %}
-
-
 
 {% block content %}
 
@@ -20,11 +19,12 @@
         <div class="govuk-grid-column-three-quarters">
           <form class="form" method="post">
 
+
        <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              What proof of pregnancy do you have?
+              What proof of birth do you have?
 
             </h1>
         </legend>
@@ -33,9 +33,19 @@
           </div>--> 
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="BC" data-aria-controls="conditional-contact">
+              <label class="govuk-label govuk-radios__label" for="contact">
+                Birth Certificate
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+           
+            </div>
+
+            <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="matb1" data-aria-controls="conditional-contact">
               <label class="govuk-label govuk-radios__label" for="contact">
-                Maternity Certificate (MAT B1)
+                Maternity Certificate (MATB1)
               </label>
             </div>
             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
@@ -49,14 +59,18 @@
             </div>-->
           
           
-               <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
-              <label class="govuk-label govuk-radios__label" for="contact-2">
-               None
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="none" data-aria-controls="conditional-contact-3">
+              <label class="govuk-label govuk-radios__label" for="contact-3">
+                None
               </label>
-              <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
-                You must provide proof of pregnancy before you can get Maternity Allowance. You can do this later on.
-
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-text">
+                  You must provide proof of birth before you can get Maternity Allowance. You can do this later on.
+                </label>
+               
               </div>
             </div>
           </div>

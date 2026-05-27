@@ -1,0 +1,84 @@
+
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %} 
+
+ 
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+        <form class="form" action="/i15-bereavement" method="post">
+
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+<div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+            Which type of bereavement have you had?
+            </h1>
+          </legend>
+         <div id="signIn-hint" class="govuk-body">
+           You can apply for Maternity Allowance if your baby dies or was stillborn within certain timeframes.
+<br><br>
+           Select which best describes your situation.
+          </div>
+
+{{ govukRadios({
+  name: "whereDoYouLive",
+   name: "bereavement",
+    value: data['bereavementAnswer'],
+  fieldset: {
+    legend: {
+      text: "",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "stillbirth",
+      text: "Stillbirth",
+  hint: {
+    text: "Your baby died, and then was born after 24 weeks of pregnancy and you have a stillbirth certificate"
+  }
+    },
+    {
+      value: "neonatal",
+      text: "Neonatal death ",
+  hint: {
+    text: "Your baby was born alive at any stage of pregnancy and then died"
+  }
+    },
+    {
+      value: "miscarriage",
+      text: "Miscarriage",
+  hint: {
+    text: "Your baby died and was born before 24 weeks of pregnancy"
+  }
+    }
+  ]
+}) }}
+<br><br>
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+</form>
+
+  </div>
+</div>
+
+{% endblock %}

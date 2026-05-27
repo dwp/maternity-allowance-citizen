@@ -1,0 +1,45 @@
+
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+   <!-- {% include "govuk-prototype-kit/includes/homepage-top.njk" %}-->
+
+    <!--<h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>-->
+
+    <!--{% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}-->
+
+
+<h1 class="govuk-heading-l">Earnings history</h1>
+<p class="govuk-body">
+  We currently have no payslips from HM Revenue & Customs (HMRC) for your test period (3 March 2024 and 7 June 2025).
+  <br><br>
+  You'll need 13 weeks of payslips of your highest earning weeks within your test period. These payslips do not need to be linked together.
+  <br><br>
+  If you had more than one employment in any of the weeks you have chosen, you must provide the payslips from all the employments.
+  
+  <p class="govuk-body">
+    <a href="#" class="govuk-link">This information is incorrect</a>
+  </p>
+
+
+
+<!--<form method="POST">
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+</form>-->
+</div>
+
+</div>
+{% endblock %}

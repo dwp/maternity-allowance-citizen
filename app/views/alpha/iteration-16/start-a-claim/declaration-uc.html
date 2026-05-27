@@ -1,0 +1,133 @@
+
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %} 
+
+ 
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+   <!-- {% include "govuk-prototype-kit/includes/homepage-top.njk" %}-->
+
+    <!--<h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>-->
+
+    <!--{% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}-->
+ 
+  </div>
+  <h1 class="govuk-heading-xl">If you get Universal Credit</h1>
+
+
+  {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+  {% set html %}
+    <p class="govuk-notification-banner__heading">
+      Your Universal Credit payments will be reduced by an amount equal to your Maternity Allowance payments.
+    </p>
+  {% endset %}
+  
+  {{ govukNotificationBanner({
+    html: html
+  }) }}
+
+<p class="govuk-body">You may get an <a href="">extra amount of Universal Credit for your children (opens in new tab)</a> (whether you get Maternity Allowance or not).</p>
+
+  <p class="govuk-body"><a href="https://www.gov.uk/universal-credit/changes-of-circumstances" target="_blank">Report a change on your Universal Credit account (opens in a new tab)</a> if you start getting Maternity Allowance.</p>
+
+<p class="govuk-body">If you're claiming Universal Credit, you may also get:
+<ul class="govuk-list govuk-list--bullet">
+  <li><a href="https://www.gov.uk/sure-start-maternity-grant" target="_blank">Sure Start Maternity Grant (SSMG) (opens in new tab)</a> - this helps with the costs of having a baby if you live in England or Wales and you or your partner are on a qualifying benefit and do not have another child under the age of 16 living in the same household</li>
+  <li><a href="https://www.mygov.scot/best-start-grant-best-start-foods" target="_blank">Best Start Grant - Pregnancy and Baby Payment (opens in new tab)</a> - this helps with the costs of having a baby if you live in Scotland</li>
+   <li><a href="https://www.gov.uk/healthy-start" target="_blank">Healthy Start vouchers (opens in new tab)</a> to buy healthy foods like milk or fruit if you live in England or Wales - if you are under 18, you can claim these even if you are not on a qualifying benefit </li>
+
+  <li><a href="https://www.mygov.scot/best-start-grant-best-start-foods" target="_blank">Best Start Foods (opens in new tab)</a> - these are payments to help you buy healthy foods during pregnancy if your child is under 3 and you live in Scotland</li>
+</ul>
+
+
+<h2 class="govuk-heading-m">Payments</h2>
+
+<p class="govuk-body">	
+  Universal Credit and Maternity Allowance are paid at different times. Universal Credit is paid monthly. Maternity Allowance is paid every 2 or 4 weeks.</p>
+
+<p class="govuk-body">You can use the <a href="https://www.gov.uk/maternity-paternity-calculator" target="_blank">benefit calculator (opens in new tab)</a> to help find out what benefits you could get, how much you could get and how to claim.</p>
+
+<!--<h2 class="govuk-heading-m">Other benefits</h2>
+
+<p class="govuk-body">The other benefits that can be affected are:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>Bereavement benefits</li>
+  <li>Carer's Allowance</li>
+  <li>Carer support payment</li>
+  <li>Employment Support Allowance (ESA)</li>
+  <li>Income Support</li>
+  <li>Jobseeker's Allowance - this will stop if you get Maternity Allowance</li>
+
+</ul>-->
+
+
+
+
+<!--<h2 class="govuk-heading-m">Pregnancy-related sick leave</h2>
+
+<p class="govuk-body">If you are on sick leave due to a pregnancy-related illness on or after the 4th week before the baby is due, your Maternity Allowance must start at any time in this 4 week period. </p>
+<p class="govuk-body">If you are on sick leave due to a pregnancy-related illness on or after the 4th week before the week the baby is due, your Maternity Allowance must start at any time in this 4 week period.</p>
+
+<p class="govuk-body">If you are receiving Statutory Sick Pay (SSP) or Incapacity benefit in the same 4 week period, Maternity Allowance will stop. If you are receiving New Style Employment and Support Allowance, this may stop.</p>-->
+
+<h2 class="govuk-heading-m">National Insurance credits</h2>
+
+<p class="govuk-body">What benefits you get will affect which <a href="https://www.gov.uk/national-insurance-credits" target="_blank">National Insurance credits (opens in new tab)</a> you're eligible for. As an example:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>if you claim Maternity Allowance, you get Class 1 National Insurance credits, which help you qualify for some other benefits and State Pension</li>
+  <li>if you claim Universal Credit only, you get Class 3 National Insurance credits, which count towards your help you qualify for State Pension only</li>
+
+</ul>
+
+<form method="POST">
+
+  <h2 class="govuk-heading-m">Confirm understanding</h2>
+
+  <p class="govuk-body">Confirm you understand how your Universal Credit may be affected if you claim Maternity Allowance.</p>
+
+  {{ govukCheckboxes({
+idPrefix: "confirm",
+name: "confirm",
+items: [
+{
+value: "confirm",
+text: "Yes I confirm"
+}
+]
+}) }}
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Continue"
+  }) }}
+
+  {{ govukButton({
+    text: "I do not want to claim Maternity Allowance",
+    classes: "govuk-button--secondary",
+    href: "leaveMA"
+  }) }}
+</div>
+
+</form>
+</div>
+
+
+{% endblock %}
