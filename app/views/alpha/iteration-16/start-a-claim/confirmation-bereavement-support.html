@@ -1,0 +1,96 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+   <!-- {% include "govuk-prototype-kit/includes/homepage-top.njk" %}-->
+
+    <!--<h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>-->
+
+    <!--{% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}-->
+
+
+<h1 class="govuk-heading-l">Support and resources during a bereavement</h1>
+
+<h3 class="govuk-heading-s">Advice and support</h3>
+<p class="govuk-body">	
+Baby loss can be emotionally and physically draining. If you are struggling, these organisations can help you understand what happened and give advice on recovery.</p>
+
+<p class="govuk-body">They can give emotional support, access to online and in-person networks and can also give legal and practical advice.</p>
+<ul class="govuk-list govuk-list govuk-list--bullet">
+  <li>
+    <a class="govuk-link" href="https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/grief-bereavement-loss/" target="_blank">Advice on bereavement and loss on the NHS website (opens in new tab)</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="https://www.tommys.org/baby-loss-support" target="_blank">Baby loss information and support from Tommy’s (opens in new tab)</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="https://www.sands.org.uk/support-you" target="_blank">Support for bereaved families from Sands (opens in new tab)</a>
+  </li>
+</ul>
+
+
+<h3 class="govuk-heading-s">Financial support</h3>
+<p>There is financial support available to you and your partner to take time off of work following a bereavement, and towards funeral costs.</p>
+<ul class="govuk-list govuk-list govuk-list--bullet">
+  <li>
+    <a class="govuk-link" href="https://www.gov.uk/parental-bereavement-pay-leave" target="_blank">Statutory Parental Bereavement Pay and Leave (opens in new tab)</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="https://www.gov.uk/neonatal-care-pay-leave" target="_blank">Neonatal Care Pay and Leave (opens in new tab)</a>
+  </li>
+    <li>
+    <a class="govuk-link" href="https://www.gov.uk/neonatal-care-pay-leave" target="_blank">Funeral Expenses Payment (opens in new tab)</a>
+  </li>
+    <li>
+    <a class="govuk-link" href="https://www.gov.uk/neonatal-care-pay-leave" target="_blank">Children’s Funeral Fund for England (opens in new tab)</a>
+  </li>
+</ul>
+
+<h3 class="govuk-heading-s">Process and what to do</h3>
+
+<p class="govuk-body">The NHS and GOV.UK can help you understand both the medical and administrative processes that happen when your baby dies. </p>
+
+<ol class="govuk-list govuk-list govuk-list--bullet">
+  <li>
+  <a class="govuk-link" href="https://www.nhs.uk/conditions/stillbirth/what-happens/" target="_blank">What happens if your unborn baby dies on the NHS website (opens in new tab)</a>
+  </li>
+  <li>
+   <a class="govuk-link" href="https://www.gov.uk/after-a-death/if-a-child-or-baby-dies" target="_blank">What to do if a child or baby dies (opens in new tab)</a>
+  </li>
+</ol>
+
+<p class="govuk-body">These lists are not exhaustive. </p>
+
+<form method="POST">
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+  
+  <div class="govuk-button-group">
+    {{ govukButton({
+      text: "Save or print this page"
+    }) }}
+  
+  
+  </div>
+  
+  </form>
+
+<!--<form method="POST">
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+</form>-->
+</div>
+
+</div>
+{% endblock %}

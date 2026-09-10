@@ -16,33 +16,28 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
-<form class="form" action="/i16-employed-abroad" method="post" novalidate>
+<form class="form" method="post" novalidate>
 
   {% from "govuk/components/input/macro.njk" import govukInput %}
 
-  {{ govukRadios({
-    name: "employedAbroad",
-    value: data['employedAbroadAnswer'],
+  <h1 class="govuk-heading-l govuk-!-margin-bottom-3">
+   What is the due date listed on your MAT B1 form?
+  </h1>
+
+  <div id="passport-issued-hint" class="govuk-body">We use this date to calculate your eligibility for Maternity Allowance.</div>
+
+  {{ govukDateInput({
+    id: "passport-issued",
+    namePrefix: "passport-issued",
     fieldset: {
       legend: {
-        text: "Did you pay National Insurance to a country other than the United Kingdom?",
         isPageHeading: true,
         classes: "govuk-fieldset__legend--l"
       }
     },
-  hint: {
-    text:"Only include payments in your Test Period (3 March 2024 and 7 June 2025)"
-  },
-    items: [
-      {
-        value: "yes",
-        text: "Yes"
-      },
-      {
-        value: "no",
-        text: "No"
-      }
-    ]
+    hint: {
+      text: "For example, 27 3 2007"
+    }
   }) }}
 
   

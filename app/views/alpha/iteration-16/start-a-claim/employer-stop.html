@@ -16,14 +16,14 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
-<form class="form" action="/i14-stop-work-reason" method="post" novalidate>
+<form class="form" action="/i16-stop-work-reason" method="post" novalidate>
 
   {% from "govuk/components/input/macro.njk" import govukInput %}
   {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
   {{ govukRadios({
     name: "whereDoYouLive",
-    name: "i14stopWorkReason",
+    name: "i16stopWorkReason",
     value: data['i14stopWorkReasonAnswer'],
     fieldset: {
       legend: {
