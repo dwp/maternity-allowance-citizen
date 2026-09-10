@@ -3,7 +3,7 @@ kind: Component
 metadata:
   name: Maternity.allowance.citizen.prototype
   title: Maternity.Allowance.Citizen.Prototype
-  description: |
+  description: 
      maternity-allowance-citizen-prototype.
  
   annotations:
@@ -15,7 +15,7 @@ metadata:
  
 
     dwp.gov.uk/last-verified.by: Jagdip Purewal 
-    dwp.gov.uk/last-verified.on: "2026-05-27"
+    dwp.gov.uk/last-verified.on: "2026-09-10"
 
  
     dwp.gov.uk/open-source.approved: "false"
