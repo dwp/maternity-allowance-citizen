@@ -1,0 +1,105 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %} 
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %} 
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+   <!-- {% include "govuk-prototype-kit/includes/homepage-top.njk" %}-->
+
+    <!--<h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>-->
+
+    <!--{% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}-->
+ 
+  </div>
+  <h1 class="govuk-heading-xl">If you’re self employed</h1>
+
+
+  {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+  {% set html %}
+    <p class="govuk-notification-banner__heading">
+      Your Maternity Allowance award could be adjusted to take your National Insurance contribution into account.
+ 
+    </p>
+  {% endset %}
+  
+  {{ govukNotificationBanner({
+    html: html
+  }) }}
+
+  <h2 class="govuk-heading-m">If you're registered as self-employed</h2> 
+
+ 
+    <p class="govuk-body">You can get Maternity Allowance for up to 39 weeks if you’ve been</p>
+    <ul class="govuk-list govuk-list--bullet">
+    <li>registered with HM Revenue and Customs (HMRC) for at least 26 weeks in your 66 week Test Period</li>  
+    <li>paid Class 2 National Insurance contributions for at least 13 weeks in your 66 week Test Period</li> 
+     </ul>
+     <p class="govuk-body">The 66 weeks before the week your baby is due is known as your Test Period.</p> 
+ 
+     <h2 class="govuk-heading-m">Class 2 National Insurance contributions</h2> 
+     <p class="govuk-body">From 6 April 2015, HMRC changed the way it collects Class 2 National Insurance (NI) contributions from self-employed people. This means you may not have paid the required Class 2 NI contributions in your Test Period to receive the maximum Maternity Allowance rate.</p> 
+    
+     <h2 class="govuk-heading-m">If you’ve paid 13 weeks of Class 2 contributions</h2> 
+     <p class="govuk-body">You may get £27 per week for a few weeks while your Class 2 NI contributions are linked to your Maternity Allowance application. Your payments will be increased and backdated if necessary. This can take several weeks.</p> 
+
+     <h2 class="govuk-heading-m">If you’ve paid less than 13 weeks of Class 2 contributions</h2> 
+     <p class="govuk-body">If you've NOT paid for any Class 2 contributions, you’ll be entitled to £27 per week Maternity Allowance.</p> 
+     <p class="govuk-body">If you've paid between 1 and 12 weeks of Class 2 contributions, your Maternity Allowance will be calculated based on how many weeks of Class 2 NI contributions you’ve made.</p>
+     <p class="govuk-body">You may be able to increase your Maternity Allowance by paying for additional voluntary Class 2 NI contributions.</p> 
+
+         
+     <h2 class="govuk-heading-m">Paying for additional voluntary Class 2 NI contributions</h2> 
+     <p class="govuk-body">After you apply for Maternity Allowance, HMRC will contact you if you’ve paid less than 13 weeks of Class 2 NI contributions. They will tell you how many additional contributions you need to get the full amount of Maternity Allowance. You do not need to tell Maternity Allowance if you pay for additional voluntary Class 2 NI contributions, HMRC will let us know.</p> 
+
+     <p class="govuk-body">For more information about how much Maternity Allowance you’ll get, visit <a href="https://www.gov.uk/maternity-allowance/what-youll-get" target="_blank">Maternity Allowance: What you'll get - GOV.UK (opens in new tab)</a> </p>
+                
+     <p class="govuk-body">For more information about voluntary National Insurance contributions, visit <a href="https://www.gov.uk/voluntary-national-insurance-contributions" target="_blank">Voluntary National Insurance contributions - GOV.UK (opens in new tab)</a> </p>
+ 
+
+  <form method="POST">
+
+      <h2 class="govuk-heading-m">Tick to confirm if you understand the above information</h2>
+      {{ govukCheckboxes({
+    idPrefix: "confirm",
+    name: "confirm",
+    items: [
+    {
+    value: "confirm",
+    text: "Yes I confirm"
+    }
+    ]
+    }) }} 
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+ 
+    
+ 
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+   
+    
+    </form>
+
+</div>
+
+
+{% endblock %}

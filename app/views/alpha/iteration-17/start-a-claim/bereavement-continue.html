@@ -1,0 +1,86 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+   <!-- {% include "govuk-prototype-kit/includes/homepage-top.njk" %}-->
+
+    <!--<h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>-->
+
+    <!--{% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}-->
+
+
+<h1 class="govuk-heading-l">Continue your Maternity Allowance application</h1>
+<p class="govuk-body">Thank you for providing information about your baby. </p>
+
+<p class="govuk-body">You will now continue with your Maternity Allowance application and answer the remaining questions about your employment and earnings history. </p>
+<br>
+<h2 class="govuk-heading-m">Resources for you</h2>
+<p class="govuk-body">Support is available to help you understand and manage your bereavement, if you need it. </p>
+<br>
+<h3 class="govuk-heading-s">Advice and support</h3>
+<ul class="govuk-list">
+  <li>
+    <a class="govuk-link" href="https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/grief-bereavement-loss/" target="_blank">	NHS advice on bereavement and loss (opens in new tab)</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="https://www.tommys.org/baby-loss-support" target="_blank">Tommy’s baby loss information and support (opens in new tab)</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="https://www.sands.org.uk/support-you" target="_blank">Sands support for bereaved families (opens in new tab)</a>
+  </li>
+</ul>
+
+<h3 class="govuk-heading-s">Financial support</h3>
+<ul class="govuk-list">
+  <li>
+    <a class="govuk-link" href="https://www.gov.uk/parental-bereavement-pay-leave" target="_blank">Statutory Parental Bereavement Pay and Leave (opens in new tab)</a>
+  </li>
+  <li>
+    <a class="govuk-link" href="https://www.gov.uk/neonatal-care-pay-leave" target="_blank">Neonatal Care Pay and Leave (opens in new tab)</a>
+  </li>
+</ul>
+
+<h3 class="govuk-heading-s">Process and what to do</h3>
+<ul class="govuk-list">
+  <li>
+    NHS guidance on <a class="govuk-link" href="https://www.nhs.uk/conditions/stillbirth/what-happens/" target="_blank">what happens if your unborn baby dies (opens in new tab)</a>
+  </li>
+  <li>
+    GOV.UK guidance on <a class="govuk-link" href="https://www.gov.uk/after-a-death/if-a-child-or-baby-dies" target="_blank">what to do if a child or baby dies (opens in new tab)</a>
+  </li>
+</ul>
+
+
+<form method="POST">
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+  
+  <div class="govuk-button-group">
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+  
+  
+  </div>
+  
+  </form>
+
+<!--<form method="POST">
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+</form>-->
+</div>
+
+</div>
+{% endblock %}

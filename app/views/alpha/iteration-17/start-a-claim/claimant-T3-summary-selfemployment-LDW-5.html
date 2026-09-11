@@ -1,16 +1,16 @@
 
-{% extends "layouts/main.html" %}
+{% extends "layout.html" %}
 
-{% set pageName="Home" %} 
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
 
- 
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
     href: "javascript:history.go(-1)"
   }) }}
 {% endblock %}
-
 
 {% block content %}
 
@@ -19,112 +19,111 @@
       
       
 <section id="decision" class="govuk-!-margin-bottom-6">
-  <h1 class="govuk-heading-l">Confirm your baby details</h1>
+  <h1 class="govuk-heading-l">Confirm self-employment details</h1>
   
     <table class="govuk-table">
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">
-        Baby born
+        Employment type
       </th>
       <td class="govuk-table__cell">
-        No
+        Self-employed
       </td>
-      <td class="govuk-table__cell">  <a class="govuk-link" href="baby-born">
+      <td class="govuk-table__cell">  <a class="govuk-link" href="employment-type">
         Change<span class="govuk-visually-hidden"> name</span>
       </a></td>
-    </tr>
+    </tr> 
+
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">
-        Baby due date
+        Registered as self-employed
       </th>
       <td class="govuk-table__cell">
-       12 November 2026
+        Yes
       </td>
-      <td class="govuk-table__cell">  <a class="govuk-link" href="baby-due-born">
+      <td class="govuk-table__cell">  <a class="govuk-link" href="mat-leave-start">
+        Change<span class="govuk-visually-hidden"> name</span>
+      </a></td>
+    </tr> 
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">
+        Still self-employed 
+      </th>
+      <td class="govuk-table__cell">
+        Yes
+      </td>
+      <td class="govuk-table__cell">  <a class="govuk-link" href="mat-leave-start">
         Change<span class="govuk-visually-hidden"> name</span>
       </a></td>
     </tr>
-    
-  
-
-    <!--<tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">
-      Birth Certificate system number
-      </th>
-      <td class="govuk-table__cell">
-        123456789
-      </td>
-      <td class="govuk-table__cell">  <a class="govuk-link" href="baby-birth-proof">
-        Change<span class="govuk-visually-hidden"> name</span>
-      </a></td>
-    </tr>-->
+ 
  
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">
-        Proof of pregnancy
+        Stopped work 
       </th>
       <td class="govuk-table__cell">
-        MATB1
+        No 
       </td>
-      <td class="govuk-table__cell">  <a class="govuk-link" href="baby-birth-proof">
+      <td class="govuk-table__cell">  <a class="govuk-link" href="employer-stop">
         Change<span class="govuk-visually-hidden"> name</span>
       </a></td>
-    </tr>
-
+    </tr> 
 
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">
-        Evidence uploaded
+        Last day of work known 
       </th>
       <td class="govuk-table__cell">
-        MATB1.jpg
+        Yes 
       </td>
-      <td class="govuk-table__cell">  <a class="govuk-link" href="baby-birth-proof">
+      <td class="govuk-table__cell">  <a class="govuk-link" href="selfemployment-LDW-plan-know">
         Change<span class="govuk-visually-hidden"> name</span>
       </a></td>
-    </tr>
-    <!--<tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">
-        Birth certificate system number
-      </th>
-      <td class="govuk-table__cell">
-        Not provided
-      </td>
-      <td class="govuk-table__cell">  <a class="govuk-link" href="baby-birth-cert-number">
-        Change<span class="govuk-visually-hidden"> name</span>
-      </a></td>
-    </tr>
+    </tr> 
 
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">
-        Birth certificate
+        Planned last day of work  
       </th>
       <td class="govuk-table__cell">
-        BirthCertificate.jpg
+        1 November 2026 
       </td>
-      <td class="govuk-table__cell">  <a class="govuk-link" href="baby-birth-cert-number">
+      <td class="govuk-table__cell">  <a class="govuk-link" href="selfemployment-LDW-plan">
         Change<span class="govuk-visually-hidden"> name</span>
       </a></td>
-    </tr>
+    </tr> 
+ 
+ 
 
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">
-       Proof of pregnancy
-      </th>
-      <td class="govuk-table__cell">
-        None
-      </td>
-      <td class="govuk-table__cell">  <a class="govuk-link" href="proof-2">
-        Change<span class="govuk-visually-hidden"> name</span>
-      </a></td>
-    </tr>-->
-
-   
-
+ 
 </tbody>
 </table>
 
+ 
 
+
+
+  <!--<tr class="govuk-table__row"></tr>
+    <td scope="row" class="govuk-table__cell">
+     Sainsbury's
+    </td>
+    <td class="govuk-table__cell">
+     12 July 2024
+    </td>
+    <td class="govuk-table__cell">   
+      18 Janurary 2025<span class="govuk-visually-hidden"> name</span>
+    </td>
+    <td class="govuk-table__cell">  <a class="govuk-link" href="employment-history">
+      Change<span class="govuk-visually-hidden"> name</span>
+    </a></td>
+    <tr class="govuk-table__row">
+      </tr>
+  </tr>-->
+
+</tbody>
+</table>
   
 <form class="form" method="post" novalidate>
 
@@ -132,7 +131,7 @@
 
   <div class="govuk-button-group">
     {{ govukButton({
-      text: "Save and continue"
+      text: "Save and Continue"
     }) }}
   
 

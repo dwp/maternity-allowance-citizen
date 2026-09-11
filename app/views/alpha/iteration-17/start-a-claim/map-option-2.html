@@ -1,0 +1,83 @@
+
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %} 
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %} 
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters">
+      
+      <form class="form" action="/i16-map-choice" method="post" novalidate> 
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="mapStartDate-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+Starting your Maternity Allowance
+      </h1>
+    </legend> 
+
+    <p class="govuk-body">You have the option to choose when your Maternity Allowance period starts.</p> 
+
+        <p class="govuk-body">If you do choose, the date must be between your last day of work and your baby's due date. For you, this will be between 16 August 2026 and 6 November 2026.</p> 
+
+         <p class="govuk-body">We'll confirm the date of your first payment when we let you know if your application is successful.</p>
+
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+Would you like to choose the date your Maternity Allowance period starts?
+              </legend>
+
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="mapStartDate" name="mapStartDate" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="mapStartDate">
+          Yes
+        </label> 
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="mapStartDate-2" name="mapStartDate" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="mapStartDate-2">
+          No
+        </label>
+                <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          I want my Maternity Allowance to start the day after my baby is born.
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+
+
+
+  <div class="govuk-button-group">
+    {{ govukButton({
+      text: "Confirm"
+    }) }}
+  
+
+  </div>
+
+  </form>
+
+  </section>
+
+
+  </div>
+</div>
+
+{% endblock %}

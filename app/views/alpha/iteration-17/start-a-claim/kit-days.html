@@ -1,0 +1,49 @@
+
+{% extends "layout.html" %}
+ 
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <form class="form" method="post">
+
+
+<h1 class="govuk-heading-l">Keeping in touch days</h1>
+<p class="govuk-body">
+You can work up to 10 days while you are getting Maternity Allowance (MA) without losing any of your payments. </p>
+<p class="govuk-body">
+These are called keeping in touch (KIT) days.   
+</p>
+
+<p class="govuk-body">
+KIT days let you keep in touch with your workplace or with your business if you are self-employed. You can use them to do some work without affecting your MA or you can use them to help your return to work.  
+</p>
+
+<p class="govuk-body">
+If you are on maternity leave from your employer, you must agree with your employer that you can work on those days. Your employer cannot insist you work on those days. 
+</p>
+
+<p class="govuk-body">
+If you are self-employed or not on maternity leave from an employer, you can choose if you want to take any KIT days. 
+</p>
+
+<h2 class="govuk-heading-m">Telling us about your KIT days</h2>
+<p class="govuk-body">
+You should <a href="">contact us to tell us about any KIT days that you are taking</a>. </p>
+<p class="govuk-body">
+If you take more than 10 KIT days we might stop or reduce your MA payments.  
+</p>
+
+
+
+   
+</form>
+</div></div>
+{% endblock %}

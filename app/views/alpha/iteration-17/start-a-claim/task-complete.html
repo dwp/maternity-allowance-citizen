@@ -1,0 +1,168 @@
+
+{% extends "layouts/main.html" %}
+ 
+{% set pageName="Home" %} 
+
+ 
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+<form class="form" method="post" novalidate>
+
+  <h1 class="govuk-heading-xl">Check your answers and submit application</h1>
+
+  <div class="govuk-inset-text">
+    Your answers so far have been saved.
+  </div>
+
+  <p class="govuk-body">You can check each section you have completed if you need to change anything.</p>
+
+  <ul class="govuk-task-list">
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="claimant-T1-summary" aria-describedby="company-details-1-status">
+          Claimant details
+        </a>
+      </div>
+      <div class="govuk-task-list__status" id="company-details-2-status">
+        <p class="govuk-body" style="margin-bottom: 0px;">Completed</p>
+      </div>
+    </li>
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="baby-T2-summary" aria-describedby="company-details-2-status">
+          Baby details
+        </a>
+      </div>
+      <div class="govuk-task-list__status" id="company-details-2-status">
+        <p class="govuk-body" style="margin-bottom: 0px;">Completed</p>
+      </div>
+    </li>
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="claimant-T3-summary" aria-describedby="company-details-3-hint company-details-3-status">
+         Employment details
+        </a>
+        <!--<div id="company-details-3-hint" class="govuk-task-list__hint">
+          Include 5 years of the company’s relevant financial information
+        </div>-->
+      </div>
+      <div class="govuk-task-list__status" id="company-details-3-status">
+        <p class="govuk-body" style="margin-bottom: 0px;">Completed</p>
+      </div>
+    </li>
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="claimant-T4-summary" aria-describedby="company-details-4-status">
+          Earning details
+        </a>
+      </div>
+      <div class="govuk-task-list__status" id="company-details-4-status">
+        <p class="govuk-body" style="margin-bottom: 0px;">Completed</p>
+      </div>
+    </li>
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="claimant-T5-summary" aria-describedby="company-details-5-status">
+          Payments details
+        </a>
+      </div>
+      <div class="govuk-task-list__status" id="company-details-5-status">
+        <p class="govuk-body" style="margin-bottom: 0px;">Completed</p>
+      </div>
+    </li>
+  </ul>
+
+</form>
+
+<h1 class="govuk-label-wrapper">
+  <label class="govuk-label govuk-label--m" for="more-detail">
+    Evidence you must provide
+  </label>
+</h1>
+
+<p class="govuk-body">Before you can be awarded any Maternity Allowance, you’ll need to submit the following evidence. You can submit this now, or we’ll contact you and you’ll need to send it to us through post. You can still submit your application without uploading you evidence.</p>
+<ul class="govuk-list">
+  <a href="proof-2"><li class="govuk-link">Proof of pregnancy</li></a>
+</ul>
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--m" for="more-detail">
+      Optional - Do you need to provide any more details?
+    </label>
+  </h1>
+  <div id="more-detail-hint" class="govuk-hint">
+    Do not include personal or financial information, like your National Insurance number or credit card details
+  </div>
+  <textarea style="margin-bottom: 10px;" class="govuk-textarea govuk-js-character-count" id="with-hint" name="withHint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+  <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+    You can enter up to 300 words
+  </div>
+
+</div>
+ 
+
+<form method="POST">
+
+  <h2 class="govuk-heading-m">Declaration</h2>
+  <p class="govuk-body">By agreeing to this declaration, you agree:</p>
+  <ul class="govuk-list govuk-list--bullet">
+  <li>the information you have given is complete and correct  </li>  
+  <li>to tell the Department of Work and Pensions (DWP) straight away if your circumstances change, such as your address, marital status or bank details </li> 
+  <li>to tell DWP straight away about changes that will affect when we pay you, such as if your baby arrives early, you change your planned last day of work, or you become entitled to Statutory Maternity Pay </li>
+  <li>to pay back any Maternity Allowance if you are paid too much</li> 
+
+  </ul>
+
+  <div class="govuk-warning-text" style="margin-bottom: 0px;">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+If you knowingly give wrong information and do not report changes, you may:
+  <ul class="govuk-list govuk-list--bullet" style="margin-top: 10px;;">
+<li><strong>have your Maternity Allowance stopped</strong></li>
+<li><strong>have to pay back any Maternity Allowance</strong></li>
+<li><strong>be liable to prosecution</strong></li>
+  </ul>
+
+  </strong>
+</div>
+
+
+
+<form method="POST">
+
+
+  {{ govukCheckboxes({
+idPrefix: "confirm",
+name: "confirm",
+items: [
+{
+value: "confirm",
+text: "I understand and agree "
+}
+]
+}) }}
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Submit application "
+  }) }}
+
+</div>
+
+</form>
+
+{% endblock %}

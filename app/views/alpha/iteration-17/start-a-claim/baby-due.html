@@ -1,0 +1,129 @@
+
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %} 
+
+ 
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      
+<section id="decision" class="govuk-!-margin-bottom-6">
+  <h1 class="govuk-heading-l">Contact preferences details</h1>
+  <div id="passport-issued-hint" class="govuk-hint">
+    Please confirm these are your correct preferences 
+  </div>
+  <dl class="govuk-summary-list govuk-!-margin-bottom-0">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+        Name
+      </dt>
+      <dd class="govuk-summary-list__value">
+        34 Fairburn Way,<br>Chelsea,<br>London,<br>SW7 3CP
+      </dd>
+
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-width-one-half">
+        Mobile number
+      </dt>
+      <dd class="govuk-summary-list__value">
+       077456764343
+      </dd>
+
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+       UK Landline number
+      </dt>
+      <dd class="govuk-summary-list__value">
+        None
+      </dd>
+
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Email address
+      </dt>
+      <dd class="govuk-summary-list__value">
+        jane.doe@gmail.com
+      </dd>
+
+    </div>
+
+  </dl>
+  </section>
+      
+      
+    <!--  
+      
+      <h1 class="govuk-heading-l">
+        Claimant details
+      </h1>
+
+      <ul class="govuk-list">
+        <li>
+          <span class="govuk-body govuk-!-font-weight-bold">Name: </span>{{ data['claimant-name'] }}
+        </li>
+        <li>
+          <span class="govuk-body govuk-!-font-weight-bold">National Insurance Number: </span>{{ data['claimant-nino'] }}
+        </li>
+        <li>
+          <span class="govuk-body govuk-!-font-weight-bold">Date of birth: </span>{{ data['claimant-dob'] }}
+        </li>
+        <li>
+          <span class="govuk-body govuk-!-font-weight-bold">Address: </span>{{ data['claimant-address'] }}, {{ data['claimant-postcode'] }}
+        </li>
+        <li>
+          <span class="govuk-body govuk-!-font-weight-bold">Contact number: </span>{{ data['claimant-contact-number'] }}
+        </li>
+      </ul>
+
+    -->
+
+      <form class="form" method="post" novalidate>
+
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+      {{ govukRadios({
+        classes: "govuk-radios--inline",
+        name: "claimant-confirm",
+        fieldset: {
+          legend: {
+            text: "Are these the correct preferences?",
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Yes"
+          },
+          {
+            value: "no",
+            text: "No"
+          }
+        ]
+      }) }}
+
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+        text: "Save and continue"
+      }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,62 @@
+
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %} 
+
+ 
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+<form class="form" method="post" novalidate>
+
+  {% from "govuk/components/input/macro.njk" import govukInput %}
+
+  <h1 class="govuk-heading-l govuk-!-margin-bottom-3">
+You need to upload your Certificate of stillbirth to get Maternity Allowance
+  </h1>
+
+  
+ <div id="passport-issued-hint" class="govuk-body">
+You will need to send us your Certificate of stillbirth before you can get Maternity Allowance.
+  </div>
+
+   <div id="passport-issued-hint" class="govuk-body">
+You can finish your application and post it to us at a later on.
+  </div>
+
+   <div id="passport-issued-hint" class="govuk-body">
+If you do not have a Certificate of stillbirth, ask your midwife or doctor to complete one for you. 
+  </div>
+
+
+
+
+  
+
+
+
+
+  <form class="form" method="post" novalidate>
+
+   
+  
+  
+  
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+  
+      {{ govukButton({
+        text: "Continue"
+      }) }}
+  </form>
+
+</div></div>
+{% endblock %}

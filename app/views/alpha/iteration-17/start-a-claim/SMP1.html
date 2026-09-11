@@ -1,0 +1,72 @@
+
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %} 
+
+ 
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.go(-1)"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+<form class="form" method="post" novalidate>
+
+  {% from "govuk/components/input/macro.njk" import govukInput %}
+
+  <h1 class="govuk-heading-l govuk-!-margin-bottom-3">
+    Upload your SMP1 form for Asda
+  </h1>
+
+  <div class="govuk-inset-text">
+ You must provide your SMP1 form before you can get Maternity Allowance. You can add this later.
+  </div>
+
+  <div id="passport-issued-body" class="govuk-body">
+    Records show that you were employed by Asda between 30 November 2023 and now. You must provide an SMP1 form for this employer.
+    <br><br>
+    You must upload the full form.
+
+  </div>
+
+  <!--<div id="passport-issued-body" class="govuk-body">
+   SMP1 forms must be dated from 23 February 2025 onwards. You must upload all 4 pages.
+
+  </div>-->
+
+
+  {{ govukFileUpload({
+    id: "file-upload-1",
+    name: "fileUpload1",
+    label: {
+      text: "Upload a file or photo. Accepted file types are jpg, pdf and png."
+    }
+  }) }}
+
+  
+
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+
+
+  <div class="govuk-button-group">
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+  
+    {{ govukButton({
+      text: "I do not have an SMP1 form",
+      classes: "govuk-button--secondary",
+      href: "SMP1-none"
+    }) }}
+  </div>
+</form>
+</div></div>
+{% endblock %}
